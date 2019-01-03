@@ -21,7 +21,7 @@ footer {
   bottom: 0;
 }
 
-.content {
+.container {
   flex: 1;
   margin: 1em;
 }

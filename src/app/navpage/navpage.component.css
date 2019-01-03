@@ -1,0 +1,32 @@
+.nav-icon-btn, .nav-icon-btn:visited {
+  color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0);
+  border: solid 0.05em rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  vertical-align: center;
+  width: 7em;
+  height: 7em;
+  transition: 0.3s;
+}
+
+.nav-icon-btn span {
+  margin-bottom: 1em;
+}
+
+.nav-icon-btn:hover {
+  cursor: pointer;
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(255, 255, 255, 0.1);
+  border: solid 0.2em rgba(255, 255, 255, 1);
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+.nav-icon-btn:hover + .nav-text {
+  color: rgba(255, 255, 255, 1);
+  transition: 0.3s;
+}
+
+.nav-text {
+  color: rgba(255, 255, 255, 0.5);
+}

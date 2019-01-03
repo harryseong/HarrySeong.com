@@ -10,6 +10,7 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 import { AppRoutingModule } from './app-routing.module';
 import { PlacesComponent } from './places/places.component';
 import { FooterComponent } from './footer/footer.component';
+import { NavpageComponent } from './navpage/navpage.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FooterComponent } from './footer/footer.component';
     HomeComponent,
     NavbarComponent,
     PlacesComponent,
-    FooterComponent
+    FooterComponent,
+    NavpageComponent
   ],
   imports: [
     BrowserAnimationsModule,

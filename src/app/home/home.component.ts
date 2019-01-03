@@ -9,6 +9,7 @@ export class HomeComponent implements OnInit {
   @ViewChild('video') videoElement: any;
   video: any;
   vidStatus: string;
+  panelOpenState = false;
 
   constructor() { }
 

@@ -11,6 +11,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { PlacesComponent } from './places/places.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavpageComponent } from './navpage/navpage.component';
+import { PhotosComponent } from './photos/photos.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { NavpageComponent } from './navpage/navpage.component';
     NavbarComponent,
     PlacesComponent,
     FooterComponent,
-    NavpageComponent
+    NavpageComponent,
+    PhotosComponent,
+    AboutComponent
   ],
   imports: [
     BrowserAnimationsModule,

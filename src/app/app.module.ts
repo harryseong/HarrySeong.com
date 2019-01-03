@@ -9,13 +9,15 @@ import { NavbarComponent } from './navbar/navbar.component';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import { AppRoutingModule } from './app-routing.module';
 import { PlacesComponent } from './places/places.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     NavbarComponent,
-    PlacesComponent
+    PlacesComponent,
+    FooterComponent
   ],
   imports: [
     BrowserAnimationsModule,

@@ -1,0 +1,45 @@
+<div class="content">
+
+  <!-- Video -->
+  <video #video muted (ended)="videoEnded()" [class]="vidStatus=='playing' ? '' : 'paused'">
+    <source src="assets/videos/typewriter.mp4" type="video/mp4">
+  </video>
+
+  <div fxLayout="column" fxLayoutGap="1em">
+    <div fxLayout="row" fxFill fxLayoutAlign="start start" fxLayoutAlign.xs="center center">
+      <div fxLayout="column" fxLayoutGap="1em" fxFlex="40" fxFlex.sm="60" fxFlex.xs="100" class="infoBox">
+
+        <div class="infoBoxHeader">
+          WELCOME
+        </div>
+
+        <div class="infoBoxText">
+          The typewriter that you see here is the Remington Rand Deluxe Model 5, a model that was manufactured in the 1940's.
+          I was inspired to acquire a typewriter after reading about Tom Hanks' quirky fascination and passion
+          for these mechanical word factories.
+        </div>
+
+        <div class="infoBoxText">
+          My relationship with technology is a necessary one, though one which continues to exist with a faint whisper of
+          the hackneyed hyphenated adjective, "love-hate."
+        </div>
+
+        <div class="infoBoxText">
+          You are welcome to enter and peer about into the world of the man who sits on the proverbial fence regarding his
+          relationship to the aforementioned modern necessity.
+        </div>
+
+        <div fxLayout="row" fxLayoutGap="1em" fxFill fxLayoutAlign="center center" class="infoBoxActions">
+          <button mat-stroked-button (click)="toggleVideo()" class="btn">
+            <span *ngIf="vidStatus=='playing'"><i class="fas fa-pause"></i>&nbsp;PAUSE</span>
+            <span *ngIf="vidStatus=='paused'"><i class="fas fa-play"></i>&nbsp;PLAY</span>
+            <span *ngIf="vidStatus=='stopped'"><i class="fas fa-redo-alt"></i>&nbsp;REPLAY</span>
+          </button>
+          <button mat-stroked-button type="button" class="btn" routerLink="places" routerLinkActive="active">
+            <span>ENTER</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

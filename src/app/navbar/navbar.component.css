@@ -1,0 +1,37 @@
+.nav-toolbar {
+  font-size: 1.5em;
+}
+
+.nav-toolbar.clear {
+  color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.logo-button {
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1em;
+  transition: 0.3s
+}
+
+.logo-button:hover {
+  color: rgba(255, 255, 255, 1);
+  transition: 0.3s
+}
+
+.logon-button {
+  color: rgba(255, 255, 255, 0.5);
+  border-color: rgba(255, 255, 255, 0.5);
+  transition: 0.3s
+}
+
+.logon-button:hover {
+  color: rgba(255, 255, 255, 1);
+  border-color: rgba(255, 255, 255, 1);
+  transition: 0.3s
+}
+
+.nav-user-photo {
+  height: 2em;
+  border-radius: 50%;
+}

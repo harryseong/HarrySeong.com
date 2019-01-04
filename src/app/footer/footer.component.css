@@ -16,8 +16,8 @@ a:hover {
 .social-media-icon, .social-media-icon:visited {
   background-color: rgba(255, 255, 255, 0);
   color: rgba(255, 255, 255, 0.5);
-  transition: 0.3s;
   border: solid 0.1em rgba(255, 255, 255, 0.5);
+  transition: 0.3s;
 }
 
 .social-media-icon span {
@@ -26,9 +26,9 @@ a:hover {
 
 .social-media-icon:hover {
   background-color: rgba(255, 255, 255, 0.91);
-  transition: 0.3s;
-  border: solid 0.1em #696969;
+  border: solid 0.1em rgba(255, 255, 255, 0);
   transform: scale(1.1);
+  transition: 0.3s;
 }
 
 .fb-icon:hover {

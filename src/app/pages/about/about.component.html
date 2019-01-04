@@ -1,4 +1,22 @@
-<div class="content" [@transitionAnimations]="transition">
-  <div class="pageHeader">about</div>
-  <div class="pageSubHeader">who, what, when, where, how...</div>
+<div class="content" [@transitionAnimations]="transition" fxLayout="column" fxLayoutGap="2em">
+  <div>
+    <div class="page-header">about</div>
+    <div class="page-subheader">who, what, when, where, how...</div>
+  </div>
+
+  <div fxLayout="column" fxFill fxLayoutAlign="center center">
+    <img src="assets/images/harry.jpg" alt="harry" class="harry-photo mat-elevation-z2">
+    <div class="name">Hyunsoo Harry Seong (성현수)</div>
+    <div class="bio-info" fxLayout="column" fxFill fxLayoutAlign="center center">
+      <div><span class="bio-label">hometown:</span> Seoul, South Korea</div>
+      <div><span class="bio-label">nationality:</span> United States</div>
+      <div><span class="bio-label">languages:</span> English, Korean</div>
+      <div><span class="bio-label">birthday:</span> August 1st, 1991</div>
+      <div><span class="bio-label">current residence:</span> Evanston, Illinois, USA</div>
+    </div>
+  </div>
+
+  <mat-divider></mat-divider>
+
+
 </div>

@@ -2,8 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import {animate, state, style, transition, trigger} from '@angular/animations';
 import {FirestoreService} from '../../shared/services/firebase/firestore/firestore.service';
 import * as mapboxgl from 'mapbox-gl';
-import {FeatureCollection, GeoJson} from '../../shared/services/map/map';
-import {MapService} from '../../shared/services/map/map.service';
 import {environment} from '../../../environments/environment';
 
 @Component({
@@ -25,6 +23,7 @@ export class PlacesComponent implements OnInit {
 
   /// default settings
   map: mapboxgl.Map;
+  seoul = new mapboxgl.LngLat(127.02, 37.53);
   style = 'mapbox://styles/mapbox/dark-v9';
   lat = 37.75;
   lng = -122.41;
@@ -36,23 +35,17 @@ export class PlacesComponent implements OnInit {
   ngOnInit() {
     this.firestoreService.places.valueChanges().subscribe(places => this.places = places);
     this.initializeMap();
+    this.map.on('load', () => {
+      if (this.map.loaded()) {
+        this.map.flyTo({
+          zoom: 4,
+          center: this.seoul
+        });
+      }
+    });
   }
 
   private initializeMap() {
-    /// locate the user
-    // if (navigator.geolocation) {
-    //   navigator.geolocation.getCurrentPosition(position => {
-    //     alert(JSON.stringify(position));
-    //     this.lat = position.coords.latitude;
-    //     this.lng = position.coords.longitude;
-    //     this.map.flyTo({
-    //       center: [this.lng, this.lat]
-    //     });
-    //   },  error => console.error(error),
-    //     {timeout: 30000, enableHighAccuracy: true, maximumAge: 75000}
-    //   );
-    // }
-
     this.buildMap();
   }
 
@@ -60,14 +53,12 @@ export class PlacesComponent implements OnInit {
     this.map = new mapboxgl.Map({
       container: 'map',
       style: this.style,
-      zoom: 13,
-      center: [this.lng, this.lat]
+      zoom: 5,
+      center: [this.lng, this.lat],
+      interactive: false
     });
     // Add map controls
     this.map.addControl(new mapboxgl.NavigationControl());
-    this.map.flyTo({
-      center: [this.lng, this.lat]
-    });
   }
 
 }

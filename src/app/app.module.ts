@@ -8,11 +8,11 @@ import {MaterialModule} from '../material.module';
 import { NavbarComponent } from './navbar/navbar.component';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import { AppRoutingModule } from './app-routing.module';
-import { PlacesComponent } from './places/places.component';
+import { PlacesComponent } from './pages/places/places.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavpageComponent } from './navpage/navpage.component';
-import { PhotosComponent } from './photos/photos.component';
-import { AboutComponent } from './about/about.component';
+import { PhotosComponent } from './pages/photos/photos.component';
+import { AboutComponent } from './pages/about/about.component';
 
 @NgModule({
   declarations: [

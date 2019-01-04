@@ -33,3 +33,6 @@ footer {
   flex: 1 1 auto;
 }
 
+.pageHeader {
+  font-size: 2.5em;
+}

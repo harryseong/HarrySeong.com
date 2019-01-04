@@ -16,10 +16,16 @@
   transition: 0.3s;
 }
 
+.name {
+  color: rgba(255, 255, 255, 1);
+  font-size: 1.4em;
+  font-weight: 500;
+}
+
 .about-header {
   color: rgba(255, 255, 255, 1);
   font-size: 1.2em;
-  font-weight: 500;
+  font-weight: 300;
 }
 
 .about-subheader {
@@ -35,4 +41,8 @@
 
 .white-text {
   color: rgba(255, 255, 255, 1);
+}
+
+.gray-text {
+  color: rgba(255, 255, 255, 0.7);
 }

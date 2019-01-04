@@ -6,9 +6,9 @@
 
   <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap.lt-md="1em" fxFill fxLayoutAlign="center center">
 
-    <div fxLayout="column" fxFlex.gt-sm="30" fxFlex.lt-md="100" fxLayoutAlign="center center">
+    <div fxLayout="column" fxLayoutGap="0.25em" fxFlex="35" fxFlex.lt-md="100" fxLayoutAlign="center center">
       <img src="assets/images/harry.jpg" alt="harry" class="harry-photo mat-elevation-z2">
-      <div class="about-header">Hyunsoo Harry Seong (성현수)</div>
+      <div class="name">Hyunsoo Harry Seong (성현수)</div>
       <div class="bio-info" fxLayout="column" fxFill fxLayoutAlign="center center">
         <div><span class="white-text">hometown</span> Seoul, South Korea</div>
         <div><span class="white-text">nationality</span> United States</div>
@@ -18,19 +18,69 @@
       </div>
     </div>
 
-    <div fxLayout="column" fxLayoutGap="1em" fxFlex.gt-sm="55" fxFlex.lt-md="100">
-      <div>
-        <div class="about-header">technical skillsets</div>
+    <div fxLayout="column" fxLayoutGap="0.5em" fxFlex="60" fxFlex.lt-md="100">
 
+      <div fxLayout="column" fxLayoutGap="0.25em">
+        <div class="about-header">education</div>
         <div>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi consequuntur corporis, doloremque dolores dolorum impedit incidunt ipsa iure necessitatibus quisquam sapiente sed tempore voluptatem. Iste quae quas reiciendis reprehenderit vel?
+          <div class="about-subheader white-text">Northwestern University <span class="gray-text">|</span> Evanston, IL <span class="gray-text">|</span> Class of 2013</div>
+          <div class="about-subheader">B.A. Biological Sciences Major, Business Institutions Minor</div>
         </div>
       </div>
-      <div>
-        <div class="about-header">technical skillsets</div>
 
-        <div>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi consequuntur corporis, doloremque dolores dolorum impedit incidunt ipsa iure necessitatibus quisquam sapiente sed tempore voluptatem. Iste quae quas reiciendis reprehenderit vel?
+      <div>
+        <mat-divider></mat-divider>
+      </div>
+
+      <div fxLayout="column" fxLayoutGap="0.25em">
+        <div class="about-header">experience</div>
+        <div fxLayout="column" fxLayoutGap="0.5em">
+          <div>
+            <div class="about-subheader white-text">Northwestern University <span class="gray-text">|</span> Evanston, IL <span class="gray-text">|</span> June 2013 - Present</div>
+            <div class="about-subheader">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, consequuntur delectus dolores eius error ex excepturi molestiae provident quae sit temporibus vel vero vitae! Fuga laudantium nesciunt nostrum ratione recusandae?</div>
+          </div>
+          <div>
+            <div class="about-subheader white-text">bloXroute <span class="gray-text">|</span> Evanston, IL <span class="gray-text">|</span> August 2018 - Present</div>
+            <div class="about-subheader">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, consequuntur delectus dolores eius error ex excepturi molestiae provident quae sit temporibus vel vero vitae! Fuga laudantium nesciunt nostrum ratione recusandae?</div>
+          </div>
+          <div>
+            <div class="about-subheader white-text">Michigan State Appellate Defender Office (SADO) <span class="gray-text">|</span> Remote <span class="gray-text">|</span> October 2018 – Present</div>
+            <div class="about-subheader">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, consequuntur delectus dolores eius error ex excepturi molestiae provident quae sit temporibus vel vero vitae! Fuga laudantium nesciunt nostrum ratione recusandae?</div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <mat-divider></mat-divider>
+      </div>
+
+      <div fxLayout="column" fxLayoutGap="0.25em">
+        <div class="about-header">technical skill sets</div>
+        <div fxLayout="row wrap" fxLayout.xs="column" fxLayoutGap="1em" fxLayoutGap.xs="0.5em">
+          <div fxLayout="column" fxLayoutGap="0.5em" fxFlex="45">
+            <div>
+              <div class="about-subheader white-text">languages</div>
+              <div class="about-subheader">Java, Typescript, HTML/CSS/JS, PHP, Python</div>
+            </div>
+            <div>
+              <div class="about-subheader white-text">databases</div>
+              <div class="about-subheader">MySQL, OracleDB, Google Firestore NoSQL</div>
+            </div>
+            <div>
+              <div class="about-subheader white-text">frameworks</div>
+              <div class="about-subheader">Spring Boot/Thymeleaf, Angular 2+, Cordova, Laravel</div>
+            </div>
+          </div>
+          <div fxLayout="column" fxLayoutGap="0.5em" fxFlex="45">
+            <div>
+              <div class="about-subheader white-text">libraries</div>
+              <div class="about-subheader">Bootstrap, jQuery, Swagger2, Angular Flex-Layout, Angular Material, Mapbox, Google Maps, ChartJS</div>
+            </div>
+            <div>
+              <div class="about-subheader white-text">tools / ide's</div>
+              <div class="about-subheader">Git, GitKraken, Docker, Maven, Postman, DataGrip, SQLDeveloper, Confluence, JIRA, IntelliJ, WebStorm, PHP Storm, PyCharm</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -1,18 +1,38 @@
-<div class="content" [@transitionAnimations]="transition" fxLayout="column" fxLayoutGap="2em">
+<div class="content" [@transitionAnimations]="transition" fxLayout="column" fxLayoutGap="2em" fxLayoutGap.xs="1em">
   <div>
     <div class="page-header">about</div>
     <div class="page-subheader">who, what, when, where, how...</div>
   </div>
 
-  <div fxLayout="column" fxFill fxLayoutAlign="center center">
-    <img src="assets/images/harry.jpg" alt="harry" class="harry-photo mat-elevation-z2">
-    <div class="about-header">Hyunsoo Harry Seong (성현수)</div>
-    <div class="bio-info" fxLayout="column" fxFill fxLayoutAlign="center center">
-      <div><span class="white-text">hometown</span> Seoul, South Korea</div>
-      <div><span class="white-text">nationality</span> United States</div>
-      <div><span class="white-text">languages</span> English, Korean</div>
-      <div><span class="white-text">birthday</span> August 1st, 1991</div>
-      <div><span class="white-text">current residence</span> Evanston, Illinois, USA</div>
+  <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap.lt-md="1em" fxFill fxLayoutAlign="center center">
+
+    <div fxLayout="column" fxFlex.gt-sm="30" fxFlex.lt-md="100" fxLayoutAlign="center center">
+      <img src="assets/images/harry.jpg" alt="harry" class="harry-photo mat-elevation-z2">
+      <div class="about-header">Hyunsoo Harry Seong (성현수)</div>
+      <div class="bio-info" fxLayout="column" fxFill fxLayoutAlign="center center">
+        <div><span class="white-text">hometown</span> Seoul, South Korea</div>
+        <div><span class="white-text">nationality</span> United States</div>
+        <div><span class="white-text">languages</span> English, Korean</div>
+        <div><span class="white-text">birthday</span> August 1st, 1991</div>
+        <div><span class="white-text">current residence</span> Evanston, Illinois, USA</div>
+      </div>
+    </div>
+
+    <div fxLayout="column" fxLayoutGap="1em" fxFlex.gt-sm="55" fxFlex.lt-md="100">
+      <div>
+        <div class="about-header">technical skillsets</div>
+
+        <div>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi consequuntur corporis, doloremque dolores dolorum impedit incidunt ipsa iure necessitatibus quisquam sapiente sed tempore voluptatem. Iste quae quas reiciendis reprehenderit vel?
+        </div>
+      </div>
+      <div>
+        <div class="about-header">technical skillsets</div>
+
+        <div>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi consequuntur corporis, doloremque dolores dolorum impedit incidunt ipsa iure necessitatibus quisquam sapiente sed tempore voluptatem. Iste quae quas reiciendis reprehenderit vel?
+        </div>
+      </div>
     </div>
   </div>
 

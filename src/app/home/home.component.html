@@ -1,14 +1,15 @@
 <div class="content">
 
   <!-- Video -->
-  <video #video muted (ended)="videoEnded()" [class]="vidStatus=='playing' ? '' : 'paused'" [@videoLoadAnimation]="videoBgAnim">
+  <video #video muted (ended)="videoEnded()" [class]="vidStatus=='playing' ? '' : 'paused'" [@videoLoadAnimation]="videoBgAnim"
+         poster="assets/images/typewriter_3000x2000.jpg">
     <source src="assets/videos/typewriter.mp4" type="video/mp4">
   </video>
 
   <div fxLayout="column" fxLayoutGap="1em">
-    <div fxLayout="row" fxFill fxLayoutAlign="start start" fxLayoutAlign.xs="center center">
-      <div fxLayout="column" fxFlex="35" fxFlex.sm="60" fxFlex.xs="100" class="info-box" [@transitionAnimations]="transition">
+    <div fxLayout="row" fxFill fxLayoutAlign="end end" fxLayoutAlign.xs="center center">
 
+      <div fxLayout="column" fxFlex="35" fxFlex.sm="60" fxFlex.xs="100" class="info-box" [@transitionAnimations]="transition">
         <div class="info-box-header">
           welcome
         </div>
@@ -42,7 +43,9 @@
             <span *ngIf="vidStatus=='stopped'"><i class="fas fa-redo-alt"></i>&nbsp;REPLAY</span>
           </button>
         </div>
+      </div>
 
     </div>
   </div>
+
 </div>

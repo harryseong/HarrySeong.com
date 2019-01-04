@@ -18,8 +18,8 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
     trigger('videoLoadAnimation', [
       transition(':enter', [
         style({ opacity: 0 }),
-        animate('2000ms ease', style({ opacity: 0.4})),
-        style({ opacity: 0.4 }),
+        animate('2000ms ease', style({ opacity: 0.5})),
+        style({ opacity: 0.5 }),
       ]),
     ])
   ],
@@ -28,7 +28,6 @@ export class HomeComponent implements OnInit {
   @ViewChild('video') videoElement: any;
   video: any;
   vidStatus: string;
-  panelOpenState = false;
   videoBgAnim = '';
   transition = '';
 

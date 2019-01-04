@@ -28,7 +28,7 @@
   font-weight: 300;
 }
 
-.about-subheader {
+.about-text {
   font-size: 0.75em;
   font-weight: 300;
 }
@@ -37,6 +37,14 @@
   text-transform: lowercase;
   font-size: 0.85em;
   font-weight: 300;
+}
+
+.bio-blurb {
+  text-align: justify;
+  margin-top: 1em;
+  font-size: 0.85em;
+  font-weight: 300;
+  max-width: 25em;
 }
 
 .white-text {

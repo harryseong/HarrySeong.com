@@ -4,6 +4,9 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { AppModule } from './app/app.module';
 import { environment } from './environments/environment';
 
+import 'firebase/app';
+import 'firebase/auth';
+import 'firebase/firestore';
 import 'hammerjs';
 
 if (environment.production) {

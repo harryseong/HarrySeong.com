@@ -31,6 +31,19 @@
   transition: 0.3s
 }
 
+.user-btn {
+  color: rgba(255, 255, 255, 1);
+  border-color: rgba(255, 255, 255, 1);
+  opacity: 0.7;
+  transition: 0.3s;
+  padding: 0 0.5em;
+}
+
+.user-btn:hover {
+  opacity: 1;
+  transition: 0.3s
+}
+
 .nav-user-photo {
   height: 2em;
   border-radius: 50%;

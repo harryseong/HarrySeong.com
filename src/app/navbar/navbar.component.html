@@ -2,7 +2,24 @@
   <mat-toolbar class="nav-toolbar clear">
     <div routerLink="" routerLinkActive="active" class="logo-button">HARRY SEONG</div>
     <span class="spacer"></span>
-    <button mat-stroked-button type="button" class="login-button" fxShow="false" fxShow.gt-xs>LOG IN</button>
+
+    <div fxShow="false" fxShow.gt-xs fxLayout="row">
+      <button mat-button type="button" [matMenuTriggerFor]="userMenu" *ngIf="authService.authState | async as authState" class="user-btn">
+        <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="0.5em">
+          <img class="nav-user-photo mat-elevation-z1" src="{{authState.photoURL}}" alt="user_photo">
+          <span class="nav-user-name">{{authState.displayName}}</span>
+        </div>
+      </button>
+
+      <button mat-stroked-button type="button" class="login-button" fxShow="false" fxShow.gt-xs *ngIf="!authService.isLoggedIn" (click)="authService.login()">
+        LOG IN
+      </button>
+    </div>
+
+    <mat-menu #userMenu="matMenu">
+      <button mat-menu-item (click)="authService.logout()">Log out</button>
+    </mat-menu>
+
     <button mat-icon-button fxHide="false" fxHide.gt-xs (click)="drawer.toggle()"><i class="fas fa-bars"></i></button>
   </mat-toolbar>
 </nav>

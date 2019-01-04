@@ -14,6 +14,10 @@ import { NavpageComponent } from './navpage/navpage.component';
 import { PhotosComponent } from './pages/photos/photos.component';
 import { AboutComponent } from './pages/about/about.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import {AngularFireModule} from '@angular/fire';
+import {AngularFirestoreModule} from '@angular/fire/firestore';
+import {AngularFireAuthModule} from '@angular/fire/auth';
+import {environment} from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -33,6 +37,9 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     FlexLayoutModule,
     MaterialModule,
     AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebase, environment.firebase.projectId),
+    AngularFirestoreModule, // imports firebase/firestore, only needed for database features
+    AngularFireAuthModule, // imports firebase/auth, only needed for auth features,
   ],
   exports: [
     MaterialModule

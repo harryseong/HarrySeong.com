@@ -57,8 +57,6 @@ export class PlacesComponent implements OnInit {
       center: [this.lng, this.lat],
       interactive: false
     });
-    // Add map controls
-    this.map.addControl(new mapboxgl.NavigationControl());
   }
 
 }

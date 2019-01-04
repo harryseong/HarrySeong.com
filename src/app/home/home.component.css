@@ -43,7 +43,7 @@ video.paused {
   font-size: 2em;
   letter-spacing: 0.1em;
   font-weight: 500;
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 1);
   margin-bottom: 0.5em;
   text-transform: uppercase;
 }

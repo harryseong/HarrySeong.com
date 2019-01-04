@@ -16,17 +16,23 @@
   transition: 0.3s;
 }
 
-.name {
+.about-header {
   color: rgba(255, 255, 255, 1);
   font-size: 1.2em;
   font-weight: 500;
 }
 
+.about-subheader {
+  font-size: 0.75em;
+  font-weight: 300;
+}
+
 .bio-info {
   text-transform: lowercase;
   font-size: 0.85em;
+  font-weight: 300;
 }
 
-.bio-label {
+.white-text {
   color: rgba(255, 255, 255, 1);
 }

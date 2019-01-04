@@ -10,12 +10,12 @@ video {
   z-index: -100;
   transform: translateX(-50%) translateY(-50%);
   background-size: cover;
-  opacity: 0.95;
+  opacity: 0.85;
   transition: 1s;
 }
 
 video.paused {
-  opacity: 0.85;
+  opacity: 0.4;
 }
 
 .btn {
@@ -32,23 +32,16 @@ video.paused {
 }
 
 .infoBox {
-  background-color: rgba(35, 35, 35, 0);
-  color: rgba(255, 255, 255, 0.75);
-  padding: 1em;
-  border-radius: 0.175em;
-  text-align: justify;
-  transition: 0.3s;
-}
-
-.infoBox:hover {
   background-color: rgba(35, 35, 35, 0.5);
+  color: rgba(255, 255, 255, 0.75);
+  padding: 2em;
+  border-radius: 0.175em;
   transition: 0.3s;
 }
 
 .infoBoxHeader {
-  font-size: 1.5em;
+  font-size: 2em;
   font-weight: 500;
-  letter-spacing: 0.09em;
   color: rgba(255, 255, 255, 0.75);
 }
 

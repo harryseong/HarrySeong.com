@@ -13,6 +13,7 @@ import { FooterComponent } from './footer/footer.component';
 import { NavpageComponent } from './navpage/navpage.component';
 import { PhotosComponent } from './pages/photos/photos.component';
 import { AboutComponent } from './pages/about/about.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { AboutComponent } from './pages/about/about.component';
     FooterComponent,
     NavpageComponent,
     PhotosComponent,
-    AboutComponent
+    AboutComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserAnimationsModule,

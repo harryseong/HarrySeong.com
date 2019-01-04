@@ -6,6 +6,7 @@ import {PlacesComponent} from './pages/places/places.component';
 import {NavpageComponent} from './navpage/navpage.component';
 import {PhotosComponent} from './pages/photos/photos.component';
 import {AboutComponent} from './pages/about/about.component';
+import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -13,6 +14,7 @@ const routes: Routes = [
   {path: 'places', component: PlacesComponent},
   {path: 'photos', component: PhotosComponent},
   {path: 'about', component: AboutComponent},
+  {path: '**', component: PageNotFoundComponent}
 ];
 
 @NgModule({

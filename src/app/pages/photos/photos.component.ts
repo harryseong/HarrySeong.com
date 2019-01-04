@@ -15,12 +15,9 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
   ]
 })
 export class PhotosComponent implements OnInit {
-  transition = '';
 
   constructor() { }
 
-  ngOnInit() {
-    this.transition = 'fadeInDrop';
-  }
+  ngOnInit() {}
 
 }

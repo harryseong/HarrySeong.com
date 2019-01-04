@@ -1,10 +1,13 @@
-<div class="content" [@transitionAnimations]>
-  <div class="page-header">places</div>
-  <div class="page-subheader">where we've been, where we are...</div>
+<div class="content" [@transitionAnimations] fxLayout="column" fxLayoutGap="1em">
+  <div>
+    <div class="page-header">places</div>
+    <div class="page-subheader">where we've been, where we are...</div>
+  </div>
+
+  <!--Mapbox-->
+  <div id="map"></div>
 
   <ul>
     <li *ngFor="let place of places">{{place.name}}</li>
   </ul>
-
-  <div id="map"></div>
 </div>

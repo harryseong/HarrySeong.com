@@ -3,7 +3,6 @@ import {animate, style, transition, trigger} from '@angular/animations';
 import {FirestoreService} from '../../shared/services/firebase/firestore/firestore.service';
 import * as mapboxgl from 'mapbox-gl';
 import {environment} from '../../../environments/environment';
-import {forEach} from '@angular/router/src/utils/collection';
 
 @Component({
   selector: 'app-places',
@@ -20,6 +19,12 @@ import {forEach} from '@angular/router/src/utils/collection';
       transition(':enter', [
         style({ opacity: 0, transform: 'translateY(0.5em)'}),
         animate('1.5s .5s ease', style({ opacity: 1, transform: 'translateY(0)' })),
+      ]),
+    ]),
+    trigger('btnAnimations', [
+      transition(':enter', [
+        style({ opacity: 0, transform: 'translateY(-0.5em)'}),
+        animate('2s ease', style({ opacity: 1, transform: 'translateY(0)' })),
       ]),
     ])
   ]

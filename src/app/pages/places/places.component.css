@@ -20,5 +20,17 @@
 }
 
 .place-name {
+  color: rgba(255, 255, 255, 1);
   font-size: 1.2em;
+}
+
+.place-years {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.75em;
+  font-weight: 500;
+}
+
+.place-text {
+  font-size: 0.75em;
+  font-weight: 300;
 }

@@ -1,10 +1,10 @@
-<div class="content" [@transitionAnimations] fxLayout="column" fxLayoutGap="2em" fxLayoutGap.xs="1em">
-  <div>
+<div class="content" fxLayout="column" fxLayoutGap="2em" fxLayoutGap.xs="1em">
+  <div [@headerAnimations]>
     <div class="page-header">about</div>
     <div class="page-subheader">who, what, when, where, how...</div>
   </div>
 
-  <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap.lt-md="1em" fxFill fxLayoutAlign="center center">
+  <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap.lt-md="1em" fxFill fxLayoutAlign="center center" [@contentAnimations]>
 
     <div fxLayout="column" fxLayoutGap="0.25em" fxFlex="40" fxFlex.lt-md="100" fxLayoutAlign="center center">
       <img src="assets/images/harry_200x200.jpg" alt="harry" class="harry-photo mat-elevation-z2">
@@ -88,7 +88,7 @@
 
   <mat-divider></mat-divider>
 
-  <div>
+  <div [@contentAnimations]>
     <div class="about-header"><i class="fas fa-code"></i> this website</div>
     <div class="about-text">
       <span class="white-text">&#123; </span>

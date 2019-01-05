@@ -1,13 +1,15 @@
-<div class="content" [@transitionAnimations] fxLayout="column" fxLayoutGap="1em">
-  <div>
+<div class="content" fxLayout="column" fxLayoutGap="2em" fxLayoutGap.xs="1em">
+  <div [@headerAnimations]>
     <div class="page-header">places</div>
     <div class="page-subheader">where we've been, where we are...</div>
   </div>
 
   <!--Mapbox-->
-  <div id="map"></div>
+  <div id="map" [@contentAnimations]></div>
 
-  <ul>
-    <li *ngFor="let place of places">{{place.name}}</li>
-  </ul>
+  <div fxLayout="row wrap" fxLayoutGap="0.5em" fxLayoutAlign="center center">
+    <button mat-stroked-button *ngFor="let place of places" (click)="fly(place.coords)" class="fly-btn">
+      {{place.name}}
+    </button>
+  </div>
 </div>

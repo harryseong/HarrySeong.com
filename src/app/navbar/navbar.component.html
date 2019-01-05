@@ -5,7 +5,7 @@
 
     <div fxShow="false" fxShow.gt-xs fxLayout="row">
       <button mat-button type="button" [matMenuTriggerFor]="userMenu" *ngIf="authService.authState | async as authState" class="user-btn">
-        <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="0.5em">
+        <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="0.3em">
           <img class="nav-user-photo mat-elevation-z1" src="{{authState.photoURL}}" alt="user_photo">
           <span class="nav-user-name">{{authState.displayName}}</span>
         </div>

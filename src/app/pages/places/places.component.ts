@@ -32,6 +32,7 @@ import {environment} from '../../../environments/environment';
 export class PlacesComponent implements OnInit {
   map: mapboxgl.Map;
   style = 'mapbox://styles/mapbox/dark-v9';
+  currentPlace: any;
   places = [];
 
   constructor(private firestoreService: FirestoreService) {
@@ -44,7 +45,8 @@ export class PlacesComponent implements OnInit {
       this.initializeMap();
       this.map.on('load', () => {
         if (this.map.loaded()) {
-          this.fly(this.places[0].coords);
+          this.fly(this.places[0]);
+          this.currentPlace = this.places[0];
         }
       });
     });
@@ -61,10 +63,11 @@ export class PlacesComponent implements OnInit {
     this.places.forEach(place => new mapboxgl.Marker().setLngLat(place.coords).addTo(this.map));
   }
 
-  fly(coords) {
+  fly(place) {
+    this.currentPlace = place;
     this.map.flyTo({
       zoom: 5,
-      center: coords
+      center: place.coords
     });
   }
 }

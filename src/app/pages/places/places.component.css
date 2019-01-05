@@ -10,4 +10,13 @@
 
 .fly-btn {
   margin: 0.2em 0;
+  font-weight: 300;
+}
+
+.fly-btn.current {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.place-name {
+  font-size: 1.2em;
 }

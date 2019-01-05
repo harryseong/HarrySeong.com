@@ -5,11 +5,14 @@
   </div>
 
   <!--Mapbox-->
-  <div id="map" [@contentAnimations]></div>
+  <div [@contentAnimations]>
+    <div id="map"></div>
+  </div>
 
   <div fxLayout="row wrap" fxLayoutGap="0.5em" fxLayoutAlign="center center" [@btnAnimations]>
-    <button mat-stroked-button *ngFor="let place of places" (click)="fly(place.coords)" class="fly-btn">
-      {{place.name}}
+    <button mat-stroked-button *ngFor="let place of places" (click)="fly(place)" class="fly-btn"
+            [class.current]="place.order==currentPlace.order">
+      {{place.order}}. {{place.displayName}}
     </button>
   </div>
 </div>

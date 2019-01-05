@@ -15,7 +15,7 @@ import {environment} from '../../../environments/environment';
         animate('2s ease', style({ opacity: 1, transform: 'translateY(0)' })),
       ]),
     ]),
-    trigger('contentAnimations', [
+    trigger('mapAnimations', [
       transition(':enter', [
         style({ opacity: 0 }),
         animate('1.5s 1s ease', style({ opacity: 1 })),

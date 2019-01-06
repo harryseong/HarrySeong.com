@@ -13,9 +13,9 @@
     </div>
   </div>
 
-  <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap.lt-md="1em" fxFill fxLayoutAlign="center center" [@contentAnimations]>
+  <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap.lt-md="1em" fxFill fxLayoutAlign="center center">
 
-    <div fxLayout="column" fxLayoutGap="0.25em" fxFlex="40" fxFlex.lt-md="100" fxLayoutAlign="center center">
+    <div fxLayout="column" fxLayoutGap="0.25em" fxFlex="40" fxFlex.lt-md="100" fxLayoutAlign="center center" [@contentAnimations]>
       <img src="assets/images/harry_200x200.jpg" alt="harry" class="harry-photo mat-elevation-z2">
       <div class="name">Hyunsoo Harry Seong (성현수)</div>
       <div class="bio-info" fxLayout="column" fxFill fxLayoutAlign="center center">
@@ -33,7 +33,7 @@
 
     <div fxLayout="column" fxLayoutGap="1em" fxFlex="57" fxFlex.lt-md="100">
 
-      <div fxLayout="column" fxLayoutGap="0.25em">
+      <div fxLayout="column" fxLayoutGap="0.25em" [@educationAnimations]>
         <div class="about-header">education</div>
         <div>
           <div class="about-text white-text">Northwestern University <span class="gray-text">|</span> Evanston, IL <span class="gray-text">|</span> Class of 2013</div>
@@ -41,9 +41,11 @@
         </div>
       </div>
 
-      <mat-divider></mat-divider>
+      <div fxLayout="column" fxLayoutGap="0.25em" [@experienceAnimations]>
+        <div>
+          <mat-divider></mat-divider>
+        </div>
 
-      <div fxLayout="column" fxLayoutGap="0.25em">
         <div class="about-header">experience</div>
         <div fxLayout="column" fxLayoutGap="0.5em">
           <div>
@@ -61,9 +63,11 @@
         </div>
       </div>
 
-      <mat-divider></mat-divider>
+      <div fxLayout="column" fxLayoutGap="0.25em" [@techAnimations]>
+        <div>
+          <mat-divider></mat-divider>
+        </div>
 
-      <div fxLayout="column" fxLayoutGap="0.25em">
         <div class="about-header">technical skill sets</div>
         <div fxLayout="row wrap" fxLayout.xs="column" fxLayoutGap="1em" fxLayoutGap.xs="0.5em">
           <div fxLayout="column" fxLayoutGap="0.5em" fxFlex="45">
@@ -95,9 +99,11 @@
     </div>
   </div>
 
-  <mat-divider></mat-divider>
+  <div fxLayout="column" fxLayoutGap="0.25em" [@websiteAnimations]>
+    <div>
+      <mat-divider></mat-divider>
+    </div>
 
-  <div [@contentAnimations]>
     <div class="about-header"><i class="fas fa-code"></i> this website</div>
     <div class="about-text">
       Built as a labor of <i class="fas fa-heart fa-sm fa-fw"></i> with

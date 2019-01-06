@@ -1,6 +1,15 @@
 <div class="content" fxLayout="column" fxLayoutGap="2em" fxLayoutGap.xs="1em">
-  <div [@headerAnimations]>
-    <div class="page-header">page not found</div>
-    <div class="page-subheader">what you are looking for does not exist</div>
+  <div fxLayout="row" [@headerAnimations]>
+    <div>
+      <div class="page-header">page not found</div>
+      <div class="page-subheader">sorry, what you are looking for does not exist...</div>
+    </div>
+    <span class="spacer"></span>
+    <div fxLayout="column" fxLayoutGap="0.2em" fxLayoutAlign="center center">
+      <button routerLink="/nav" routerLinkActive="active" class="nav-icon-btn mat-elevation-z0">
+        <div fxLayout="row" fxLayoutAlign="center center"><i class="fas fa-arrow-left fa-2x fa-fw"></i></div>
+      </button>
+      <div class="nav-text">back</div>
+    </div>
   </div>
 </div>

@@ -1,3 +1,12 @@
 .content {
   color: rgba(255, 255, 255, 0.7);
 }
+
+.nav-icon-btn, .nav-icon-btn:visited {
+  width: 4.2em;
+  height: 4.2em;
+}
+
+.nav-text {
+  font-size: 0.75em;
+}

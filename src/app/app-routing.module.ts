@@ -10,7 +10,7 @@ import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
-  {path: 'navpage', component: NavpageComponent},
+  {path: 'nav', component: NavpageComponent},
   {path: 'places', component: PlacesComponent},
   {path: 'photos', component: PhotosComponent},
   {path: 'about', component: AboutComponent},

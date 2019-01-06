@@ -21,6 +21,7 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
   ]
 })
 export class AboutComponent implements OnInit {
+  currentYear = new Date().getFullYear();
 
   constructor() { }
 

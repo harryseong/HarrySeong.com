@@ -1,4 +1,4 @@
-<div class="content" fxLayout="column" fxLayoutGap="2em" fxLayoutGap.xs="1em">
+<div class="content" fxLayout="column" fxLayoutGap="1em">
   <div fxLayout="row" [@headerAnimations]>
     <div>
       <div class="page-header">about</div>
@@ -100,11 +100,15 @@
   <div [@contentAnimations]>
     <div class="about-header"><i class="fas fa-code"></i> this website</div>
     <div class="about-text">
+      Built as a labor of <i class="fas fa-heart fa-sm fa-fw"></i> with
       <span class="white-text">&#123; </span>
         Angular
       <span class="white-text"> + </span>
         Google Firebase
       <span class="white-text"> }</span>
+    </div>
+    <div class="about-text">
+      &copy; {{currentYear}} Harry Seong
     </div>
   </div>
 

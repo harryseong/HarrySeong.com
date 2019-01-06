@@ -35,3 +35,20 @@
   font-size: 0.75em;
   font-weight: 300;
 }
+
+.year-slider {
+  margin-bottom: 2em;
+}
+
+::ng-deep .mat-accent .mat-slider-thumb {
+  background-color: white;
+}
+::ng-deep .mat-accent .mat-slider-thumb-label {
+   background-color: white;
+ }
+::ng-deep .mat-accent .mat-slider-thumb-label-text {
+  color: black;
+}
+::ng-deep .mat-accent .mat-slider-track-fill {
+  background-color: white;
+}

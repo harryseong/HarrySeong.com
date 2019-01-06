@@ -38,6 +38,7 @@ import {environment} from '../../../environments/environment';
 export class PlacesComponent implements OnInit {
   map: mapboxgl.Map;
   style = 'mapbox://styles/mapbox/dark-v9';
+  currentPlaceOrder = 1;
   currentPlace: any;
   places = [];
 
@@ -52,7 +53,7 @@ export class PlacesComponent implements OnInit {
       this.initializeMap();
       this.map.on('load', () => {
         if (this.map.loaded()) {
-          this.fly(this.places[0]);
+          this.fly(this.places[0].coords);
         }
       });
     });
@@ -69,11 +70,21 @@ export class PlacesComponent implements OnInit {
     this.places.forEach(place => new mapboxgl.Marker().setLngLat(place.coords).addTo(this.map));
   }
 
-  fly(place) {
+  sliderChange() {
+    this.currentPlace = this.places[this.currentPlaceOrder - 1];
+    this.fly(this.currentPlace.coords);
+  }
+
+  updateCurrentPlace(place) {
     this.currentPlace = place;
+    this.currentPlaceOrder = place.order;
+    this.fly(place.coords);
+  }
+
+  fly(coords) {
     this.map.flyTo({
       zoom: 5,
-      center: place.coords
+      center: coords
     });
   }
 }

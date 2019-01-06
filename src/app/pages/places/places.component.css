@@ -7,14 +7,16 @@
   width: 100%
 }
 
-.fly-btn {
+.place-btn {
   margin: 0.2em 0;
+  padding: 0.1em 1em;
+  font-size: 0.5em;
   font-weight: 300;
   transition: 0.3s;
   border-radius: 0.2em;
 }
 
-.fly-btn.current {
+.place-btn.current {
   color: rgba(255, 255, 255, 1);
   background-color: rgba(255, 255, 255, 0.15);
   transition: 0.3s;

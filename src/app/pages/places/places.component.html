@@ -9,18 +9,21 @@
     <div id="map" [@mapAnimations]></div>
   </div>
 
-  <div fxLayout="row" fxLayoutGap="0.2em" fxLayoutAlign="center center" [@btnAnimations]>
-    <div>then</div>
-    <mat-slider fxFill fxFlex="50" tickInterval="1" min="1" [max]="places.length"
-                [(value)]="currentPlaceOrder" (change)="sliderChange()" class="year-slider"></mat-slider>
-    <div>now</div>
-  </div>
+  <div fxLayout="column" fxLayoutGap="0" [@btnAnimations]>
+    <div fxLayout="row" fxFill fxLayoutGap="0.3em" fxLayoutAlign="center center">
+      <div>then</div>
+      <mat-slider fxFill fxFlex="50" fx.Flex.xs="90" tickInterval="1" min="1" [max]="places.length"
+                  [(value)]="currentPlaceOrder" (change)="sliderChange()" class="year-slider"></mat-slider>
+      <div>now</div>
+    </div>
 
-  <!--<div fxLayout="row wrap" fxLayoutGap="0.5em" fxLayoutAlign="center center" [@btnAnimations]>-->
-    <!--<button mat-stroked-button *ngFor="let place of places" (click)="updateCurrentPlace(place)" class="fly-btn" [class.current]="place.order==currentPlace.order">-->
-      <!--{{place.order}}. {{place.displayName}}-->
-    <!--</button>-->
-  <!--</div>-->
+    <div fxLayout="row wrap" fxLayoutGap="0.5em" fxLayoutAlign="center center">
+      <button mat-stroked-button *ngFor="let place of places" (click)="updateCurrentPlace(place)" class="place-btn"
+              [class.current]="place.order==currentPlace.order" fxLayoutAlign="center center">
+        {{place.displayName}}
+      </button>
+    </div>
+  </div>
 
   <div fxLayout="row" fxLayoutAlign="center center" [@contentAnimations] *ngIf="currentPlace!=null">
     <div fxLayout="column" fxLayoutGap="0.2em" fxFlex="55" fxFlex.sm="80" fxFlex.xs="100">

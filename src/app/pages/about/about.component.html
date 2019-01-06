@@ -1,7 +1,16 @@
 <div class="content" fxLayout="column" fxLayoutGap="2em" fxLayoutGap.xs="1em">
-  <div [@headerAnimations]>
-    <div class="page-header">about</div>
-    <div class="page-subheader">who, what, when, where, how...</div>
+  <div fxLayout="row" [@headerAnimations]>
+    <div>
+      <div class="page-header">about</div>
+      <div class="page-subheader">who, what, when, where, how...</div>
+    </div>
+    <span class="spacer"></span>
+    <div fxLayout="column" fxLayoutGap="0.2em" fxLayoutAlign="center center">
+      <button routerLink="/navpage" routerLinkActive="active" class="nav-icon-btn mat-elevation-z0">
+        <span><i class="fas fa-arrow-left fa-2x fa-fw"></i></span>
+      </button>
+      <div class="nav-text">back</div>
+    </div>
   </div>
 
   <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap.lt-md="1em" fxFill fxLayoutAlign="center center" [@contentAnimations]>

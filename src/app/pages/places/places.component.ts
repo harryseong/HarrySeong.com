@@ -81,6 +81,18 @@ export class PlacesComponent implements OnInit {
     this.fly(place.coords);
   }
 
+  previousPlace() {
+    if (this.currentPlaceOrder > 1) {
+      this.updateCurrentPlace(this.places[this.currentPlaceOrder - 2]);
+    }
+  }
+
+  nextPlace() {
+    if (this.currentPlaceOrder < this.places.length) {
+      this.updateCurrentPlace(this.places[this.currentPlaceOrder]);
+    }
+  }
+
   fly(coords) {
     this.map.flyTo({
       zoom: 5,

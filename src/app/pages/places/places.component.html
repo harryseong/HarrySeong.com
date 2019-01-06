@@ -1,7 +1,16 @@
 <div class="content" fxLayout="column" fxLayoutGap="0.8em" fxLayoutGap.xs="0.5em">
-  <div [@headerAnimations]>
-    <div class="page-header">places</div>
-    <div class="page-subheader">where we've been, where we are...</div>
+  <div fxLayout="row" [@headerAnimations]>
+    <div>
+      <div class="page-header">places</div>
+      <div class="page-subheader">where we've been, where we are...</div>
+    </div>
+    <span class="spacer"></span>
+    <div fxLayout="column" fxLayoutGap="0.2em" fxLayoutAlign="center center">
+      <button routerLink="/navpage" routerLinkActive="active" class="nav-icon-btn mat-elevation-z0">
+        <span><i class="fas fa-arrow-left fa-2x fa-fw"></i></span>
+      </button>
+      <div class="nav-text">back</div>
+    </div>
   </div>
 
   <!--Mapbox-->
@@ -10,11 +19,15 @@
   </div>
 
   <div fxLayout="column" fxLayoutGap="0" [@btnAnimations]>
-    <div fxLayout="row" fxFill fxLayoutGap="0.3em" fxLayoutAlign="center center">
-      <div>then</div>
+    <div fxLayout="row" fxFill fxLayoutGap="0.2em" fxLayoutAlign="center center">
+      <button mat-button (click)="previousPlace()" class="change-place-btn">
+        <span><i class="fas fa-angle-left"></i> then</span>
+      </button>
       <mat-slider fxFill fxFlex="50" fx.Flex.xs="90" tickInterval="1" min="1" [max]="places.length"
                   [(value)]="currentPlaceOrder" (change)="sliderChange()" class="year-slider"></mat-slider>
-      <div>now</div>
+      <button mat-button (click)="nextPlace()" class="change-place-btn">
+        <span>now <i class="fas fa-angle-right"></i></span>
+      </button>
     </div>
 
     <div fxLayout="row wrap" fxLayoutGap="0.5em" fxLayoutAlign="center center">

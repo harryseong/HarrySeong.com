@@ -22,6 +22,7 @@ video.paused {
   width: 8em;
   color: rgba(255, 255, 255, 0.75);
   border-color: rgba(255, 255, 255, 0.75);
+  border-radius: 0.2em;
   transition: 0.3s
 }
 
@@ -36,11 +37,13 @@ video.paused {
   color: rgba(255, 255, 255, 0.75);
   padding: 2em;
   border-radius: 0.175em;
+  font-size: 0.9em;
+  font-weight: 300;
   transition: 0.3s;
 }
 
 .info-box-header {
-  font-size: 2em;
+  font-size: 1.8em;
   letter-spacing: 0.1em;
   font-weight: 500;
   color: rgba(255, 255, 255, 1);

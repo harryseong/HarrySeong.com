@@ -1,10 +1,10 @@
 import {Injectable, NgZone} from '@angular/core';
 import {AngularFireAuth} from '@angular/fire/auth';
-import {auth} from 'firebase';
 import {MatSnackBar} from '@angular/material';
 import {Router} from '@angular/router';
 import {map} from 'rxjs/operators';
 import {AngularFirestore} from '@angular/fire/firestore';
+import {auth} from 'firebase/app';
 
 @Injectable({
   providedIn: 'root'

@@ -10,3 +10,21 @@
 .nav-text {
   font-size: 0.75em;
 }
+
+.in-progress {
+  border: solid 0.1em rgba(255, 255, 255, 0.7);
+  border-radius: 0.2em;
+  height: 10em;
+  width: 10em;
+  transition: 1s;
+}
+
+in-progress-text {
+  font-size: 0.6em;
+}
+
+.in-progress:hover {
+  color: rgba(255, 255, 255, 1);
+  border: solid 0.1em rgba(255, 255, 255, 1);
+  transition: 1s;
+}

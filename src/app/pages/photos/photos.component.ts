@@ -12,6 +12,12 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
         animate('2s ease', style({ opacity: 1, transform: 'translateY(0)' })),
       ]),
     ]),
+    trigger('backAnimations', [
+      transition(':enter', [
+        style({ transform: 'translateX(4em)'}),
+        animate('0.75s ease', style({ transform: 'translateX(0)' })),
+      ]),
+    ]),
     trigger('contentAnimations', [
       transition(':enter', [
         style({ opacity: 0, transform: 'translateY(0.5em)'}),
@@ -21,7 +27,7 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
     trigger('progressAnimations', [
       transition(':enter', [
         style({ opacity: 0}),
-        animate('4s .5s ease', style({ opacity: 1, transform: 'rotateY(720deg)' })),
+        animate('2s 1s ease', style({ opacity: 1, transform: 'rotateY(360deg)' })),
       ]),
     ])
   ]

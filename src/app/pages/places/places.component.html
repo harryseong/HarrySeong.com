@@ -1,11 +1,11 @@
 <div class="content" fxLayout="column" fxLayoutGap="0.8em" fxLayoutGap.xs="0.5em">
-  <div fxLayout="row" [@headerAnimations]>
-    <div>
+  <div fxLayout="row">
+    <div [@headerAnimations]>
       <div class="page-header">places</div>
       <div class="page-subheader">where we've been, where we are...</div>
     </div>
     <span class="spacer"></span>
-    <div fxLayout="column" fxLayoutGap="0.2em" fxLayoutAlign="center center">
+    <div fxLayout="column" fxLayoutGap="0.2em" fxLayoutAlign="center center" [@backAnimations]>
       <button routerLink="/nav" routerLinkActive="active" class="nav-icon-btn mat-elevation-z0">
         <div fxLayout="row" fxLayoutAlign="center center"><i class="fas fa-arrow-left fa-2x fa-fw"></i></div>
       </button>

@@ -1,12 +1,12 @@
 <div class="content" fxLayout="column" fxLayoutGap="2em" fxLayoutGap.xs="1em">
 
-  <div fxLayout="row" [@headerAnimations]>
-    <div>
+  <div fxLayout="row">
+    <div [@headerAnimations]>
       <div class="page-header">photos</div>
       <div class="page-subheader">moments captured in rectangular forms...</div>
     </div>
     <span class="spacer"></span>
-    <div fxLayout="column" fxLayoutGap="0.2em" fxLayoutAlign="center center">
+    <div fxLayout="column" fxLayoutGap="0.2em" fxLayoutAlign="center center" [@backAnimations]>
       <button routerLink="/nav" routerLinkActive="active" class="nav-icon-btn mat-elevation-z0">
         <div fxLayout="row" fxLayoutAlign="center center"><i class="fas fa-arrow-left fa-2x fa-fw"></i></div>
       </button>

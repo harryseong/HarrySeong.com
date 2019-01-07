@@ -9,7 +9,7 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
     trigger('transitionAnimations', [
       transition(':enter', [
         style({transform: 'translateY(4.5em)'}),
-        animate('750ms ease'),
+        animate('.75s ease'),
       ]),
     ]),
   ]

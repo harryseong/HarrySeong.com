@@ -9,13 +9,13 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
     trigger('transitionAnimations', [
       transition(':enter', [
         style({ opacity: 0, transform: 'translateY(-0.5em)' }),
-        animate('1000ms 1250ms ease', style({ opacity: 1, transform: 'translateY(0)'}))
+        animate('1s 1.25s ease', style({ opacity: 1, transform: 'translateY(0)'}))
       ]),
     ]),
     trigger('videoLoadAnimation', [
       transition(':enter', [
         style({ opacity: 0 }),
-        animate('2000ms .3s ease', style({ opacity: 0.5})),
+        animate('2s .3s ease', style({ opacity: 0.5})),
       ]),
     ])
   ],

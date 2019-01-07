@@ -7,26 +7,26 @@ body {
   background-color: black;
 }
 
+nav {
+  position: relative;
+  top: 0;
+  z-index: 100;
+}
+
+.container {
+  flex: 1;
+  margin: 1em;
+}
+
 app-root {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
 }
 
-nav {
-  position: relative;
-  top: 0;
-  z-index: 1000;
-}
-
 footer {
   position: relative;
   bottom: 0;
-}
-
-.container {
-  flex: 1;
-  margin: 1em;
 }
 
 .spacer {

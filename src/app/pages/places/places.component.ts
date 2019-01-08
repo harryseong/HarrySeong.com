@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {animate, style, transition, trigger} from '@angular/animations';
 import {FirestoreService} from '../../shared/services/firebase/firestore/firestore.service';
 import * as mapboxgl from 'mapbox-gl';
 import {environment} from '../../../environments/environment';
+import {Subscription} from 'rxjs';
 
 @Component({
   selector: 'app-places',
@@ -41,23 +42,28 @@ import {environment} from '../../../environments/environment';
     ])
   ]
 })
-export class PlacesComponent implements OnInit {
+export class PlacesComponent implements OnInit, OnDestroy {
   map: mapboxgl.Map;
   style = 'mapbox://styles/mapbox/dark-v9';
   currentPlaceOrder = 1;
   currentPlace: any;
   places = [];
+  placesSubscription: Subscription;
 
   constructor(private firestoreService: FirestoreService) {
     mapboxgl.accessToken = environment.mapbox.accessToken;
   }
 
   ngOnInit() {
-    this.firestoreService.places.valueChanges().subscribe(places => {
+    this. placesSubscription = this.firestoreService.places.valueChanges().subscribe(places => {
       this.places = places.sort((a, b) => a.order - b.order);
       this.currentPlace = this.places[0];
       this.initializeMap();
     });
+  }
+
+  ngOnDestroy() {
+    this.placesSubscription.unsubscribe();
   }
 
   private initializeMap() {

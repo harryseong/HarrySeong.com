@@ -56,14 +56,7 @@ export class PlacesComponent implements OnInit {
     this.firestoreService.places.valueChanges().subscribe(places => {
       this.places = places.sort((a, b) => a.order - b.order);
       this.currentPlace = this.places[0];
-      setTimeout(() => {
-        this.initializeMap();
-        this.map.on('load', () => {
-          if (this.map.loaded()) {
-            this.fly(this.places[0].coords);
-          }
-        });
-      }, 1000);
+      this.initializeMap();
     });
   }
 
@@ -72,10 +65,17 @@ export class PlacesComponent implements OnInit {
       container: 'map',
       style: this.style,
       zoom: 5,
-      center: ['-122.41', '37.75'],
+      center: [-122.41, 37.75],
       interactive: false
     });
     this.places.forEach(place => new mapboxgl.Marker().setLngLat(place.coords).addTo(this.map));
+    this.map.on('load', () => {
+        if (this.map.loaded()) {
+          setTimeout(() => {
+            this.fly(this.places[0].coords);
+          }, 500);
+        }
+    });
   }
 
   sliderChange() {

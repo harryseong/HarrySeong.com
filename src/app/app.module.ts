@@ -18,7 +18,7 @@ import {AngularFireModule} from '@angular/fire';
 import {AngularFirestoreModule} from '@angular/fire/firestore';
 import {AngularFireAuthModule} from '@angular/fire/auth';
 import {environment} from '../environments/environment';
-import {TypingAnimationDirective} from 'angular-typing-animation';
+import {TypingAnimationModule} from 'angular-typing-animation';
 
 @NgModule({
   declarations: [
@@ -31,7 +31,6 @@ import {TypingAnimationDirective} from 'angular-typing-animation';
     PhotosComponent,
     AboutComponent,
     PageNotFoundComponent,
-    TypingAnimationDirective,
   ],
   imports: [
     BrowserAnimationsModule,
@@ -42,6 +41,7 @@ import {TypingAnimationDirective} from 'angular-typing-animation';
     AngularFireModule.initializeApp(environment.firebase, environment.firebase.projectId),
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features,
+    TypingAnimationModule,
   ],
   exports: [
     MaterialModule

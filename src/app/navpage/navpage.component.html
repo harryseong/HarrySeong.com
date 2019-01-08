@@ -1,25 +1,36 @@
 <div class="content" fxFlex="100" fxLayout="column" fxLayoutAlign="center center">
-  <div fxLayout.gt-xs="row" fxLayout.lt-sm="column" fxLayoutGap.gt-xs="4em" fxLayoutGap.lt-sm="2em" [@transitionAnimations]>
+  <div fxLayout="row" fxLayoutGap="4em" fxLayoutGap.lt-sm="3em" [@transitionAnimations]>
 
-    <div fxLayout="column" fxLayoutGap="0.75em" fxLayoutAlign="center center">
-      <button routerLink="/places" routerLinkActive="active" class="nav-icon-btn mat-elevation-z0">
-        <span><i class="fas fa-globe-americas fa-3x fa-fw nav-icon"></i></span>
-      </button>
-      <div class="nav-text">places</div>
+    <div fxLayout.gt-xs="row" fxLayout.lt-sm="column" fxLayoutGap.gt-xs="4em" fxLayoutGap.lt-sm="2em" [@transitionAnimations]>
+      <div fxLayout="column" fxLayoutGap="0.75em" fxLayoutAlign="center center">
+        <button routerLink="/places" routerLinkActive="active" class="nav-icon-btn mat-elevation-z0">
+          <span><i class="fas fa-globe-americas fa-3x fa-fw nav-icon"></i></span>
+        </button>
+        <div class="nav-text">places</div>
+      </div>
+
+      <div fxLayout="column" fxLayoutGap="0.75em" fxLayoutAlign="center center">
+        <button routerLink="/photos" routerLinkActive="active" class="nav-icon-btn mat-elevation-z0">
+          <span><i class="fas fa-camera fa-3x fa-fw nav-icon"></i></span>
+        </button>
+        <div class="nav-text">photos</div>
+      </div>
     </div>
 
-    <div fxLayout="column" fxLayoutGap="0.75em" fxLayoutAlign="center center">
-      <button routerLink="/photos" routerLinkActive="active" class="nav-icon-btn mat-elevation-z0">
-        <span><i class="fas fa-camera-retro fa-3x fa-fw nav-icon"></i></span>
-      </button>
-      <div class="nav-text">photos</div>
-    </div>
+    <div fxLayout.gt-xs="row" fxLayout.lt-sm="column" fxLayoutGap.gt-xs="4em" fxLayoutGap.lt-sm="2em" [@transitionAnimations]>
+      <div fxLayout="column" fxLayoutGap="0.75em" fxLayoutAlign="center center">
+        <button routerLink="/music" routerLinkActive="active" class="nav-icon-btn mat-elevation-z0">
+          <span><i class="fas fa-headphones-alt fa-3x fa-fw nav-icon"></i></span>
+        </button>
+        <div class="nav-text">music</div>
+      </div>
 
-    <div fxLayout="column" fxLayoutGap="0.75em" fxLayoutAlign="center center">
-      <button routerLink="/about" routerLinkActive="active" class="nav-icon-btn mat-elevation-z0">
-        <span><i class="fas fa-info fa-3x fa-fw nav-icon"></i></span>
-      </button>
-      <div class="nav-text">about</div>
+      <div fxLayout="column" fxLayoutGap="0.75em" fxLayoutAlign="center center">
+        <button routerLink="/about" routerLinkActive="active" class="nav-icon-btn mat-elevation-z0">
+          <span><i class="fas fa-info fa-3x fa-fw nav-icon"></i></span>
+        </button>
+        <div class="nav-text">about</div>
+      </div>
     </div>
 
   </div>

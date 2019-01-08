@@ -10,7 +10,6 @@ import {
   MatButtonModule,
   MatCardModule,
   MatCheckboxModule,
-  MatIconModule,
   MatListModule,
   MatMenuModule,
   MatToolbarModule,
@@ -36,7 +35,8 @@ import {
   MatSidenavModule,
   MatChipsModule,
   MatTabsModule,
-  MatStepperModule
+  MatStepperModule,
+  MatIconModule
 } from '@angular/material';
 
 const materialModules = [
@@ -52,7 +52,6 @@ const materialModules = [
   MatMenuModule,
   MatToolbarModule,
   MatButtonModule,
-  MatIconModule,
   MatListModule,
   MatGridListModule,
   MatCommonModule,
@@ -76,7 +75,8 @@ const materialModules = [
   MatSidenavModule,
   MatChipsModule,
   MatTabsModule,
-  MatStepperModule
+  MatStepperModule,
+  MatIconModule
 ];
 
 @NgModule({

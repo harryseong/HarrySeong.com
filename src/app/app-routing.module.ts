@@ -7,11 +7,13 @@ import {NavpageComponent} from './navpage/navpage.component';
 import {PhotosComponent} from './pages/photos/photos.component';
 import {AboutComponent} from './pages/about/about.component';
 import {PageNotFoundComponent} from './pages/page-not-found/page-not-found.component';
+import {MusicComponent} from './pages/music/music.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'nav', component: NavpageComponent},
   {path: 'places', component: PlacesComponent},
+  {path: 'music', component: MusicComponent},
   {path: 'photos', component: PhotosComponent},
   {path: 'about', component: AboutComponent},
   {path: '**', component: PageNotFoundComponent}

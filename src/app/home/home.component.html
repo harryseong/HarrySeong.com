@@ -38,9 +38,9 @@
           </button>
 
           <button mat-stroked-button (click)="toggleVideo()" class="btn">
-            <span *ngIf="vidStatus=='playing'"><i class="fas fa-pause"></i>&nbsp;PAUSE</span>
-            <span *ngIf="vidStatus=='paused'"><i class="fas fa-play"></i>&nbsp;PLAY</span>
-            <span *ngIf="vidStatus=='stopped'"><i class="fas fa-redo-alt"></i>&nbsp;REPLAY</span>
+            <span *ngIf="vidStatus=='playing'"><i class="fas fa-pause fa-fw"></i>&nbsp;PAUSE</span>
+            <span *ngIf="vidStatus=='paused'"><i class="fas fa-play fa-fw"></i>&nbsp;PLAY</span>
+            <span *ngIf="vidStatus=='stopped'"><i class="fas fa-redo-alt fa-fw"></i>&nbsp;REPLAY</span>
           </button>
         </div>
       </div>

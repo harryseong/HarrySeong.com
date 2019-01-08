@@ -19,6 +19,7 @@ import {AngularFirestoreModule} from '@angular/fire/firestore';
 import {AngularFireAuthModule} from '@angular/fire/auth';
 import {environment} from '../environments/environment';
 import {TypingAnimationModule} from 'angular-typing-animation';
+import { MusicComponent } from './pages/music/music.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import {TypingAnimationModule} from 'angular-typing-animation';
     PhotosComponent,
     AboutComponent,
     PageNotFoundComponent,
+    MusicComponent,
   ],
   imports: [
     BrowserAnimationsModule,

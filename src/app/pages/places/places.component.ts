@@ -24,19 +24,19 @@ import {environment} from '../../../environments/environment';
     trigger('mapAnimations', [
       transition(':enter', [
         style({ opacity: 0 }),
-        animate('1.5s 1s ease', style({ opacity: 1 })),
+        animate('1.5s 2s ease', style({ opacity: 1 })),
       ]),
     ]),
     trigger('btnAnimations', [
       transition(':enter', [
         style({ opacity: 0, transform: 'translateY(2em)'}),
-        animate('1.5s 1.5s ease', style({ opacity: 1, transform: 'translateY(0)' })),
+        animate('1.5s 2.5s ease', style({ opacity: 1, transform: 'translateY(0)' })),
       ]),
     ]),
     trigger('contentAnimations', [
       transition(':enter', [
         style({ opacity: 0, transform: 'translateY(2em)'}),
-        animate('1.5s 2s ease', style({ opacity: 1, transform: 'translateY(0)' })),
+        animate('1.5s 3s ease', style({ opacity: 1, transform: 'translateY(0)' })),
       ]),
     ])
   ]
@@ -56,12 +56,14 @@ export class PlacesComponent implements OnInit {
     this.firestoreService.places.valueChanges().subscribe(places => {
       this.places = places.sort((a, b) => a.order - b.order);
       this.currentPlace = this.places[0];
-      this.initializeMap();
-      this.map.on('load', () => {
-        if (this.map.loaded()) {
-          this.fly(this.places[0].coords);
-        }
-      });
+      setTimeout(() => {
+        this.initializeMap();
+        this.map.on('load', () => {
+          if (this.map.loaded()) {
+            this.fly(this.places[0].coords);
+          }
+        });
+      }, 1000);
     });
   }
 

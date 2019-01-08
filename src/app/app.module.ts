@@ -13,11 +13,12 @@ import { FooterComponent } from './footer/footer.component';
 import { NavpageComponent } from './navpage/navpage.component';
 import { PhotosComponent } from './pages/photos/photos.component';
 import { AboutComponent } from './pages/about/about.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import {AngularFireModule} from '@angular/fire';
 import {AngularFirestoreModule} from '@angular/fire/firestore';
 import {AngularFireAuthModule} from '@angular/fire/auth';
 import {environment} from '../environments/environment';
+import {TypingAnimationDirective} from 'angular-typing-animation';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import {environment} from '../environments/environment';
     NavpageComponent,
     PhotosComponent,
     AboutComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    TypingAnimationDirective,
   ],
   imports: [
     BrowserAnimationsModule,

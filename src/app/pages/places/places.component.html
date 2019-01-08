@@ -2,7 +2,11 @@
   <div fxLayout="row">
     <div [@headerAnimations]>
       <div class="page-header">places</div>
-      <div class="page-subheader">where we've been, where we are...</div>
+      <div class="page-subheader">
+        <span typingAnimation [typeSpeed]="30" [startDelay]="500" [hideCursorOnComplete]="true">
+          where we've been, where we are...
+        </span>
+      </div>
     </div>
     <span class="spacer"></span>
     <div fxLayout="column" fxLayoutGap="0.2em" fxLayoutAlign="center center" [@backAnimations]>

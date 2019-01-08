@@ -1,9 +1,12 @@
 <div class="content" fxLayout="column" fxLayoutGap="2em" fxLayoutGap.xs="1em">
-
   <div fxLayout="row">
     <div [@headerAnimations]>
       <div class="page-header">photos</div>
-      <div class="page-subheader">moments captured in rectangular forms...</div>
+      <div class="page-subheader">
+        <span typingAnimation [typeSpeed]="30" [startDelay]="500" [hideCursorOnComplete]="true">
+          moments captured in rectangular forms...
+        </span>
+      </div>
     </div>
     <span class="spacer"></span>
     <div fxLayout="column" fxLayoutGap="0.2em" fxLayoutAlign="center center" [@backAnimations]>
@@ -20,5 +23,4 @@
       <div class="in-progress-text">work in progress...</div>
     </div>
   </div>
-
 </div>

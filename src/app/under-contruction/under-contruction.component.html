@@ -1,0 +1,27 @@
+<div fxLayout="row" fxLayoutAlign="center center">
+  <div fxLayout="column" fxLayoutGap="1em" fxFlex="35">
+
+    <form [formGroup]="greetingForm" (keydown.enter)="$event.preventDefault()" fxLayout="column" fxLayoutGap="0.2em"
+          [@greetingFormAnimations] *ngIf="!greetingMsg">
+      <mat-form-field>
+        <mat-label>
+            <span typingAnimation [typeSpeed]="35" [startDelay]="0" [hideCursorOnComplete]="true" class="greetingTest">
+              Hi there! What's your name?
+            </span>
+        </mat-label>
+        <input type="text" matInput formControlName="name" (keyup.enter)=$event.target.blur();pleaseGreetMe();false>
+      </mat-form-field>
+      <button mat-stroked-button type="button" (click)="pleaseGreetMe()" [disabled]="!greetingForm.valid">Enter</button>
+
+      <div [@greetingMessageAnimations] *ngIf="artist!=null && song!=null">
+        Random fact: {{artist}} sang the song, "{{song}}".
+      </div>
+    </form>
+
+    <div [@greetingMessageAnimations] *ngIf="greetingMsg">
+      <span typingAnimation [typeSpeed]="20" [startDelay]="0" [hideCursorOnComplete]="false" class="greetingTest">
+        {{greetingMsg}} Sorry, this part of the website is still under construction. Please come back later!
+      </span>
+    </div>
+  </div>
+</div>

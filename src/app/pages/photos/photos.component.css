@@ -28,3 +28,7 @@ in-progress-text {
   border: solid 0.1em rgba(255, 255, 255, 1);
   transition: 1s;
 }
+
+.greeting-test {
+  font-size: 1.2em;
+}

@@ -20,6 +20,9 @@ import {AngularFireAuthModule} from '@angular/fire/auth';
 import {environment} from '../environments/environment';
 import {TypingAnimationModule} from 'angular-typing-animation';
 import { MusicComponent } from './pages/music/music.component';
+import {HttpClientModule} from '@angular/common/http';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { UnderContructionComponent } from './under-contruction/under-contruction.component';
 
 @NgModule({
   declarations: [
@@ -33,16 +36,20 @@ import { MusicComponent } from './pages/music/music.component';
     AboutComponent,
     PageNotFoundComponent,
     MusicComponent,
+    UnderContructionComponent,
   ],
   imports: [
-    BrowserAnimationsModule,
-    BrowserModule,
-    FlexLayoutModule,
-    MaterialModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase, environment.firebase.projectId),
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features,
+    BrowserAnimationsModule,
+    BrowserModule,
+    FlexLayoutModule,
+    FormsModule,
+    MaterialModule,
+    ReactiveFormsModule,
+    HttpClientModule,
     TypingAnimationModule,
   ],
   exports: [

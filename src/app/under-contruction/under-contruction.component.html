@@ -1,8 +1,8 @@
 <div fxLayout="row" fxLayoutAlign="center center">
-  <div fxLayout="column" fxLayoutGap="1em" fxFlex="35">
+  <div fxLayout="column" fxLayoutGap="1em" fxFlex="35" fxFlex.sm="60" fxFlex.xs="100">
 
-    <form [formGroup]="greetingForm" (keydown.enter)="$event.preventDefault()" fxLayout="column" fxLayoutGap="0.2em"
-          [@greetingFormAnimations] *ngIf="!greetingMsg">
+    <form [formGroup]="greetingForm" (keydown.enter)="$event.preventDefault()" fxLayout="column" fxLayoutGap="0.5em"
+          [@greetingFormAnimations] *ngIf="!greetingMsg" fxFlexOffset.gt-sm="5em" fxFlexOffset.xs="4em">
       <mat-form-field>
         <mat-label>
             <span typingAnimation [typeSpeed]="35" [startDelay]="0" [hideCursorOnComplete]="true" class="greetingTest">
@@ -11,10 +11,11 @@
         </mat-label>
         <input type="text" matInput formControlName="name" (keyup.enter)=$event.target.blur();pleaseGreetMe();false>
       </mat-form-field>
+
       <button mat-stroked-button type="button" (click)="pleaseGreetMe()" [disabled]="!greetingForm.valid">Enter</button>
 
       <div [@greetingMessageAnimations] *ngIf="artist!=null && song!=null">
-        Random fact: {{artist}} sang the song, "{{song}}".
+        Random fact: {{artist}} sang "{{song}}".
       </div>
     </form>
 
@@ -23,5 +24,6 @@
         {{greetingMsg}} Sorry, this part of the website is still under construction. Please come back later!
       </span>
     </div>
+
   </div>
 </div>

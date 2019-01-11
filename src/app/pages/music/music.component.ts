@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {animate, style, transition, trigger} from '@angular/animations';
+import {SpotifyApiService} from '../../shared/services/api/spotify/spotify-api.service';
+import {interval, Subscription, timer} from 'rxjs';
 
 @Component({
   selector: 'app-music',
@@ -20,23 +22,33 @@ import {animate, style, transition, trigger} from '@angular/animations';
     ]),
     trigger('contentAnimations', [
       transition(':enter', [
-        style({ opacity: 0, transform: 'translateY(0.5em)'}),
-        animate('1.5s .5s ease', style({ opacity: 1, transform: 'translateY(0)' })),
+        style({ opacity: 0, transform: 'translateY(0)'}),
+        animate('0.5s 0.75s ease', style({ opacity: 1, transform: 'translateY(0)' })),
       ]),
     ]),
-    trigger('progressAnimations', [
-      transition(':enter', [
-        style({ opacity: 0}),
-        animate('2s 1s ease', style({ opacity: 1, transform: 'rotateY(360deg)' })),
-      ]),
-    ])
   ]
 })
-export class MusicComponent implements OnInit {
+export class MusicComponent implements OnInit, OnDestroy {
+  currentlyPlayingRsp: any;
+  currentlyPlaying$: Subscription;
 
-  constructor() { }
+  constructor(private spotifyApiService: SpotifyApiService) { }
 
   ngOnInit() {
+    this.spotifyApiService.authorize();
+
+    this.currentlyPlaying$ = timer(0, 5000).subscribe(() => {
+      this.spotifyApiService.getCurrentlyPlayingTrack().subscribe(
+        rsp => {
+          this.currentlyPlayingRsp = rsp;
+          console.log('Refreshed currently playing track.');
+        }
+      );
+    });
   }
 
+  ngOnDestroy(): void {
+    this.currentlyPlaying$.unsubscribe();
+    console.log('Unsubscribed from "currently playing" subscription.');
+  }
 }

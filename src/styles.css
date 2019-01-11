@@ -74,3 +74,18 @@ footer {
   color: rgba(255, 255, 255, 0.5);
   transition: 0.3s;
 }
+
+.white-text {
+  color: rgba(255, 255, 255, 1);
+}
+
+.gray-text {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+}
+.animate-flicker {
+  animation: fadeIn 3s infinite alternate;
+}

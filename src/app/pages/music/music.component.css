@@ -11,20 +11,27 @@
   font-size: 0.75em;
 }
 
-.in-progress {
-  border: solid 0.1em rgba(255, 255, 255, 0.7);
-  border-radius: 0.2em;
-  height: 10em;
-  width: 10em;
-  transition: 1s;
-}
-
-in-progress-text {
-  font-size: 0.6em;
-}
-
-.in-progress:hover {
+.music-header {
   color: rgba(255, 255, 255, 1);
-  border: solid 0.1em rgba(255, 255, 255, 1);
-  transition: 1s;
+  font-size: 1.2em;
+  font-weight: 300;
+  text-transform: lowercase;
 }
+
+.music-text {
+  font-size: 0.75em;
+  font-weight: 300;
+  text-transform: lowercase;
+}
+
+.song-name {
+  color: rgba(255, 255, 255, 1);
+  font-size: 1.2em;
+  font-weight: 300;
+  text-transform: lowercase;
+}
+
+.album-cover {
+  height: 20em;
+}
+

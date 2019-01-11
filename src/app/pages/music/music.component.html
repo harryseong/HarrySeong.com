@@ -18,8 +18,7 @@
     </div>
   </div>
 
-  <div fxLayout=row  fxLayoutAlign="center center">
-    <div fxLayout="column" fxLayoutAlign="center center" fxFlex="50" fxFlex.xs="100" *ngIf="currentlyPlayingRsp">
+  <div fxLayout=row fxLayoutAlign="center center" *ngIf="currentlyPlayingRsp">
 
       <div fxLayout="column" fxLayoutGap="1em" *ngIf="currentlyPlayingRsp.is_playing==true" [@contentAnimations]>
         <div fxFlexOffset="1em">
@@ -39,20 +38,19 @@
         </div>
       </div>
 
-      <div fxLayout="column" fxLayoutGap="1em" fxLayoutAlign="center center"
-           *ngIf="currentlyPlayingRsp.is_playing==false" [@contentAnimations]>
-        <div fxFlexOffset="2em">
+      <div fxLayout="column" fxLayoutGap="1em" fxFlex="50" fxFlex.xs="100" *ngIf="currentlyPlayingRsp.is_playing==false" [@contentAnimations]>
+        <div fxFlexOffset="2em" fxLayout="column">
           <div class="music-header">
-            <i class="far fa-meh"></i> How boring
+            How boring <i class="far fa-meh"></i>
           </div>
-          <div class="music-text">
-            Harry is not listening to anything right now.
-            Check back later, maybe he'll be jamming to some tunes then.
+          <div>
+            <span typingAnimation [typeSpeed]="20" [startDelay]="0" [hideCursorOnComplete]="false" class="greetingTest">
+              Harry is not listening to anything right now. Check back later, maybe he'll be jamming to some tunes then.
+            </span>
           </div>
         </div>
       </div>
 
-    </div>
   </div>
 
 </div>

@@ -1,0 +1,32 @@
+<div fxLayout="row" fxLayoutAlign="center center" fxFill>
+  <div fxLayout="column" fxFlex="50" fxFlex.sm="60" fxFlex.xs="100" fxLayOutAlign="center center">
+    <div fxLayout="row" fxLayoutAlign="center center">
+      <img src="assets/images/liuyi_dino_black_bg.png" class="liuyi-dino no-select" (click)="dinoJump()" [@dinoAnimations]="dinoState">
+    </div>
+
+    <div fxLayout="column" fxLayoutGap="0.5em" [@contentAnimations]>
+
+      <div fxLayout="row" fxLayoutAlign="center center" class="dino-talk">
+          <span typingAnimation [typeSpeed]="20" [startDelay]="0" [hideCursorOnComplete]="true" *ngIf="dinoTalk">
+            {{dinoTalk}}
+          </span>
+      </div>
+
+      <div>
+        <div>
+          <mat-progress-bar mode="determinate" [color]="color" [value]="dinoStamina"></mat-progress-bar>
+        </div>
+        <div fxLayout="row">
+          <div>HP</div>
+          <span class="spacer"></span>
+          <div>{{dinoStamina}}</div>
+        </div>
+      </div>
+
+      <div fxLayoutAlign="center center">
+        <button mat-stroked-button *ngIf="dinoStamina==0" (click)="revive()">HEY, WAKE UP!</button>
+        <button mat-stroked-button *ngIf="dinoState=='revived'" (click)="areYouOkay()">Are you ok?</button>
+      </div>
+    </div>
+  </div>
+</div>

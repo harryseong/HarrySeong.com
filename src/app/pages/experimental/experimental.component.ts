@@ -11,7 +11,7 @@ import {animate, style, transition, trigger} from '@angular/animations';
         style({ opacity: 0, transform: 'translateY(0)'}),
         animate('0.5s 0.75s ease', style({ opacity: 1, transform: 'translateY(0)' })),
       ]),
-    ]),
+    ])
   ]
 })
 export class ExperimentalComponent implements OnInit {
@@ -20,7 +20,5 @@ export class ExperimentalComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

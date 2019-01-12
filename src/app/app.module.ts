@@ -26,6 +26,7 @@ import { UnderContructionComponent } from './under-contruction/under-contruction
 import { ExperimentalComponent } from './pages/experimental/experimental.component';
 import { NavpageSecretComponent } from './pages/navpage-secret/navpage-secret.component';
 import { PageHeaderComponent } from './pages/page-header/page-header.component';
+import { DinoComponent } from './pages/experimental/dino/dino.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { PageHeaderComponent } from './pages/page-header/page-header.component';
     ExperimentalComponent,
     NavpageSecretComponent,
     PageHeaderComponent,
+    DinoComponent,
   ],
   imports: [
     AppRoutingModule,

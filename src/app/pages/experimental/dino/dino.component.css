@@ -1,0 +1,33 @@
+.dino-stamina {
+  font-size: 1.2em;
+  font-weight: 400;
+}
+
+.dino-talk {
+  font-size: 0.9em;
+  font-weight: 300;
+  height: 3em;
+}
+
+.liuyi-dino {
+  width: 10em;
+  margin: 1em;
+}
+
+.liuyi-dino:hover {
+  cursor: pointer;
+}
+
+mat-progress-bar {
+  height: 0.5em;
+}
+
+.no-select {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}

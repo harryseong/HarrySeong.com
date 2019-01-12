@@ -6,18 +6,6 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
   templateUrl: './photos.component.html',
   styleUrls: ['./photos.component.css'],
   animations: [
-    trigger('headerAnimations', [
-      transition(':enter', [
-        style({ opacity: 0, transform: 'translateY(-0.5em)'}),
-        animate('2s ease', style({ opacity: 1, transform: 'translateY(0)' })),
-      ]),
-    ]),
-    trigger('backAnimations', [
-      transition(':enter', [
-        style({ transform: 'translateX(4em)'}),
-        animate('0.75s ease', style({ transform: 'translateX(0)' })),
-      ]),
-    ]),
     trigger('contentAnimations', [
       transition(':enter', [
         style({ opacity: 0, transform: 'translateY(0.5em)'}),
@@ -27,6 +15,8 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
   ]
 })
 export class PhotosComponent implements OnInit {
+  pageHeader = 'photos';
+  pageSubheader = 'moments captured in rectangular forms...';
 
   constructor() { }
 

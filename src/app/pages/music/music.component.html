@@ -1,22 +1,6 @@
 <div class="content" fxLayout="column" fxLayoutGap="2em" fxLayoutGap.xs="1em">
 
-  <div fxLayout="row">
-    <div [@headerAnimations]>
-      <div class="page-header">music</div>
-      <div class="page-subheader">
-        <span typingAnimation [typeSpeed]="25" [startDelay]="500" [hideCursorOnComplete]="true">
-          i hear vibrations in the air...
-        </span>
-      </div>
-    </div>
-    <span class="spacer"></span>
-    <div fxLayout="column" fxLayoutGap="0.2em" fxLayoutAlign="center center" [@backAnimations]>
-      <button routerLink="/nav" routerLinkActive="active" class="nav-icon-btn mat-elevation-z0">
-        <div fxLayout="row" fxLayoutAlign="center center"><i class="fas fa-arrow-left fa-2x fa-fw"></i></div>
-      </button>
-      <div class="nav-text">back</div>
-    </div>
-  </div>
+  <app-page-header [pageHeader]="pageHeader" [pageSubheader]="pageSubheader"></app-page-header>
 
   <div fxLayout=row fxLayoutAlign="center center" *ngIf="currentlyPlayingRsp">
 
@@ -38,14 +22,14 @@
         </div>
       </div>
 
-      <div fxLayout="column" fxLayoutGap="1em" fxFlex="50" fxFlex.xs="100" *ngIf="currentlyPlayingRsp.is_playing==false" [@contentAnimations]>
+      <div fxLayout="column" fxLayoutGap="1em" fxFlex="50" fxFlex.xs="100" *ngIf="currentlyPlayingRsp.is_playing==false || currentlyPlayingRsp==null" [@contentAnimations]>
         <div fxFlexOffset="2em" fxLayout="column">
           <div class="music-header">
             How boring <i class="far fa-meh"></i>
           </div>
           <div>
             <span typingAnimation [typeSpeed]="20" [startDelay]="0" [hideCursorOnComplete]="false" class="greetingTest">
-              Harry is not listening to anything right now. Check back later, maybe he'll be jamming to some tunes then.
+              Harry is not listening to anything right now. Check back later, maybe he'll be jamming to some tunes then!
             </span>
           </div>
         </div>

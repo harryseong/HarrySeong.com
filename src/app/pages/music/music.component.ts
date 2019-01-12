@@ -8,18 +8,6 @@ import {interval, Subscription, timer} from 'rxjs';
   templateUrl: './music.component.html',
   styleUrls: ['./music.component.css'],
   animations: [
-    trigger('headerAnimations', [
-      transition(':enter', [
-        style({ opacity: 0, transform: 'translateY(-0.5em)'}),
-        animate('2s ease', style({ opacity: 1, transform: 'translateY(0)' })),
-      ]),
-    ]),
-    trigger('backAnimations', [
-      transition(':enter', [
-        style({ transform: 'translateX(4em)'}),
-        animate('0.75s ease', style({ transform: 'translateX(0)' })),
-      ]),
-    ]),
     trigger('contentAnimations', [
       transition(':enter', [
         style({ opacity: 0, transform: 'translateY(0)'}),
@@ -29,19 +17,26 @@ import {interval, Subscription, timer} from 'rxjs';
   ]
 })
 export class MusicComponent implements OnInit, OnDestroy {
+  pageHeader = 'music';
+  pageSubheader = 'i hear vibrations in the air...';
   currentlyPlayingRsp: any;
   currentlyPlaying$: Subscription;
 
   constructor(private spotifyApiService: SpotifyApiService) { }
 
   ngOnInit() {
-    this.spotifyApiService.authorize();
+    // this.spotifyApiService.authorize().subscribe(
+    //   rsp => alert(JSON.stringify(rsp))
+    // );
 
     this.currentlyPlaying$ = timer(0, 5000).subscribe(() => {
       this.spotifyApiService.getCurrentlyPlayingTrack().subscribe(
         rsp => {
           this.currentlyPlayingRsp = rsp;
           console.log('Refreshed currently playing track.');
+        },
+        error => {
+          this.currentlyPlayingRsp = null;
         }
       );
     });

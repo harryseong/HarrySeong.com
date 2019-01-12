@@ -12,7 +12,7 @@ export class SpotifyApiService {
 
   authorize(): Observable<any> {
     const headers = new HttpHeaders()
-      .set('client_id', '')
+      .set('client_id', environment.spotify.clientId)
       .set('response_type', 'code')
       .set('redirect_uri', environment.spotify.redirectUri)
       .set('state', environment.spotify.oAuthState)
@@ -25,7 +25,7 @@ export class SpotifyApiService {
     const headers = new HttpHeaders()
       .set('Accept', 'application/json')
       .set('Content-Type', 'application/json')
-      .set('Authorization', 'Bearer ' + environment.spotify.oAuthToken)
+      .set('Authorization', 'Bearer ' + environment.spotify.oAuthToken);
     return this.http.get<any>('https://api.spotify.com/v1/me/player/currently-playing', {headers: headers});
   }
 }

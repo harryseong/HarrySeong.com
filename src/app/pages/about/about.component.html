@@ -1,21 +1,6 @@
 <div class="content" fxLayout="column" fxLayoutGap="1em">
-  <div fxLayout="row">
-    <div [@headerAnimations]>
-      <div class="page-header">about</div>
-      <div class="page-subheader">
-        <span typingAnimation [typeSpeed]="25" [startDelay]="500" [hideCursorOnComplete]="true">
-          who, what, when, where, how...
-        </span>
-      </div>
-    </div>
-    <span class="spacer"></span>
-    <div fxLayout="column" fxLayoutGap="0.2em" fxLayoutAlign="center center" [@backAnimations]>
-      <button routerLink="/nav" routerLinkActive="active" class="nav-icon-btn mat-elevation-z0">
-        <div fxLayout="row" fxLayoutAlign="center center"><i class="fas fa-arrow-left fa-2x fa-fw"></i></div>
-      </button>
-      <div class="nav-text">back</div>
-    </div>
-  </div>
+
+  <app-page-header [pageHeader]="pageHeader" [pageSubheader]="pageSubheader"></app-page-header>
 
   <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap.lt-md="1em" fxFill fxLayoutAlign="center center">
 

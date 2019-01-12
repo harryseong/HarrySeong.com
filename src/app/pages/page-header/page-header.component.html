@@ -1,0 +1,17 @@
+<div fxLayout="row">
+  <div [@headerAnimations]>
+    <div class="page-header">{{pageHeader}}</div>
+    <div class="page-subheader">
+        <span typingAnimation [typeSpeed]="25" [startDelay]="500" [hideCursorOnComplete]="true">
+          {{pageSubheader}}
+        </span>
+    </div>
+  </div>
+  <span class="spacer"></span>
+  <div fxLayout="column" fxLayoutGap="0.2em" fxLayoutAlign="center center" [@backAnimations]>
+    <button routerLink="/nav" routerLinkActive="active" class="nav-icon-btn mat-elevation-z0">
+      <div fxLayout="row" fxLayoutAlign="center center"><i class="fas fa-arrow-left fa-2x fa-fw"></i></div>
+    </button>
+    <div class="nav-text">back</div>
+  </div>
+</div>

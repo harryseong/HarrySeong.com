@@ -6,18 +6,6 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.css'],
   animations: [
-    trigger('headerAnimations', [
-      transition(':enter', [
-        style({ opacity: 0, transform: 'translateY(-0.5em)'}),
-        animate('2s ease', style({ opacity: 1, transform: 'translateY(0)' })),
-      ]),
-    ]),
-    trigger('backAnimations', [
-      transition(':enter', [
-        style({ transform: 'translateX(4em)'}),
-        animate('0.75s ease', style({ transform: 'translateX(0)' })),
-      ]),
-    ]),
     trigger('contentAnimations', [
       transition(':enter', [
         style({ opacity: 0, transform: 'translateY(0.5em)'}),
@@ -51,6 +39,8 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
   ]
 })
 export class AboutComponent implements OnInit {
+  pageHeader = 'about';
+  pageSubheader = 'who, what, when, where, how...';
   currentYear = new Date().getFullYear();
 
   constructor() { }

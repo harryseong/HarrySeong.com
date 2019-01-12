@@ -10,7 +10,7 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 import { AppRoutingModule } from './app-routing.module';
 import { PlacesComponent } from './pages/places/places.component';
 import { FooterComponent } from './footer/footer.component';
-import { NavpageComponent } from './navpage/navpage.component';
+import { NavpageComponent } from './pages/navpage/navpage.component';
 import { PhotosComponent } from './pages/photos/photos.component';
 import { AboutComponent } from './pages/about/about.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
@@ -23,6 +23,9 @@ import { MusicComponent } from './pages/music/music.component';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { UnderContructionComponent } from './under-contruction/under-contruction.component';
+import { ExperimentalComponent } from './pages/experimental/experimental.component';
+import { NavpageSecretComponent } from './pages/navpage-secret/navpage-secret.component';
+import { PageHeaderComponent } from './pages/page-header/page-header.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +40,9 @@ import { UnderContructionComponent } from './under-contruction/under-contruction
     PageNotFoundComponent,
     MusicComponent,
     UnderContructionComponent,
+    ExperimentalComponent,
+    NavpageSecretComponent,
+    PageHeaderComponent,
   ],
   imports: [
     AppRoutingModule,

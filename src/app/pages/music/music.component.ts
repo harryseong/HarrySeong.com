@@ -25,12 +25,8 @@ export class MusicComponent implements OnInit, OnDestroy {
   constructor(private spotifyApiService: SpotifyApiService) { }
 
   ngOnInit() {
-    // this.spotifyApiService.authorize().subscribe(
-    //   rsp => alert(JSON.stringify(rsp))
-    // );
-
     this.currentlyPlaying$ = timer(0, 5000).subscribe(() => {
-      this.spotifyApiService.getCurrentlyPlayingTrack().subscribe(
+      this.spotifyApiService.getCurrentlyPlaying().subscribe(
         rsp => {
           this.currentlyPlayingRsp = rsp;
           console.log('Refreshed currently playing track.');

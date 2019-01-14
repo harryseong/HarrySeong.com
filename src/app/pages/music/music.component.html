@@ -7,8 +7,8 @@
       <div fxLayout="column" fxLayoutGap="1em" *ngIf="currentlyPlayingRsp.is_playing==true" [@contentAnimations]>
         <div fxFlexOffset="1em">
           <img [src]="currentlyPlayingRsp.item.album.images[0].url" class="album-cover">
-          <div class="song-name">
-            {{currentlyPlayingRsp.item.name}}
+          <div>
+            <a [href]="songUri" class="song-name">{{currentlyPlayingRsp.item.name}}</a>
           </div>
           <div class="music-text">
           <span *ngFor="let artist of currentlyPlayingRsp.item.artists; last as isLast">
@@ -18,7 +18,7 @@
         </div>
 
         <div class="music-text animate-flicker">
-          <i class="far fa-play-circle"></i> playing now on harry's spotify
+          <i class="far fa-play-circle"></i> playing now on harry's <i class="fab fa-spotify"></i>
         </div>
       </div>
 

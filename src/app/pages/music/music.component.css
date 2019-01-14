@@ -15,11 +15,25 @@
   text-transform: lowercase;
 }
 
-.song-name {
+.song-name, .song-name:hover {
   color: rgba(255, 255, 255, 1);
   font-size: 1.2em;
   font-weight: 300;
   text-transform: lowercase;
+}
+
+.song-name {
+  text-decoration: underline solid transparent;
+  transition: 0.15s;
+}
+
+.song-name:hover {
+  text-decoration: underline solid Currentcolor;
+  transition: 0.15s;
+}
+
+.fa-spotify {
+  color: #1DB954;
 }
 
 .album-cover {

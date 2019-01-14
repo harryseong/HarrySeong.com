@@ -2,6 +2,7 @@ import {Component, OnDestroy, OnInit} from '@angular/core';
 import {animate, style, transition, trigger} from '@angular/animations';
 import {SpotifyApiService} from '../../shared/services/api/spotify/spotify-api.service';
 import {Subscription, timer} from 'rxjs';
+import {DomSanitizer} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-music',
@@ -21,14 +22,16 @@ export class MusicComponent implements OnInit, OnDestroy {
   pageSubheader = 'i hear vibrations in the air...';
   currentlyPlayingRsp: any;
   currentlyPlaying$: Subscription;
+  songUri: any;
 
-  constructor(private spotifyApiService: SpotifyApiService) { }
+  constructor(private spotifyApiService: SpotifyApiService, private sanitizer: DomSanitizer) { }
 
   ngOnInit() {
     this.currentlyPlaying$ = timer(0, 5000).subscribe(() => {
       this.spotifyApiService.getCurrentlyPlaying().subscribe(
         rsp => {
           this.currentlyPlayingRsp = rsp;
+          this.songUri = this.sanitizer.bypassSecurityTrustResourceUrl(rsp.item.uri);
           console.log('Refreshed currently playing track.');
         },
         error => {

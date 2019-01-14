@@ -11,14 +11,14 @@ export class ApiService {
   constructor(private http: HttpClient) { }
 
   getGreeting(name: string): Observable<any> {
-    return this.http.get<any>(environment.backendApiUrl + 'greeting?name=' + name);
+    return this.http.get<any>(environment.backend.apiUrl + 'greeting?name=' + name);
   }
 
   getArtistById(id: number): Observable<any> {
-    return this.http.get<any>(environment.backendApiUrl + 'artist?id=' + id);
+    return this.http.get<any>(environment.backend.apiUrl + 'artist?id=' + id);
   }
 
   getSongById(id: number): Observable<any> {
-    return this.http.get<any>(environment.backendApiUrl + 'song?id=' + id);
+    return this.http.get<any>(environment.backend.apiUrl + 'song?id=' + id);
   }
 }

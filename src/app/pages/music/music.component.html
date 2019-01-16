@@ -2,9 +2,9 @@
 
   <app-page-header [pageHeader]="pageHeader" [pageSubheader]="pageSubheader"></app-page-header>
 
-  <div fxLayout=row fxLayoutAlign="center center" *ngIf="currentlyPlayingRsp">
+  <div fxLayout=row fxLayoutAlign="center center">
 
-      <div fxLayout="column" fxLayoutGap="2.5em" fxLayoutGap.xs="1em" *ngIf="currentlyPlayingRsp.is_playing==true" [@contentAnimations]>
+      <div fxLayout="column" fxLayoutGap="2.5em" fxLayoutGap.xs="1em" *ngIf="currentlyPlayingRsp!=null && currentlyPlayingRsp.is_playing==true" [@contentAnimations]>
         <div fxFlexOffset="1em">
           <img [src]="currentlyPlayingRsp.item.album.images[0].url" class="album-cover">
           <div class="song-name-div">
@@ -22,7 +22,7 @@
         </div>
       </div>
 
-      <div fxLayout="column" fxLayoutGap="1em" fxFlex="50" fxFlex.xs="100" *ngIf="currentlyPlayingRsp.is_playing==false || currentlyPlayingRsp==null" [@contentAnimations]>
+      <div fxLayout="column" fxLayoutGap="1em" fxFlex="50" fxFlex.xs="100" *ngIf="currentlyPlayingRsp==null || currentlyPlayingRsp.is_playing==false" [@contentAnimations]>
         <div fxFlexOffset="2em" fxLayout="column">
           <div class="music-header">
             How boring <i class="far fa-meh"></i>

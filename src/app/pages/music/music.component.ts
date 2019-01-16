@@ -42,6 +42,7 @@ export class MusicComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.currentlyPlaying$.unsubscribe();
+    this.currentlyPlayingRsp = null;
     console.log('Unsubscribed from "currently playing" subscription.');
   }
 

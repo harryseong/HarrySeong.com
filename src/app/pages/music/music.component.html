@@ -4,7 +4,7 @@
 
   <div fxLayout=row fxLayoutAlign="center center" *ngIf="currentlyPlayingRsp">
 
-      <div fxLayout="column" fxLayoutGap="2em" fxLayoutGap.xs="1em" *ngIf="currentlyPlayingRsp.is_playing==true" [@contentAnimations]>
+      <div fxLayout="column" fxLayoutGap="2.5em" fxLayoutGap.xs="1em" *ngIf="currentlyPlayingRsp.is_playing==true" [@contentAnimations]>
         <div fxFlexOffset="1em">
           <img [src]="currentlyPlayingRsp.item.album.images[0].url" class="album-cover">
           <div class="song-name-div">

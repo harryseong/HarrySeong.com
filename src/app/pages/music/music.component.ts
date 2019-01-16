@@ -47,7 +47,10 @@ export class MusicComponent implements OnInit, OnDestroy {
 
   refreshAccessToken() {
     this.spotifyApiService.refreshAccessToken().subscribe(
-      rsp => this.accessToken = rsp.access_token,
+      rsp => {
+        this.accessToken = rsp.access_token;
+        console.info('Spotify access token was successfully refreshed.');
+      },
       error1 => (console.error('There was an error refreshing the Spotify access token.'))
     );
   }
@@ -55,9 +58,14 @@ export class MusicComponent implements OnInit, OnDestroy {
   getCurrentlyPlaying(accessToken) {
     this.spotifyApiService.getCurrentlyPlaying(accessToken).subscribe(
       rsp => {
-        this.currentlyPlayingRsp = rsp;
-        this.songUri = this.sanitizer.bypassSecurityTrustResourceUrl(rsp.item.uri);
-        console.log('Refreshed currently playing track.');
+        if (rsp !== null) {
+          this.currentlyPlayingRsp = rsp;
+          this.songUri = this.sanitizer.bypassSecurityTrustResourceUrl(rsp.item.uri);
+          console.log('Refreshed currently playing track.');
+        } else {
+         this.currentlyPlayingRsp = null;
+         console.warn('Returned currentlyPlayingRsp is null.');
+        }
       },
       error => {
         console.warn('Spotify access token is expired.');

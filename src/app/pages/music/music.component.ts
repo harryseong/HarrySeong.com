@@ -48,8 +48,7 @@ export class MusicComponent implements OnInit, OnDestroy {
   refreshAccessToken() {
     this.spotifyApiService.refreshAccessToken().subscribe(
       rsp => this.accessToken = rsp.access_token,
-      error1 => (console.error('There was an error refreshing the Spotify access token.')),
-      () => console.info('Spotify access token refreshed.')
+      error1 => (console.error('There was an error refreshing the Spotify access token.'))
     );
   }
 

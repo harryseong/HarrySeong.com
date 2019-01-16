@@ -23,26 +23,48 @@ export class MusicComponent implements OnInit, OnDestroy {
   currentlyPlayingRsp: any;
   currentlyPlaying$: Subscription;
   songUri: any;
+  accessToken: string;
 
   constructor(private spotifyApiService: SpotifyApiService, private sanitizer: DomSanitizer) { }
 
   ngOnInit() {
-    this.currentlyPlaying$ = timer(0, 5000).subscribe(() => {
-      this.spotifyApiService.getCurrentlyPlaying().subscribe(
-        rsp => {
-          this.currentlyPlayingRsp = rsp;
-          this.songUri = this.sanitizer.bypassSecurityTrustResourceUrl(rsp.item.uri);
-          console.log('Refreshed currently playing track.');
-        },
-        error => {
-          this.currentlyPlayingRsp = null;
-        }
-      );
+    this.currentlyPlaying$ = timer(0, 7500).subscribe(() => {
+      if (this.accessToken == null) {
+        this.spotifyApiService.refreshAccessToken().subscribe(rsp => {
+          this.accessToken = rsp.access_token;
+          this.getCurrentlyPlaying(this.accessToken);
+        });
+      } else {
+        this.getCurrentlyPlaying(this.accessToken);
+      }
     });
   }
 
   ngOnDestroy(): void {
     this.currentlyPlaying$.unsubscribe();
     console.log('Unsubscribed from "currently playing" subscription.');
+  }
+
+  refreshAccessToken() {
+    this.spotifyApiService.refreshAccessToken().subscribe(
+      rsp => this.accessToken = rsp.access_token,
+      error1 => (console.error('There was an error refreshing the Spotify access token.')),
+      () => console.info('Spotify access token refreshed.')
+    );
+  }
+
+  getCurrentlyPlaying(accessToken) {
+    this.spotifyApiService.getCurrentlyPlaying(accessToken).subscribe(
+      rsp => {
+        this.currentlyPlayingRsp = rsp;
+        this.songUri = this.sanitizer.bypassSecurityTrustResourceUrl(rsp.item.uri);
+        console.log('Refreshed currently playing track.');
+      },
+      error => {
+        console.warn('Spotify access token is expired.');
+        this.currentlyPlayingRsp = null;
+        this.refreshAccessToken();
+      }
+    );
   }
 }

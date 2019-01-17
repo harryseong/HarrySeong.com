@@ -21,11 +21,11 @@ export class MusicComponent implements OnInit, OnDestroy {
   pageHeader = 'music';
   pageSubheader = 'i hear vibrations in the air...';
   pageExplanation = 'Music is an almost daily part of my life, so I decided to pay some sort of an homage to it with this page. ' +
-    'Music inspires and motivates me, so it is pretty difficult to imagine life without music. There are, however, some times when ' +
-    'silence is a welcome presence. I suppose it really depends on my mood which I prefer.';
-  pageTech = 'This page makes use of the Spotify API. The access token for the API is refreshed with a refresh token through a simple ' +
-    'NodeJS Express app uploaded to Firebase as a function; this piece was implemented in order to conceal the refresh token from public ' +
-    'view.';
+    'Music inspires and motivates me in so many ways that it\'s pretty difficult to imagine life without music. There are, however, ' +
+    'some moments when silence is a welcome companion. I suppose it really depends on my mood which I prefer.';
+  pageTech = 'This page makes use of the Spotify API to retrieve information on what is currently being played on my Spotify account. ' +
+    'The access token for the API is refreshed with a refresh token through a simple NodeJS Express app uploaded to Firebase as a ' +
+    'function; this piece was implemented in order to conceal the refresh token from public view.';
   triedSpotifyApi = false;
   currentlyPlayingRsp: any;
   currentlyPlaying$: Subscription;

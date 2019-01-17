@@ -1,9 +1,8 @@
-<div fxLayout="column" fxLayoutGap="1em">
+<div class="dialog-header">
+  {{data.header}}
+</div>
 
-  <div class="dialog-header">
-    {{data.header}}
-  </div>
-
+<mat-dialog-content fxLayout="column" fxLayoutGap="1em">
   <div class="dialog-content">
     <div class="dialog-subheader">
       <i class="fas fa-info-circle fa-fw"></i> why
@@ -21,7 +20,7 @@
       {{data.tech}}
     </div>
   </div>
-</div>
+</mat-dialog-content>
 
 <mat-dialog-actions fxLayoutAlign="end end">
   <button mat-stroked-button class="close-btn" (click)="close()">CLOSE</button>

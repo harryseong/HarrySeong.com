@@ -20,6 +20,8 @@ import {DomSanitizer} from '@angular/platform-browser';
 export class MusicComponent implements OnInit, OnDestroy {
   pageHeader = 'music';
   pageSubheader = 'i hear vibrations in the air...';
+  pageExplanation = 'TBD';
+  pageTech = 'TBD';
   currentlyPlayingRsp: any;
   currentlyPlaying$: Subscription;
   songUri: any;

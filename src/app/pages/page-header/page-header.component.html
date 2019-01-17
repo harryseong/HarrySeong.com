@@ -1,10 +1,15 @@
 <div fxLayout="row">
   <div [@headerAnimations]>
-    <div class="page-header">{{pageHeader}}</div>
+    <div>
+      <a href="javascript:void(0)" class="page-header" (click)="openDialog()" *ngIf="pageHeader!='404'; else error">{{pageHeader}}</a>
+      <ng-template #error>
+        <div class="page-header">{{pageHeader}}</div>
+      </ng-template>
+    </div>
     <div class="page-subheader">
-        <span typingAnimation [typeSpeed]="25" [startDelay]="500" [hideCursorOnComplete]="true">
-          {{pageSubheader}}
-        </span>
+      <span typingAnimation [typeSpeed]="25" [startDelay]="500" [hideCursorOnComplete]="true">
+        {{pageSubheader}}
+      </span>
     </div>
   </div>
   <span class="spacer"></span>

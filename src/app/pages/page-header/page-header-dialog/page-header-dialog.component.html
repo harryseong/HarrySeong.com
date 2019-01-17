@@ -1,0 +1,15 @@
+<div fxLayout="column" fxLayoutGap="0.8em">
+  <div class="dialog-header">
+    {{data.header}}
+  </div>
+  <div class="dialog-content">
+    {{data.explanation}}
+  </div>
+  <div class="dialog-content">
+    {{data.tech}}
+  </div>
+</div>
+
+<mat-dialog-actions fxLayoutAlign="end end">
+  <button mat-stroked-button class="close-btn" (click)="close()">CLOSE</button>
+</mat-dialog-actions>

@@ -41,6 +41,8 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
 export class AboutComponent implements OnInit {
   pageHeader = 'about';
   pageSubheader = 'who, what, when, where, how...';
+  pageExplanation = 'TBD';
+  pageTech = 'TBD';
   currentYear = new Date().getFullYear();
 
   constructor() { }

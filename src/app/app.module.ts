@@ -27,6 +27,7 @@ import { ExperimentalComponent } from './pages/experimental/experimental.compone
 import { NavpageSecretComponent } from './pages/navpage-secret/navpage-secret.component';
 import { PageHeaderComponent } from './pages/page-header/page-header.component';
 import { DinoComponent } from './pages/experimental/dino/dino.component';
+import { PageHeaderDialogComponent } from './pages/page-header/page-header-dialog/page-header-dialog.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { DinoComponent } from './pages/experimental/dino/dino.component';
     NavpageSecretComponent,
     PageHeaderComponent,
     DinoComponent,
+    PageHeaderDialogComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -62,6 +64,9 @@ import { DinoComponent } from './pages/experimental/dino/dino.component';
   ],
   exports: [
     MaterialModule
+  ],
+  entryComponents: [
+    PageHeaderDialogComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]

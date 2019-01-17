@@ -33,6 +33,10 @@ import {Subscription} from 'rxjs';
 export class PlacesComponent implements OnInit, OnDestroy {
   pageHeader = 'places';
   pageSubheader = 'where we\'ve been, where we are...';
+  pageExplanation = 'One of the first questions that consistently arise upon getting to know somebody new has been, "where did you grow ' +
+    'up?" And I personally find it fascinating to listen to the other person\'s rundown of where they were born, grew up, and lived ' +
+    'throughout the years.';
+  pageTech = 'This page makes use of the Mapbox api and data retrieved from the Firestore NoSQL database.';
   map: mapboxgl.Map;
   style = 'mapbox://styles/mapbox/dark-v9';
   currentPlaceOrder = 1;

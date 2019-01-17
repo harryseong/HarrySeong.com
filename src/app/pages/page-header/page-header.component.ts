@@ -1,5 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {animate, style, transition, trigger} from '@angular/animations';
+import {PageHeaderDialogComponent} from './page-header-dialog/page-header-dialog.component';
+import {MatDialog} from '@angular/material';
 
 @Component({
   selector: 'app-page-header',
@@ -24,10 +26,29 @@ export class PageHeaderComponent implements OnInit {
 
   @Input() pageHeader: string;
   @Input() pageSubheader: string;
+  @Input() pageExplanation: string;
+  @Input() pageTech: string;
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit() {
+  }
+
+  // Open dialog with instructions when user clicks on the "Need to unsubscribe from a list?" link in the footer.
+  openDialog(): void {
+    const dialogRef = this.dialog.open(PageHeaderDialogComponent, {
+      width: '40em',
+      autoFocus: false,
+      data: {
+        header: this.pageHeader,
+        explanation: this.pageExplanation,
+        tech: this.pageTech
+      },
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
   }
 
 }

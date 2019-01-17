@@ -17,6 +17,8 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
 export class PhotosComponent implements OnInit {
   pageHeader = 'photos';
   pageSubheader = 'moments captured in rectangular forms...';
+  pageExplanation = 'TBD';
+  pageTech = 'TBD';
 
   constructor() { }
 

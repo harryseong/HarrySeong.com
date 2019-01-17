@@ -1,12 +1,25 @@
-<div fxLayout="column" fxLayoutGap="0.8em">
+<div fxLayout="column" fxLayoutGap="1em">
+
   <div class="dialog-header">
     {{data.header}}
   </div>
+
   <div class="dialog-content">
-    {{data.explanation}}
+    <div class="dialog-subheader">
+      <i class="fas fa-info-circle fa-fw"></i> why
+    </div>
+    <div>
+      {{data.explanation}}
+    </div>
   </div>
+
   <div class="dialog-content">
-    {{data.tech}}
+    <div class="dialog-subheader">
+      <i class="fas fa-code fa-fw"></i> how
+    </div>
+    <div>
+      {{data.tech}}
+    </div>
   </div>
 </div>
 

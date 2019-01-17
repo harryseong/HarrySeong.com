@@ -33,17 +33,6 @@ footer {
   flex: 1 1 auto;
 }
 
-.page-header {
-   font-size: 2.5em;
-  color: rgba(255, 255, 255, 1);
- }
-
-.page-subheader {
-  font-size: 0.75em;
-  font-style: italic;
-  font-weight: 300;
-}
-
 .nav-icon-btn, .nav-icon-btn:visited {
   color: rgba(255, 255, 255, 0.5);
   background-color: rgba(255, 255, 255, 0);
@@ -70,9 +59,51 @@ footer {
   transition: 0.3s;
 }
 
+.nav-icon-btn:hover + .underline-middle:before {
+  visibility: visible;
+  transform: scaleX(1);
+  background-color: rgba(255, 255, 255, 1);
+  transition: 0.3s;
+}
+
 .nav-text {
   color: rgba(255, 255, 255, 0.5);
   transition: 0.3s;
+}
+
+.underline-middle
+{
+  position: relative;
+}
+
+.underline-middle:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0.09em;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.2s ease-in-out;
+}
+
+.underline-left
+{
+  position: relative;
+}
+
+.underline-left:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #FFF;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
 }
 
 .white-text {
@@ -88,4 +119,8 @@ footer {
 }
 .animate-flicker {
   animation: fadeIn 3s infinite alternate;
+}
+
+.page-info-dialog {
+  opacity: 0.95;
 }

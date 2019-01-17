@@ -1,7 +1,7 @@
 <div fxLayout="row">
   <div [@headerAnimations]>
     <div>
-      <a href="javascript:void(0)" class="page-header" (click)="openDialog()" *ngIf="pageHeader!='404'; else error">{{pageHeader}}</a>
+      <a href="javascript:void(0)" class="page-header underline-left" (click)="openDialog()" *ngIf="pageHeader!='404'; else error">{{pageHeader}}</a>
       <ng-template #error>
         <div class="page-header">{{pageHeader}}</div>
       </ng-template>
@@ -17,6 +17,6 @@
     <button routerLink="/nav" routerLinkActive="active" class="nav-icon-btn mat-elevation-z0">
       <div fxLayout="row" fxLayoutAlign="center center"><i class="fas fa-arrow-left fa-2x fa-fw"></i></div>
     </button>
-    <div class="nav-text">back</div>
+    <div class="nav-text underline-middle">back</div>
   </div>
 </div>

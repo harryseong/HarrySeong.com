@@ -44,6 +44,7 @@ export class PageHeaderComponent implements OnInit {
         explanation: this.pageExplanation,
         tech: this.pageTech
       },
+      panelClass: 'page-info-dialog'
     });
 
     dialogRef.afterClosed().subscribe(result => {

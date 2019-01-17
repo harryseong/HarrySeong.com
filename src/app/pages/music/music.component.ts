@@ -20,8 +20,11 @@ import {DomSanitizer} from '@angular/platform-browser';
 export class MusicComponent implements OnInit, OnDestroy {
   pageHeader = 'music';
   pageSubheader = 'i hear vibrations in the air...';
-  pageExplanation = 'TBD';
-  pageTech = 'TBD';
+  pageExplanation = 'I listen to music just about every day of my life, so I decided to pay some sort of an homage to it with this page. ' +
+    'Music inspires and motivates me, so it is pretty difficult to imagine life without music.';
+  pageTech = 'This page makes use of the Spotify API. The authorization tokens for the API are refreshed through an Express NodeJS app ' +
+    'uploaded to Firebase functions.';
+  triedSpotifyApi = false;
   currentlyPlayingRsp: any;
   currentlyPlaying$: Subscription;
   songUri: any;
@@ -54,7 +57,7 @@ export class MusicComponent implements OnInit, OnDestroy {
         this.accessToken = rsp.access_token;
         console.info('Spotify access token was successfully refreshed.');
       },
-      error1 => (console.error('There was an error refreshing the Spotify access token.'))
+      error1 => console.error('There was an error refreshing the Spotify access token.')
     );
   }
 
@@ -69,12 +72,20 @@ export class MusicComponent implements OnInit, OnDestroy {
          this.currentlyPlayingRsp = null;
          console.warn('Returned currentlyPlayingRsp is null.');
         }
+        this.updateTriedSpotifyApi();
       },
       error => {
         console.warn('Spotify access token is expired.');
         this.currentlyPlayingRsp = null;
         this.refreshAccessToken();
+        this.updateTriedSpotifyApi();
       }
     );
+  }
+
+  updateTriedSpotifyApi() {
+    if (!this.triedSpotifyApi) {
+      this.triedSpotifyApi = true;
+    }
   }
 }

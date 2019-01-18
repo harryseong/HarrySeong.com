@@ -7,12 +7,15 @@
   height: 32em;
   max-width: 8em;
   opacity: 0.65;
+  user-select: none;
   transition: 0.3s;
 }
 
 .color-div:hover {
   opacity: 1;
   cursor: pointer;
+  max-width: 15em;
+  width: 15em;
   transform: scale(1.03);
   transition: 0.3s;
 }

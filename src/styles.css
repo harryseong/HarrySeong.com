@@ -68,6 +68,7 @@ footer {
 
 .nav-text {
   color: rgba(255, 255, 255, 0.5);
+  user-select: none;
   transition: 0.3s;
 }
 

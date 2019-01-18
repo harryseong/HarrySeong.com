@@ -18,13 +18,13 @@
 }
 
 .div-a {
-  background-image: linear-gradient(rgba(235, 0, 0, 1), rgba(235, 0, 0, 0.5));
+  background-image: linear-gradient(rgba(235, 0, 0, 0.55), rgba(235, 0, 0, 1), rgba(235, 0, 0, 0.55));
 }
 
 .div-b {
-  background-image: linear-gradient(rgba(255, 173, 0, 1), rgba(255, 173, 0, 0.5));
+  background-image: linear-gradient(rgba(255, 173, 0, 0.55), rgba(255, 173, 0, 1), rgba(255, 173, 0, 0.55));
 }
 
 .div-c {
-  background-image: linear-gradient(rgba(86, 242, 216, 1), rgba(86, 242, 216, 0.5));
+  background-image: linear-gradient(rgba(86, 242, 216, 0.55), rgba(86, 242, 216, 1), rgba(86, 242, 216, 0.55));
 }

@@ -2,6 +2,17 @@
 
   <app-page-header [pageHeader]="pageHeader" [pageSubheader]="pageSubheader" [pageExplanation]="pageExplanation" [pageTech]="pageTech"></app-page-header>
 
-  <app-dino fxFlexOffset="2em"></app-dino>
+  <mat-tab-group [@contentAnimations]>
+    <mat-tab label="weather">
+      <div class="mat-tab-content">
+        <app-weather></app-weather>
+      </div>
+    </mat-tab>
+    <mat-tab label="dino">
+      <div class="mat-tab-content">
+        <app-dino></app-dino>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
 
 </div>

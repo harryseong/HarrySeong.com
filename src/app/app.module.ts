@@ -29,6 +29,7 @@ import { PageHeaderComponent } from './pages/page-header/page-header.component';
 import { DinoComponent } from './pages/experimental/dino/dino.component';
 import { PageHeaderDialogComponent } from './pages/page-header/page-header-dialog/page-header-dialog.component';
 import {NgxImageGalleryModule} from 'ngx-image-gallery';
+import { WeatherComponent } from './pages/experimental/weather/weather.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import {NgxImageGalleryModule} from 'ngx-image-gallery';
     PageHeaderComponent,
     DinoComponent,
     PageHeaderDialogComponent,
+    WeatherComponent,
   ],
   imports: [
     AppRoutingModule,

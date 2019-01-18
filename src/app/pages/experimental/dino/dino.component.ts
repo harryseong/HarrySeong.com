@@ -41,8 +41,7 @@ export class DinoComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
   dinoJump() {
     if (this.dinoState !== 'jump' && this.dinoState !== 'fainted' && this.dinoState !== 'revived') {

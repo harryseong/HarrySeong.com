@@ -1,0 +1,17 @@
+<div class="weather-content" *ngIf="weatherRsp" [@contentAnimations]>
+  <div class="city">
+    Evanston, IL 60201
+  </div>
+  <div class="current-temp white-text">
+    <span>{{weatherRsp.main.temp}}&#176;F</span>
+  </div>
+  <div>
+    <span class="white-text">high</span>&nbsp;<span>{{weatherRsp.main.temp_max}}&#176;F</span>
+  </div>
+  <div>
+    <span class="white-text">low</span>&nbsp;<span>{{weatherRsp.main.temp_min}}&#176;F</span>
+  </div>
+  <div>
+    <span class="white-text">humidity</span>&nbsp;<span>{{weatherRsp.main.humidity}}%</span>
+  </div>
+</div>

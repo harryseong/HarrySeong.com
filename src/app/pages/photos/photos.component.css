@@ -5,3 +5,29 @@
 .greeting-test {
   font-size: 1.2em;
 }
+
+.color-div {
+  color: black;
+  height: 32em;
+  max-width: 8em;
+  opacity: 0.65;
+  transition: 0.3s;
+}
+
+.color-div:hover {
+  opacity: 1;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.div-a {
+  background-image: linear-gradient(rgba(235, 0, 0, 1), rgba(235, 0, 0, 0.5));
+}
+
+.div-b {
+  background-image: linear-gradient(rgba(255, 173, 0, 1), rgba(255, 173, 0, 0.5));
+}
+
+.div-c {
+  background-image: linear-gradient(rgba(86, 242, 216, 1), rgba(86, 242, 216, 0.5));
+}

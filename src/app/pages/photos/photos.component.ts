@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {animate, state, style, transition, trigger} from '@angular/animations';
+import {Component, OnInit} from '@angular/core';
+import {animate, style, transition, trigger} from '@angular/animations';
 
 @Component({
   selector: 'app-photos',
@@ -10,6 +10,27 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
       transition(':enter', [
         style({ opacity: 0, transform: 'translateY(0.5em)'}),
         animate('1.5s .5s ease', style({ opacity: 1, transform: 'translateY(0)' })),
+      ]),
+    ]),
+    trigger('divAAnimations', [
+      transition(':enter', [
+        style({ opacity: 0, transform: 'translateY(-8em)'}),
+        animate('.7s .3s ease', style({ opacity: 1, transform: 'translateY(0)' })),
+        animate('.7s ease', style({ opacity: 0.65 })),
+      ]),
+    ]),
+    trigger('divBAnimations', [
+      transition(':enter', [
+        style({ opacity: 0, transform: 'translateY(-8em)'}),
+        animate('.7s .6s ease', style({ opacity: 1, transform: 'translateY(0)' })),
+        animate('.7s ease', style({ opacity: 0.65 })),
+      ]),
+    ]),
+    trigger('divCAnimations', [
+      transition(':enter', [
+        style({ opacity: 0, transform: 'translateY(-8em)'}),
+        animate('.7s .9s ease', style({ opacity: 1, transform: 'translateY(0)' })),
+        animate('.7s ease', style({ opacity: 0.65 })),
       ]),
     ])
   ]

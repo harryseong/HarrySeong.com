@@ -4,6 +4,10 @@
   font-weight: 300;
 }
 
+.weather-form-field {
+  max-width: 8em;
+}
+
 .weather-icon {
   margin-top: 0.3em;
   font-size: 7em;
@@ -24,6 +28,11 @@
 .weather-unit {
   line-height: 1.3em;
   font-size: 0.5em;
+}
+
+.weather-unit.weather-unit-toggle {
+  line-height: 1.3em;
+  font-size: 1em;
 }
 
 .weather-hi-lo {

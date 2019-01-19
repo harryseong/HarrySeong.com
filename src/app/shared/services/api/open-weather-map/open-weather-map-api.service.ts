@@ -74,11 +74,11 @@ export class OpenWeatherMapApiService {
 
   constructor(private http: HttpClient) { }
 
-  getCurrentWeather(zipcode: string): Observable<any> {
+  getCurrentWeather(zipcode: string, unit: string): Observable<any> {
     const params = new HttpParams()
       .set('zip', zipcode)
       .set('appid', environment.openWeatherMap.apiKey)
-      .set('units', 'imperial');
+      .set('units', unit);
     return this.http.get<any>(environment.openWeatherMap.apiUrl, {params: params});
   }
 }

@@ -1,13 +1,21 @@
-<div fxLayout="row" fxLayoutAlign="center center">
-  <div *ngIf="!weatherRsp" [@contentAnimations]>
-    <form [formGroup]="weatherForm" fxLayout="column" fxLayoutGap="0.2em">
+<div fxLayout="column" fxLayoutGap="1.5em" fxLayoutAlign="center center">
 
-      <mat-form-field>
+  <div fxLayout="row" fxFill [@contentAnimations]>
+    <div fxLayoutAlign="center center">
+      <button mat-stroked-button (click)="lookupHarrysWeather()">harry's weather</button>
+    </div>
+
+    <span class="spacer"></span>
+
+    <form [formGroup]="weatherForm" class="weather-form" (keydown.enter)="$event.preventDefault()">
+      <mat-form-field class="weather-form-field">
         <mat-label>zipcode</mat-label>
-        <input type="text" matInput formControlName="zip" placeholder="e.g. 60201">
+        <input type="text" matInput #zip formControlName="zip" minlength="5" maxlength="5" (keyup.enter)="lookupCurrentWeather()">
+        <button mat-button-mini-fab [disabled]="!weatherForm.valid" matSuffix mat-icon-button aria-label="search" (click)="lookupCurrentWeather()">
+          <i class="fas fa-search"></i>
+        </button>
+        <mat-hint align="end">{{weatherForm.get('zip').value.length}} / 5</mat-hint>
       </mat-form-field>
-      <button type="button" mat-stroked-button [disabled]="!weatherForm.valid" (click)="getCurrentWeather()">ENTER</button>
-
     </form>
   </div>
 
@@ -21,12 +29,12 @@
         {{weatherRsp.name}}
       </div>
       <div class="white-text current-temp" fxLayoutAlign="start start">
-        {{round(weatherRsp.main.temp)}}<span class="weather-unit">&#176;F</span>
+        {{round(weatherRsp.main.temp)}}<span class="weather-unit">&#176;<span>{{weatherUnitC ? 'C' : 'F'}}</span></span>
       </div>
       <div class="white-text weather-hi-lo" fxLayoutAlign="start start">
-        {{round(weatherRsp.main.temp_max)}}<span class="weather-unit">&#176;F</span>
+        {{round(weatherRsp.main.temp_max)}}<span class="weather-unit">&#176;<span>{{weatherUnitC ? 'C' : 'F'}}</span></span>
         <span class="gray-text">&nbsp;/&nbsp;</span>
-        {{round(weatherRsp.main.temp_min)}}<span class="weather-unit">&#176;F</span>
+        {{round(weatherRsp.main.temp_min)}}<span class="weather-unit">&#176;<span>{{weatherUnitC ? 'C' : 'F'}}</span></span>
       </div>
       <div class="weather-description white-text">{{weatherRsp.weather[0].description}}</div>
 
@@ -35,6 +43,13 @@
         <div>sunrise&nbsp;<span class="gray-text">{{formatToCST_hmma(weatherRsp.sys.sunrise)}}</span></div>
         <div>sunset&nbsp;<span class="gray-text">{{formatToCST_hmma(weatherRsp.sys.sunset)}}</span></div>
       </div>
+
+      <div fxLayout="row" fxLayoutGap="0.3em" fxLayoutAlign="start start" fxFlexOffset="1em" [@contentAnimations]>
+        <div class="weather-unit weather-unit-toggle">&#176;F</div>
+        <mat-slide-toggle [(ngModel)]="weatherUnitC" (change)="changeUnit()"></mat-slide-toggle>
+        <div class="weather-unit weather-unit-toggle">&#176;C</div>
+      </div>
     </div>
   </div>
+
 </div>

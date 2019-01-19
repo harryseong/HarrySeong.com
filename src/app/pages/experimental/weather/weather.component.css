@@ -6,13 +6,34 @@
 
 .city {
   color: #ffffff;
-  font-size: 1.2em;
+  font-size: 1.6em;
+  text-transform: lowercase;
 }
 
 .current-temp {
-  font-size: 3.5em;
+  line-height: 1em;
+  font-size: 5em;
+  font-weight: 500;
 }
 
 .weather-unit {
+  line-height: 1.3em;
   font-size: 0.5em;
+}
+
+.weather-hi-lo {
+  font-size: 1.5em;
+}
+
+.weather-hi-lo > .weather-unit {
+  line-height: 1.7em;
+}
+
+.weather-description {
+  font-size: 1.5em;
+}
+
+.weather-misc-info {
+  font-size: 0.75em;
+  font-weight: 300;
 }

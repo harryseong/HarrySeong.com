@@ -4,7 +4,7 @@ import {Subscription, timer} from 'rxjs';
 import {environment} from '../../../../environments/environment';
 import {animate, style, transition, trigger} from '@angular/animations';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
-import * as moment from 'moment';
+import * as moment from 'moment-timezone';
 
 @Component({
   selector: 'app-weather',
@@ -32,7 +32,9 @@ export class WeatherComponent implements OnInit, OnDestroy {
 
   constructor(private weatherService: OpenWeatherMapApiService) { }
 
-  ngOnInit() { }
+  ngOnInit() {
+    this.getCurrentWeather();
+  }
 
   ngOnDestroy(): void {
     if (this.weather$ !== null) {
@@ -44,7 +46,7 @@ export class WeatherComponent implements OnInit, OnDestroy {
   getCurrentWeather() {
     this.weather$ = timer(0, environment.openWeatherMap.apiCallFrequency).subscribe(
       () => {
-        this.weatherService.getCurrentWeather(this.weatherForm.get('zip').value).subscribe(
+        this.weatherService.getCurrentWeather('60201').subscribe(
           rsp => {
             this.weatherRsp = rsp;
             const iconKey = this.weatherService.weatherIdDict[rsp.weather[0].id].iconKey;
@@ -59,5 +61,9 @@ export class WeatherComponent implements OnInit, OnDestroy {
 
   round(x: number): number {
     return Math.round(x);
+  }
+
+  formatToLocalTime(timestamp: number): string {
+    return moment.unix(timestamp).tz('America/Chicago').format('h:mma');
   }
 }

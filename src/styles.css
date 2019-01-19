@@ -41,6 +41,8 @@ footer {
   vertical-align: center;
   width: 7em;
   height: 7em;
+  user-select: none;
+  user-focus: none;
   transition: 0.3s;
 }
 

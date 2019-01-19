@@ -11,26 +11,29 @@
     </form>
   </div>
 
-  <div class="weather-content" *ngIf="weatherRsp" fxLayout="row" fxLayout.xs="column" fxLayoutGap="1em" fxLayoutGap.xs="0.5em" [@contentAnimations]>
+  <div class="weather-content" *ngIf="weatherRsp" fxLayout="row" [@contentAnimations]>
     <div class="white-text" fxLayout="column" fxLayoutGap="0.5em">
       <i [ngClass]="['wu', 'wu-black', 'wu-128', weatherIcon]"></i>
     </div>
+
     <div fxLayout="column" fxLayoutGap="0">
       <div class="city">
         {{weatherRsp.name}}
       </div>
-      <div class="current-temp white-text">
-        <span>{{round(weatherRsp.main.temp)}}&#176;<span class="weather-unit">F</span></span>
+      <div class="white-text current-temp" fxLayoutAlign="start start">
+        {{round(weatherRsp.main.temp)}}<span class="weather-unit">&#176;F</span>
       </div>
-      <div>
-        <span class="white-text">{{round(weatherRsp.main.temp_max)}}&#176;<span class="weather-unit">F</span></span>
-        <span>&nbsp;/&nbsp;</span>
-        <span class="white-text">{{round(weatherRsp.main.temp_min)}}&#176;<span class="weather-unit">F</span></span>
+      <div class="white-text weather-hi-lo" fxLayoutAlign="start start">
+        {{round(weatherRsp.main.temp_max)}}<span class="weather-unit">&#176;F</span>
+        <span class="gray-text">&nbsp;/&nbsp;</span>
+        {{round(weatherRsp.main.temp_min)}}<span class="weather-unit">&#176;F</span>
       </div>
-      <div class="white-text">{{weatherRsp.weather[0].description}}</div>
+      <div class="weather-description white-text">{{weatherRsp.weather[0].description}}</div>
 
-      <div>
-        <span class="white-text">humidity</span>&nbsp;<span>{{weatherRsp.main.humidity}}%</span>
+      <div class="weather-misc-info white-text">
+        <div>humidity&nbsp;<span class="gray-text">{{weatherRsp.main.humidity}}%</span></div>
+        <div>sunrise&nbsp;<span class="gray-text">{{formatToLocalTime(weatherRsp.sys.sunrise)}}</span></div>
+        <div>sunset&nbsp;<span class="gray-text">{{formatToLocalTime(weatherRsp.sys.sunset)}}</span></div>
       </div>
     </div>
   </div>

@@ -1,0 +1,27 @@
+[debug] [2019-01-19T07:03:06.612Z] ----------------------------------------------------------------------
+[debug] [2019-01-19T07:03:06.614Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2019-01-19T07:03:06.614Z] CLI Version:   6.3.0
+[debug] [2019-01-19T07:03:06.614Z] Platform:      darwin
+[debug] [2019-01-19T07:03:06.614Z] Node Version:  v10.1.0
+[debug] [2019-01-19T07:03:06.615Z] Time:          Sat Jan 19 2019 01:03:06 GMT-0600 (CST)
+[debug] [2019-01-19T07:03:06.615Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-01-19T07:03:06.628Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-01-19T07:03:06.628Z] > authorizing via signed-in user
+[debug] [2019-01-19T07:03:06.628Z] [iam] checking project harryseong-163420 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]
+[debug] [2019-01-19T07:03:06.630Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2019-01-19T07:03:06.630Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2019-01-19T07:03:06.745Z] <<< HTTP RESPONSE 200
+[debug] [2019-01-19T07:03:06.763Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/harryseong-163420:testIamPermissions  
+
+[debug] [2019-01-19T07:03:06.872Z] <<< HTTP RESPONSE 200
+[debug] [2019-01-19T07:03:06.873Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/harryseong-163420  
+ 
+[debug] [2019-01-19T07:03:07.060Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'harryseong-163420'...
+[info] 
+[info] i  deploying database, storage, firestore, functions, hosting
+[info] Running command: npm --prefix "$RESOURCE_DIR" run lint
+[info] Running command: npm --prefix "$RESOURCE_DIR" run build

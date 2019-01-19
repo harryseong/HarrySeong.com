@@ -47,7 +47,7 @@ export class OpenWeatherMapApiService {
     620: {icon: 'rain-mix', day: 'day-rain-mix', night: 'night-alt-rain-mix'},
     621: {icon: 'snow', day: 'day-snow', night: 'night-alt-snow'},
     622: {icon: 'snow', day: 'day-snow', night: 'night-alt-snow'},
-    701: {icon: 'showers', day: 'day-showers', night: 'night-alt-showers'},
+    701: {icon: 'fog', day: 'day-fog', night: 'night-fog'},
     711: {icon: 'smoke', day: 'smoke', night: 'smoke'},
     721: {icon: 'day-haze', day: 'day-haze', night: 'day-haze'},
     731: {icon: 'dust', day: 'dust', night: 'dust'},

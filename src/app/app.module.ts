@@ -28,7 +28,6 @@ import { NavpageSecretComponent } from './pages/navpage-secret/navpage-secret.co
 import { PageHeaderComponent } from './pages/page-header/page-header.component';
 import { DinoComponent } from './pages/experimental/dino/dino.component';
 import { PageHeaderDialogComponent } from './pages/page-header/page-header-dialog/page-header-dialog.component';
-import {NgxImageGalleryModule} from 'ngx-image-gallery';
 import { WeatherComponent } from './pages/experimental/weather/weather.component';
 
 @NgModule({
@@ -64,7 +63,6 @@ import { WeatherComponent } from './pages/experimental/weather/weather.component
     ReactiveFormsModule,
     HttpClientModule,
     TypingAnimationModule,
-    NgxImageGalleryModule,
   ],
   exports: [
     MaterialModule

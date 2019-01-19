@@ -23,8 +23,7 @@
             ],
             "styles": [
               "src/styles.css",
-              "src/theme.scss",
-              "src/assets/wu-icons/wu-icons-style.css"
+              "src/theme.scss"
             ],
             "scripts": []
           },
@@ -74,8 +73,7 @@
             "karmaConfig": "src/karma.conf.js",
             "styles": [
               "src/styles.css",
-              "src/theme.scss",
-              "src/assets/wu-icons/wu-icons-style.css"
+              "src/theme.scss"
             ],
             "scripts": [],
             "assets": [

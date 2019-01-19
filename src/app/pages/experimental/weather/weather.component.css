@@ -4,6 +4,11 @@
   font-weight: 300;
 }
 
+.weather-icon {
+  margin-top: 0.3em;
+  font-size: 7em;
+}
+
 .city {
   color: #ffffff;
   font-size: 1.6em;

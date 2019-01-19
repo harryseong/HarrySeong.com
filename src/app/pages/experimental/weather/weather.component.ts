@@ -49,9 +49,21 @@ export class WeatherComponent implements OnInit, OnDestroy {
         this.weatherService.getCurrentWeather('60201').subscribe(
           rsp => {
             this.weatherRsp = rsp;
-            const iconKey = this.weatherService.weatherIdDict[rsp.weather[0].id].iconKey;
-            this.weatherIcon = 'wu-' + this.weatherService.weatherIconDict[iconKey];
-            console.info('Updated weather info with api call.');
+
+            const sunrise = moment.unix(rsp.sys.sunrise);
+            const sunset = moment.unix(rsp.sys.sunset);
+            const currentTime = moment();
+            const isDaytime = moment(currentTime).isBetween(sunrise, sunset, null, '[)');
+            console.log('Sunrise: ' + sunrise);
+            console.log('Sunset: ' + sunset);
+            console.log('Current: ' + moment(currentTime));
+            console.log('Daytime: ' + isDaytime);
+
+            const weatherId = rsp.weather[0].id;
+            console.log('Weather ID: ' + weatherId);
+            this.weatherIcon = 'wi-' + this.weatherService.weatherIdIconMap[weatherId][isDaytime ? 'day' : 'night'];
+            console.log('Weather icon: ' + this.weatherIcon);
+            console.log('Updated weather info with api call.');
           },
           error1 => console.error('There was an error with the Open Weather Map api call.')
         );
@@ -63,7 +75,7 @@ export class WeatherComponent implements OnInit, OnDestroy {
     return Math.round(x);
   }
 
-  formatToLocalTime(timestamp: number): string {
+  formatToCST_hmma(timestamp: number): string {
     return moment.unix(timestamp).tz('America/Chicago').format('h:mma');
   }
 }

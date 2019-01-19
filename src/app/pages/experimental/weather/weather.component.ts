@@ -3,6 +3,8 @@ import {OpenWeatherMapApiService} from '../../../shared/services/api/open-weathe
 import {Subscription, timer} from 'rxjs';
 import {environment} from '../../../../environments/environment';
 import {animate, style, transition, trigger} from '@angular/animations';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-weather',
@@ -18,26 +20,44 @@ import {animate, style, transition, trigger} from '@angular/animations';
   ]
 })
 export class WeatherComponent implements OnInit, OnDestroy {
+  weatherForm = new FormGroup({
+      zip: new FormControl('', [Validators.required, Validators.pattern('^[0-9]{5}(?:-[0-9]{4})?$')])
+  });
   weatherRsp: any;
-  weatherSubscription$: Subscription;
+  weather$: Subscription;
+  weatherUnit = 'imperial';
+  weatherIcon: string;
+
+
 
   constructor(private weatherService: OpenWeatherMapApiService) { }
 
-  ngOnInit() {
-    this.weatherSubscription$ = timer(0, environment.openWeatherMap.apiCallFrequency).subscribe(
+  ngOnInit() { }
+
+  ngOnDestroy(): void {
+    if (this.weather$ !== null) {
+      this.weather$.unsubscribe();
+      console.log('Unsubscribed from weather$.');
+    }
+  }
+
+  getCurrentWeather() {
+    this.weather$ = timer(0, environment.openWeatherMap.apiCallFrequency).subscribe(
       () => {
-        this.weatherService.getCurrentWeather(environment.openWeatherMap.zipcode).subscribe(
+        this.weatherService.getCurrentWeather(this.weatherForm.get('zip').value).subscribe(
           rsp => {
             this.weatherRsp = rsp;
+            const iconKey = this.weatherService.weatherIdDict[rsp.weather[0].id].iconKey;
+            this.weatherIcon = 'wu-' + this.weatherService.weatherIconDict[iconKey];
             console.info('Updated weather info with api call.');
           },
-          error1 => console.error('There was an error reaching the Open Weather Map api endpoint.')
+          error1 => console.error('There was an error with the Open Weather Map api call.')
         );
       }
     );
   }
 
-  ngOnDestroy(): void {
-    this.weatherSubscription$.unsubscribe();
+  round(x: number): number {
+    return Math.round(x);
   }
 }

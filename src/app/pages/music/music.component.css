@@ -15,7 +15,7 @@
   text-transform: lowercase;
 }
 
-.song-name-div {
+.song-name-div, .artists-div {
   width: 18em;
 }
 

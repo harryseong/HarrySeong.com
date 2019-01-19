@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {animate, style, transition, trigger} from '@angular/animations';
-import {OpenWeatherMapApiService} from '../../shared/services/api/open-weather-map/open-weather-map-api.service';
 
 @Component({
   selector: 'app-experimental',

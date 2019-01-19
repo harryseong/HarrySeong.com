@@ -11,8 +11,8 @@
           <div class="song-name-div">
             <a [href]="songUri" class="song-name">{{currentlyPlayingRsp.item.name}}</a>
           </div>
-          <div class="music-text" *ngIf="currentlyPlayingRsp.item.artists!=null">
-            <span *ngFor="let artist of currentlyPlayingRsp.item.artists; last as isLast">
+          <div class="artists-div" *ngIf="currentlyPlayingRsp.item.artists!=null">
+            <span class="music-text" *ngFor="let artist of currentlyPlayingRsp.item.artists; last as isLast">
               {{artist.name}}<span *ngIf="!isLast">, </span>
             </span>
           </div>

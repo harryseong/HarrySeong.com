@@ -32,13 +32,13 @@
 
     <!--Weather content-->
     <div *ngIf="weatherRsp" fxLayout="row" fxLayoutAlign="center start" fxLayoutGap="1.5em" [@contentAnimations]>
-      <div fxLayout="column" fxLayoutAlign="start start">
+      <div fxLayout="column" fxFlex="50" fxLayoutAlign="end end">
         <div class="white-text weather-icon">
           <i [ngClass]="['wi', weatherIcon]"></i>
         </div>
       </div>
 
-      <div fxLayout="column" fxLayoutGap="0">
+      <div fxLayout="column" fxFlex="50" fxLayoutGap="0">
         <div class="city">
           {{weatherRsp.name}}
         </div>

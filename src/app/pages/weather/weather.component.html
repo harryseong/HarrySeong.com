@@ -6,10 +6,12 @@
 
     <!--Weather search-->
     <div fxLayout="row" fxLayoutAlign="center center" [@contentAnimations]>
-      <div fxLayout="row" fxFlex="40" fxFlex.sm="70" fxFlex.xs="100">
+      <div fxLayout="row" fxFlex="30" fxFlex.sm="45" fxFlex.xs="100">
 
         <div fxLayoutAlign="center center">
-          <button mat-stroked-button (click)="lookupHarrysWeather()">harry's weather</button>
+          <button mat-stroked-button (click)="lookupHarrysWeather()">
+            <span><i class="fas fa-map-marker-alt"></i> Harry</span>
+          </button>
         </div>
 
         <span class="spacer"></span>

@@ -10,6 +10,7 @@ import {PageNotFoundComponent} from './pages/page-not-found/page-not-found.compo
 import {MusicComponent} from './pages/music/music.component';
 import {ExperimentalComponent} from './pages/experimental/experimental.component';
 import {NavpageSecretComponent} from './pages/navpage-secret/navpage-secret.component';
+import {WeatherComponent} from './pages/weather/weather.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -18,6 +19,7 @@ const routes: Routes = [
   {path: 'music', component: MusicComponent},
   {path: 'photos', component: PhotosComponent},
   {path: 'about', component: AboutComponent},
+  {path: 'weather', component: WeatherComponent},
   {path: 'secret/nav', component: NavpageSecretComponent},
   {path: 'secret/x', component: ExperimentalComponent},
   {path: '**', component: PageNotFoundComponent}

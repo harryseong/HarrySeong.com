@@ -28,7 +28,7 @@ import { NavpageSecretComponent } from './pages/navpage-secret/navpage-secret.co
 import { PageHeaderComponent } from './pages/page-header/page-header.component';
 import { DinoComponent } from './pages/experimental/dino/dino.component';
 import { PageHeaderDialogComponent } from './pages/page-header/page-header-dialog/page-header-dialog.component';
-import { WeatherComponent } from './pages/experimental/weather/weather.component';
+import { WeatherComponent } from './pages/weather/weather.component';
 
 @NgModule({
   declarations: [

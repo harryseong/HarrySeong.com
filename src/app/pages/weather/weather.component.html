@@ -18,8 +18,8 @@
           <form [formGroup]="weatherForm" class="weather-form" (keydown.enter)="$event.preventDefault()">
             <mat-form-field class="weather-form-field">
               <mat-label>zipcode</mat-label>
-              <input type="text" matInput #zip formControlName="zip" minlength="5" maxlength="5" (keyup.enter)="lookupCurrentWeather()">
-              <button mat-button-mini-fab [disabled]="!weatherForm.valid" matSuffix mat-icon-button aria-label="search" (click)="lookupCurrentWeather()">
+              <input type="text" matInput #zip formControlName="zip" minlength="5" maxlength="5" color="accent" (keyup.enter)="lookupCurrentWeather()">
+              <button mat-button-mini-fab [disabled]="!weatherForm.valid || weatherForm.get('zip').value.length!=5" matSuffix mat-icon-button aria-label="search" (click)="lookupCurrentWeather()">
                 <i class="fas fa-search"></i>
               </button>
               <mat-hint align="end">{{weatherForm.get('zip').value.length}} / 5</mat-hint>

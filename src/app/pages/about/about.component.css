@@ -34,6 +34,16 @@
   font-weight: 300;
 }
 
+.about-text a, .about-text a:visited {
+  color: rgba(255, 255, 255, 0.7);
+  transition: 0.3s;
+}
+
+.about-text a:hover {
+  color: rgba(255, 255, 255, 1);
+  transition: 0.3s;
+}
+
 .bio-info {
   text-transform: lowercase;
   font-size: 0.85em;

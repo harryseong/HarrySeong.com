@@ -22,7 +22,7 @@ import {MatSnackBar} from '@angular/material';
 })
 export class WeatherComponent implements OnInit, OnDestroy {
   pageHeader = 'weather';
-  pageSubheader = 'raindrops are fallin\' on my head...';
+  pageSubheader = 'raindrops keep fallin\' on my head...';
   pageExplanation = 'On January 18th, 2019, the Chicagoland area was forecasted to get 5-10 inches of snow from an impending blizzard. ' +
     'We were even allowed to go home early from work early to avoid the storm. Then it did not snow until nightfall, and even so, we ' +
     'didn\'t get so much snow. I was inspired to make this weather page because of the aforementioned faux-blizzard.';

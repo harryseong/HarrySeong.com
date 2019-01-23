@@ -2,19 +2,57 @@
 
   <app-page-header [pageHeader]="pageHeader" [pageSubheader]="pageSubheader" [pageExplanation]="pageExplanation" [pageTech]="pageTech"></app-page-header>
 
-  <div fxLayout="row" fxLayoutGap="1.5em" fxLayoutGap.xs="1em" fxLayoutAlign="center center">
-    <div fxLayout="column" fxFlex="100/3" class="color-div div-a" fxLayoutAlign="center center" [@divAAnimations]>
-      <i class="fas fa-cat fa-fw fa-3x"></i>
-      <div>mr. kibbles</div>
+  <div fxLayout="row" fxLayoutGap="0" fxLayoutGap.xs="0" fxLayoutAlign="center center" class="animate-flicker">
+    <i class="fas fa-hammer"></i>&nbsp;currently under construction...
+  </div>
+
+  <div fxLayout="row" fxLayoutGap="1em" fxLayoutGap.xs="1em" fxLayoutAlign="center center">
+
+    <div fxLayout="column" fxFlex="100/3" class="color-div div-a" fxLayoutAlign="start center" [@divAAnimations]>
+      <div>
+        <img src="/assets/images/momo_red.png" alt="cat" class="column-image">
+      </div>
+      <div class="column-label">jerry</div>
+      <div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="1em" class="column-description">
+        <div>
+          Jerry is Jerry.
+        </div>
+        <div>
+          <button mat-stroked-button type="button">view</button>
+        </div>
+      </div>
     </div>
-    <div fxLayout="column" fxFlex="100/3" class="color-div div-b" fxLayoutAlign="center center" [@divBAnimations]>
-      <i class="fas fa-crow fa-fw fa-3x"></i>
-      <div>jerry</div>
+
+    <div fxLayout="column" fxFlex="100/3" class="color-div div-b" fxLayoutAlign="start center" [@divBAnimations]>
+      <div>
+        <img src="/assets/images/momo_yellow_2.png" alt="cat" class="column-image">
+      </div>
+      <div class="column-label">momo</div>
+      <div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="1em" class="column-description">
+        <div>
+          Momo is our family's beloved cat who lives on the farm.
+        </div>
+        <div>
+          <button mat-stroked-button type="button">view</button>
+        </div>
+      </div>
     </div>
-    <div fxLayout="column" fxFlex="100/3" class="color-div div-c" fxLayoutAlign="center center" [@divCAnimations]>
-      <i class="fas fa-dragon fa-fw fa-3x"></i>
-      <div>lord trent</div>
+
+    <div fxLayout="column" fxFlex="100/3" class="color-div div-c" fxLayoutAlign="start center" [@divCAnimations]>
+      <div>
+        <img src="/assets/images/momo_cyan.png" alt="cat" class="column-image">
+      </div>
+      <div class="column-label">lord trent</div>
+      <div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="1em" class="column-description">
+        <div>
+          Lord Trent is... manageable...
+        </div>
+        <div>
+          <button mat-stroked-button type="button">view</button>
+        </div>
+      </div>
     </div>
+
   </div>
 
 </div>

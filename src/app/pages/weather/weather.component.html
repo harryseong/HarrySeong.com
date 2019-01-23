@@ -9,8 +9,9 @@
       <div fxLayout="row" fxFlex="30" fxFlex.sm="45" fxFlex.xs="100">
 
         <div fxLayoutAlign="center center">
-          <button mat-stroked-button (click)="lookupHarrysWeather()">
-            <span><i class="fas fa-map-marker-alt"></i> Harry</span>
+          <button mat-stroked-button (click)="lookupHarrysWeather()"
+                  [ngClass]="['harry-btn', currentZip=='60201' ? 'current' : '']">
+            <span><i class="fas fa-map-marker-alt"></i> Harry's Weather</span>
           </button>
         </div>
 

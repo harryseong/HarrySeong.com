@@ -16,21 +16,21 @@ import {animate, style, transition, trigger} from '@angular/animations';
       transition(':enter', [
         style({ opacity: 0, transform: 'translateY(-8em)'}),
         animate('1s .6s ease', style({ opacity: 1, transform: 'translateY(0)' })),
-        animate('1s ease', style({ opacity: 0.65 })),
+        animate('1s ease', style({ opacity: 0.75 })),
       ]),
     ]),
     trigger('divBAnimations', [
       transition(':enter', [
         style({ opacity: 0, transform: 'translateY(-8em)'}),
         animate('1s .9s ease', style({ opacity: 1, transform: 'translateY(0)' })),
-        animate('1s ease', style({ opacity: 0.65 })),
+        animate('1s ease', style({ opacity: 0.75 })),
       ]),
     ]),
     trigger('divCAnimations', [
       transition(':enter', [
         style({ opacity: 0, transform: 'translateY(-8em)'}),
         animate('1s 1.2s ease', style({ opacity: 1, transform: 'translateY(0)' })),
-        animate('1s ease', style({ opacity: 0.65 })),
+        animate('1s ease', style({ opacity: 0.75 })),
       ]),
     ])
   ]

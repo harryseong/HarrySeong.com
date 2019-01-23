@@ -25,6 +25,17 @@
   font-weight: 500;
 }
 
+.harry-btn {
+  border-radius: 0.2em;
+  font-weight: 300;
+  transition: 0.3s;
+}
+
+.harry-btn.current {
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(255, 255, 255, 0.15);
+  transition: 0.3s;}
+
 .weather-unit {
   line-height: 1.3em;
   font-size: 0.5em;

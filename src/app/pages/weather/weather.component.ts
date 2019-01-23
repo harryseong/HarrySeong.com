@@ -34,7 +34,7 @@ export class WeatherComponent implements OnInit, OnDestroy {
   });
   @ViewChild('zip') zipField: ElementRef;
 
-  currentZip: string;
+  currentZip = '60201';
   weatherRsp: any;
   weather$: Subscription;
   weatherUnitC = false;

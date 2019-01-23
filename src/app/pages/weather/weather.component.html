@@ -56,8 +56,8 @@
 
         <div class="weather-misc-info white-text">
           <div>humidity&nbsp;<span class="gray-text">{{weatherRsp.main.humidity}}%</span></div>
-          <div>sunrise&nbsp;<span class="gray-text">{{formatToCST_hmma(weatherRsp.sys.sunrise)}}</span></div>
-          <div>sunset&nbsp;<span class="gray-text">{{formatToCST_hmma(weatherRsp.sys.sunset)}}</span></div>
+          <div>sunrise&nbsp;<span class="gray-text">{{formatToCST_hmma(weatherRsp.sys.sunrise)}} CST</span></div>
+          <div>sunset&nbsp;<span class="gray-text">{{formatToCST_hmma(weatherRsp.sys.sunset)}} CST</span></div>
         </div>
 
         <div fxLayout="row" fxLayoutGap="0.3em" fxLayoutAlign="start start" fxFlexOffset="1em" [@contentAnimations]>

@@ -128,7 +128,7 @@ export class WeatherComponent implements OnInit, OnDestroy {
   }
 
   formatToCST_hmma(timestamp: number): string {
-    return moment.unix(timestamp).tz('America/Chicago').format('h:mma');
+    return moment.unix(timestamp).tz('America/Chicago').format('h:mm A');
   }
 
   // Function for opening snackbar.

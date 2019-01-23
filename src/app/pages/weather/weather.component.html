@@ -45,12 +45,12 @@
           {{weatherRsp.name}}
         </div>
         <div class="white-text current-temp" fxLayoutAlign="start start">
-          {{round(weatherRsp.main.temp)}}<span class="weather-unit">&#176;<span>{{weatherUnitC ? 'C' : 'F'}}</span></span>
+          {{round(weatherRsp.main.temp)}}<span class="weather-unit">&#176;<span>{{weatherUnit}}</span></span>
         </div>
         <div class="white-text weather-hi-lo" fxLayoutAlign="start start">
-          {{round(weatherRsp.main.temp_max)}}<span class="weather-unit">&#176;<span>{{weatherUnitC ? 'C' : 'F'}}</span></span>
+          {{round(weatherRsp.main.temp_max)}}<span class="weather-unit">&#176;<span>{{weatherUnit}}</span></span>
           <span class="gray-text">&nbsp;/&nbsp;</span>
-          {{round(weatherRsp.main.temp_min)}}<span class="weather-unit">&#176;<span>{{weatherUnitC ? 'C' : 'F'}}</span></span>
+          {{round(weatherRsp.main.temp_min)}}<span class="weather-unit">&#176;<span>{{weatherUnit}}</span></span>
         </div>
         <div class="weather-description white-text">{{weatherRsp.weather[0].description}}</div>
 

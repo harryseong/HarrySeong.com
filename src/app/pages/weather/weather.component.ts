@@ -38,6 +38,7 @@ export class WeatherComponent implements OnInit, OnDestroy {
   weatherRsp: any;
   weather$: Subscription;
   weatherUnitC = false;
+  weatherUnit = 'F';
   weatherIcon: string;
 
   constructor(private weatherService: OpenWeatherMapApiService, private snackBar: MatSnackBar, private zone: NgZone) { }
@@ -72,6 +73,7 @@ export class WeatherComponent implements OnInit, OnDestroy {
         this.weatherService.getCurrentWeather(zip, this.weatherUnitC ? 'metric' : 'imperial').subscribe(
           rsp => {
             this.weatherRsp = rsp;
+            this.weatherUnit = this.weatherUnitC ? 'C' : 'F';
 
             // Determine if daytime or nighttime.
             const sunrise = moment.unix(rsp.sys.sunrise);

@@ -4,8 +4,8 @@
 
 .color-div {
   color: black;
-  height: 32em;
-  max-width: 7em;
+  height: 30em;
+  max-width: 6em;
   opacity: 0.75;
   user-select: none;
   transition: 0.3s;
@@ -15,14 +15,20 @@
   opacity: 1;
   cursor: pointer;
   max-width: 15em;
-  width: 15em;
+  width: 13em;
   transform: scale(1.02);
+  transition: 0.3s;
+}
+
+.color-div.no-expand:hover {
+  max-width: 7em;
+  width: 7em;
   transition: 0.3s;
 }
 
 img.column-image {
   margin-top: 10em;
-  width: 5em;
+  width: 4em;
   transition: 0.3s;
 }
 
@@ -34,31 +40,53 @@ img.column-image {
 }
 
 .color-div:hover > div > img.column-image {
-  margin-top: 6em;
-  width: 10em;
-  max-width: 10em;
+  margin-top: 8em;
+  width: 6.5em;
+  max-width: 6.5em;
   transition: 0.3s;
 }
+
+.color-div.no-expand:hover > div > img.column-image {
+  margin-top: 9.5em;
+  width: 4.5em;
+  max-width: 4.5em;
+  transition: 0.3s;
+}
+
 
 .color-div:hover > div {
   opacity: 1;
   transition: 0.5s 0.3s;
 }
 
+.column-label {
+  transition: 0.3s;
+}
+
 .color-div:hover > .column-label {
   font-size: 1.4em;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.color-div.no-expand:hover > .column-label {
+  font-size: 1.1em;
   font-weight: 500;
   transition: 0.3s;
 }
 
 .div-a {
-  background-image: linear-gradient(rgba(247, 42, 0, 0.9), rgba(247, 42, 0, 1), rgba(247, 42, 0, 0.7));
+  background-image: linear-gradient(rgba(247, 42, 0, 0.8), rgba(247, 42, 0, 1), rgba(247, 42, 0, 0.7));
 }
 
 .div-b {
-  background-image: linear-gradient(rgba(247, 203, 0, 0.9), rgb(247, 203, 0), rgba(247, 203, 0, 0.7));
+  background-image: linear-gradient(rgba(247, 203, 0, 0.8), rgb(247, 203, 0), rgba(247, 203, 0, 0.7));
 }
 
 .div-c {
-  background-image: linear-gradient(rgba(0, 247, 228, 0.9), rgba(0, 247, 228, 1), rgba(0, 247, 228, 0.7));
+  background-image: linear-gradient(rgba(0, 247, 228, 0.8), rgba(0, 247, 228, 1), rgba(0, 247, 228, 0.7));
+}
+
+.view-btn {
+  border-radius: 0.2em;
 }

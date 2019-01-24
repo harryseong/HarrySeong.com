@@ -6,53 +6,6 @@
     <i class="fas fa-hammer"></i>&nbsp;currently under construction...
   </div>
 
-  <div fxLayout="row" fxLayoutGap="1em" fxLayoutGap.xs="1em" fxLayoutAlign="center center">
-
-    <div fxLayout="column" fxFlex="100/3" class="color-div div-a" [ngClass.xs]="['no-expand']" fxLayoutAlign="start center" [@divAAnimations]>
-      <div>
-        <img src="/assets/images/momo_red.png" alt="cat" class="column-image">
-      </div>
-      <div class="column-label">jerry</div>
-      <div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="1em" class="column-description">
-        <div>
-          Jerry is Jerry.
-        </div>
-        <div>
-          <button mat-stroked-button type="button" class="view-btn">VIEW</button>
-        </div>
-      </div>
-    </div>
-
-    <div fxLayout="column" fxFlex="100/3" class="color-div div-b" [ngClass.xs]="['no-expand']" fxLayoutAlign="start center" [@divBAnimations]>
-      <div>
-        <img src="/assets/images/momo_yellow_2.png" alt="cat" class="column-image">
-      </div>
-      <div class="column-label">momo</div>
-      <div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="1em" class="column-description">
-        <div>
-          Momo is our family's beloved cat who lives on the farm.
-        </div>
-        <div>
-          <button mat-stroked-button type="button" class="view-btn">VIEW</button>
-        </div>
-      </div>
-    </div>
-
-    <div fxLayout="column" fxFlex="100/3" class="color-div div-c" [ngClass.xs]="['no-expand']" fxLayoutAlign="start center" [@divCAnimations]>
-      <div>
-        <img src="/assets/images/momo_cyan.png" alt="cat" class="column-image">
-      </div>
-      <div class="column-label">lord trent</div>
-      <div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="1em" class="column-description">
-        <div>
-          Lord Trent is... manageable...
-        </div>
-        <div>
-          <button mat-stroked-button type="button" class="view-btn">VIEW</button>
-        </div>
-      </div>
-    </div>
-
-  </div>
+  <router-outlet></router-outlet>
 
 </div>

@@ -29,6 +29,9 @@ import { PageHeaderComponent } from './pages/page-header/page-header.component';
 import { DinoComponent } from './pages/experimental/dino/dino.component';
 import { PageHeaderDialogComponent } from './pages/page-header/page-header-dialog/page-header-dialog.component';
 import { WeatherComponent } from './pages/weather/weather.component';
+import { PhotosMomoComponent } from './pages/photos/photos-momo/photos-momo.component';
+import { PhotosFarmComponent } from './pages/photos/photos-farm/photos-farm.component';
+import { PhotosNavComponent } from './pages/photos/photos-nav/photos-nav.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +52,9 @@ import { WeatherComponent } from './pages/weather/weather.component';
     DinoComponent,
     PageHeaderDialogComponent,
     WeatherComponent,
+    PhotosMomoComponent,
+    PhotosFarmComponent,
+    PhotosNavComponent,
   ],
   imports: [
     AppRoutingModule,

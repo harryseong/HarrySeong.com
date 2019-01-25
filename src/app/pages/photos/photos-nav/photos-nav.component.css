@@ -3,7 +3,7 @@
 }
 
 .color-div {
-  color: black;
+  color: rgba(0, 0, 0, 0.6);
   height: 28em;
   max-width: 6em;
   opacity: 0.75;

@@ -13,8 +13,7 @@ import {Router} from '@angular/router';
           style({ opacity: 0, transform: 'translateY(8em) rotateY(90deg)'}),
           stagger(300, [
             sequence([
-              animate('0.7s 0.8s ease', style({ opacity: 1, transform: 'translateY(0) rotateY(0deg)' })),
-              animate('1s ease', style({ opacity: 0.75 })),
+              animate('0.7s 0.8s ease', style({ opacity: 0.75, transform: 'translateY(0) rotateY(0deg)' })),
             ])
           ]),
         ])
@@ -54,6 +53,6 @@ export class PhotosNavComponent implements OnInit {
     this.divAState = 'hide';
     this.divBState = 'hide';
     this.divCState = 'hideLast';
-    setTimeout(() => this.router.navigate(['/photos/asbjorn']), 700);
+    setTimeout(() => this.router.navigate(['/photos/seagull']), 700);
   }
 }

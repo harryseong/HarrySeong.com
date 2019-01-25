@@ -26,7 +26,7 @@ const routes: Routes = [
       {path : '', component: PhotosNavComponent},
       {path : 'durian', component: PhotosSingaporeComponent},
       {path : 'momo', component: PhotosMinnesotaComponent},
-      {path : 'asbjorn', component: PhotosChicagoComponent},
+      {path : 'seagull', component: PhotosChicagoComponent},
     ]
   },
   {path: 'about', component: AboutComponent},

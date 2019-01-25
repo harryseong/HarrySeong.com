@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import {animate, style, transition, trigger} from '@angular/animations';
 
 @Component({
-  selector: 'app-photos-farm',
-  templateUrl: './photos-farm.component.html',
-  styleUrls: ['./photos-farm.component.css'],
+  selector: 'app-photos-chicago',
+  templateUrl: './photos-chicago.component.html',
+  styleUrls: ['./photos-chicago.component.css'],
   animations: [
     trigger('contentAnimations', [
       transition(':enter', [
@@ -14,7 +14,7 @@ import {animate, style, transition, trigger} from '@angular/animations';
     ])
   ]
 })
-export class PhotosFarmComponent implements OnInit {
+export class PhotosChicagoComponent implements OnInit {
 
   constructor() { }
 

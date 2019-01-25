@@ -11,9 +11,10 @@ import {MusicComponent} from './pages/music/music.component';
 import {ExperimentalComponent} from './pages/experimental/experimental.component';
 import {NavpageSecretComponent} from './pages/navpage-secret/navpage-secret.component';
 import {WeatherComponent} from './pages/weather/weather.component';
-import {PhotosMomoComponent} from './pages/photos/photos-momo/photos-momo.component';
-import {PhotosFarmComponent} from './pages/photos/photos-farm/photos-farm.component';
 import {PhotosNavComponent} from './pages/photos/photos-nav/photos-nav.component';
+import {PhotosChicagoComponent} from './pages/photos/photos-chicago/photos-chicago.component';
+import {PhotosSingaporeComponent} from './pages/photos/photos-singapore/photos-singapore.component';
+import {PhotosMinnesotaComponent} from './pages/photos/photos-minnesota/photos-minnesota.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -23,8 +24,9 @@ const routes: Routes = [
   {path: 'photos', component: PhotosComponent,
     children: [
       {path : '', component: PhotosNavComponent},
-      {path : 'momo', component: PhotosMomoComponent},
-      {path : 'farm', component: PhotosFarmComponent},
+      {path : 'durian', component: PhotosSingaporeComponent},
+      {path : 'momo', component: PhotosMinnesotaComponent},
+      {path : 'asbjorn', component: PhotosChicagoComponent},
     ]
   },
   {path: 'about', component: AboutComponent},

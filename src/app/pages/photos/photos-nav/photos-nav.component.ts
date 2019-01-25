@@ -40,7 +40,7 @@ export class PhotosNavComponent implements OnInit {
     this.divAState = 'hideLast';
     this.divBState = 'hide';
     this.divCState = 'hide';
-    setTimeout(() => this.router.navigate(['/photos/farm']), 700);
+    setTimeout(() => this.router.navigate(['/photos/durian']), 700);
   }
 
   viewB() {
@@ -54,6 +54,6 @@ export class PhotosNavComponent implements OnInit {
     this.divAState = 'hide';
     this.divBState = 'hide';
     this.divCState = 'hideLast';
-    setTimeout(() => this.router.navigate(['/photos/farm']), 700);
+    setTimeout(() => this.router.navigate(['/photos/asbjorn']), 700);
   }
 }

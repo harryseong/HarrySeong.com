@@ -35,9 +35,9 @@ img.column-image {
 }
 
 .color-div:hover > div > img.column-image {
-  margin-top: 5em;
-  width: 6.5em;
-  max-width: 6.5em;
+  margin-top: 5.5em;
+  width: 7.5em;
+  max-width: 7em;
   transition: 0.3s;
 }
 
@@ -45,16 +45,6 @@ img.column-image {
   margin-top: 6.5em;
   width: 4em;
   max-width: 4.5em;
-  transition: 0.3s;
-}
-
-
-.color-div:hover > div {
-  opacity: 1;
-  transition: 0.5s 0.3s;
-}
-
-.column-label {
   transition: 0.3s;
 }
 
@@ -70,11 +60,25 @@ img.column-image {
   transition: 0.3s;
 }
 
+.column-label {
+  transition: 0.3s;
+}
+
 .column-description {
   opacity: 0;
-  font-weight: 300;
+  text-align: center;
+  font-weight: 400;
   font-size: 0.8em;
-  padding: 1em;
+  padding: 0.5em 2em;
+}
+
+.color-div:hover > .column-description {
+  opacity: 1;
+  transition: 0.3s 0.3s;
+}
+
+.color-div.no-expand > .column-description {
+  padding: 0.5em 1em;
 }
 
 .view-btn {
@@ -86,7 +90,7 @@ img.column-image {
 }
 
 .div-b {
-  background-image: linear-gradient(rgba(247, 203, 0, 0.8), rgb(247, 203, 0), rgba(247, 203, 0, 0.7));
+  background-image: linear-gradient(rgba(255, 210, 0, 0.8), rgb(255, 210, 0), rgba(255, 209, 0, 0.7));
 }
 
 .div-c {

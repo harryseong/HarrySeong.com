@@ -8,9 +8,9 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy-dev-firebase": "ng build && firebase deploy",
+    "deploy-dev-firebase": "ng build && firebase deploy --except functions",
     "deploy-dev-docker": "ng build && docker build -t harryseong/harryseong-client:$npm_package_version .",
-    "deploy-prod-firebase": "ng build --prod && firebase deploy",
+    "deploy-prod-firebase": "ng build --prod && firebase deploy --except functions",
     "deploy-prod-docker": "ng build --prod && docker build -t harryseong/harryseong-client:$npm_package_version .",
     "show-project-version": "echo $npm_package_version"
   },

@@ -1,7 +1,7 @@
 <div class="content">
 
   <!-- Video -->
-  <video #video muted (ended)="videoEnded()" [class]="vidStatus=='playing' ? '' : 'paused'" [@videoLoadAnimation]
+  <video #video muted (ended)="videoEnded()" [class]="vidStatus=='playing' ? 'playing' : ''" [@videoLoadAnimation]
          poster="assets/images/typewriter_3000x2000.jpg">
     <source src="assets/videos/typewriter.mp4" type="video/mp4">
   </video>

@@ -29,6 +29,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.video = this.videoElement.nativeElement;
+    this.video.pause();
     this.setVidStatus();
   }
 

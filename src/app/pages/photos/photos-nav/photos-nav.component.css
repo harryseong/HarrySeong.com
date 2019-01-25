@@ -15,7 +15,6 @@
 
 .color-div:hover {
   opacity: 1;
-  cursor: pointer;
   max-width: 15em;
   width: 13em;
   transform: scale(1.02);

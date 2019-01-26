@@ -58,6 +58,7 @@ img.column-image {
   margin-top: 2.75em;
   width: 4em;
   max-width: 4.5em;
+  border: solid 1.75pt rgba(0, 0, 0, 0.6);
   transition: 0.3s;
 }
 

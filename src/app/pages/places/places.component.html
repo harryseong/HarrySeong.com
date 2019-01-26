@@ -4,7 +4,7 @@
 
   <!--Mapbox-->
   <div>
-    <div id="map" [@mapAnimations]></div>
+    <div id="map" class="map" [ngClass.xs]="['map-xs']" [@mapAnimations]></div>
   </div>
 
   <div fxLayout="column" fxLayoutGap="0" [@btnAnimations]>

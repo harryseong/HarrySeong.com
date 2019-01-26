@@ -2,9 +2,13 @@
   color: rgba(255, 255, 255, 0.7);
 }
 
-#map {
+.map {
   height: 25em;
   width: 100%
+}
+
+.map.map-xs {
+  height: 15em;
 }
 
 .change-place-btn {

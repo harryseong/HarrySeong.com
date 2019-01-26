@@ -44,8 +44,12 @@ img.column-image {
   transition: 0.3s;
 }
 
+.color-div.no-expand > div > img.column-image {
+  margin-top: 3em;
+}
+
 .color-div.no-expand:hover > div > img.column-image {
-  margin-top: 4.75em;
+  margin-top: 2.75em;
   width: 4em;
   max-width: 4.5em;
   transition: 0.3s;
@@ -99,7 +103,7 @@ img.column-image {
 }
 
 .color-div.no-expand > .view-btn {
-  bottom: 3em;
+  bottom: 5em;
 }
 
 .view-btn:hover {

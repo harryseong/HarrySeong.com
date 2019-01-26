@@ -32,15 +32,21 @@
 }
 
 img.column-image {
-  margin-top: 5em;
-  width: 3.5em;
+  margin-top: 4em;
+  width: 3.2em;
+  border-radius: 50%;
+  padding: 0.7em;
+  border: solid 1pt rgba(0, 0, 0, 0);
   transition: 0.3s;
 }
 
 .color-div:hover > div > img.column-image {
-  margin-top: 4.1em;
+  margin-top: 3.1em;
   width: 7.5em;
   max-width: 7em;
+  padding: 0.7em;
+  border: solid 2pt rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.1);
   transition: 0.3s;
 }
 
@@ -93,17 +99,18 @@ img.column-image {
 }
 
 .view-btn {
-  position: absolute;
   opacity: 0;
-  bottom: 6.5em;
+  font-size: 0.9em;
+  margin-bottom: 5em;
   border-radius: 0.2em;
-  width: 80%;
+  width: 75%;
   background-color: rgba(0, 0, 0, 0);
   border-color: rgba(0, 0, 0, 0.1);
 }
 
 .color-div.no-expand > .view-btn {
-  bottom: 5em;
+  font-size: 0.7em;
+  margin-bottom: 4em;
 }
 
 .view-btn:hover {

@@ -4,7 +4,7 @@
 
 .color-div {
   color: rgba(0, 0, 0, 0.6);
-  height: 28em;
+  height: 25em;
   max-width: 6em;
   opacity: 0.75;
   user-select: none;
@@ -21,6 +21,10 @@
   transition: 0.3s;
 }
 
+.color-div.no-expand {
+  height: 20em;
+}
+
 .color-div.no-expand:hover {
   max-width: 7em;
   width: 7em;
@@ -28,20 +32,20 @@
 }
 
 img.column-image {
-  margin-top: 7em;
+  margin-top: 5em;
   width: 3.5em;
   transition: 0.3s;
 }
 
 .color-div:hover > div > img.column-image {
-  margin-top: 5.5em;
+  margin-top: 4.1em;
   width: 7.5em;
   max-width: 7em;
   transition: 0.3s;
 }
 
 .color-div.no-expand:hover > div > img.column-image {
-  margin-top: 6.5em;
+  margin-top: 4.75em;
   width: 4em;
   max-width: 4.5em;
   transition: 0.3s;
@@ -71,9 +75,13 @@ img.column-image {
   padding: 0.5em 2em;
 }
 
-.color-div:hover > .column-description {
+.color-div.no-expand > .column-description {
+  font-size: 0.6em;
+}
+
+.color-div:hover > .column-description, .color-div:hover > .view-btn {
   opacity: 1;
-  transition: 0.3s 0.3s;
+  transition: 0.3s 0.2s;
 }
 
 .color-div.no-expand > .column-description {
@@ -81,7 +89,22 @@ img.column-image {
 }
 
 .view-btn {
+  position: absolute;
+  opacity: 0;
+  bottom: 6.5em;
   border-radius: 0.2em;
+  width: 80%;
+  background-color: rgba(0, 0, 0, 0);
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+.color-div.no-expand > .view-btn {
+  bottom: 3em;
+}
+
+.view-btn:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-color: rgba(0, 0, 0, 0.2);
 }
 
 .div-a {

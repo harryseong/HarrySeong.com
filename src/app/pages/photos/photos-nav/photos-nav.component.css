@@ -26,38 +26,47 @@
 }
 
 .color-div.no-expand:hover {
-  max-width: 7em;
+  max-width: 8em;
   width: 7em;
   transition: 0.3s;
 }
 
 img.column-image {
-  margin-top: 4em;
+  margin-top: 8em;
   width: 4em;
   border-radius: 50%;
   border: solid 1pt rgba(0, 0, 0, 0);
   transition: 0.3s;
 }
 
-.color-div:hover > div > img.column-image {
-  margin-top: 3.1em;
+.color-div:hover > img.column-image {
+  margin-top: 4em;
   width: 7.5em;
-  max-width: 7em;
+  max-width: 8em;
   padding: 0.5em;
   border: solid 2pt rgba(0, 0, 0, 0.6);
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.07);
   transition: 0.3s;
 }
 
-.color-div.no-expand > div > img.column-image {
-  margin-top: 3em;
+.color-div:hover > img.column-image:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  border-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.15);
+  transition: 0.3s;
 }
 
-.color-div.no-expand:hover > div > img.column-image {
-  margin-top: 2.75em;
+
+.color-div.no-expand > img.column-image {
+  margin-top: 5em;
+}
+
+.color-div.no-expand:hover > img.column-image {
+  margin-top: 5em;
   width: 4em;
   max-width: 4.5em;
-  padding: 0.2em;
+  padding: 0.1em;
   border: solid 1.75pt rgba(0, 0, 0, 0.6);
   transition: 0.3s;
 }
@@ -75,6 +84,8 @@ img.column-image {
 }
 
 .column-label {
+  color: rgba(0, 0, 0, 0.6);
+  margin-top: 0.1em;
   transition: 0.3s;
 }
 
@@ -99,26 +110,6 @@ img.column-image {
   padding: 0.5em 1em;
 }
 
-.view-btn {
-  opacity: 0;
-  font-size: 0.9em;
-  margin-bottom: 5em;
-  border-radius: 0.2em;
-  width: 75%;
-  background-color: rgba(0, 0, 0, 0);
-  border-color: rgba(0, 0, 0, 0.1);
-}
-
-.color-div.no-expand > .view-btn {
-  font-size: 0.7em;
-  margin-bottom: 4em;
-}
-
-.view-btn:hover {
-  background-color: rgba(0, 0, 0, 0.05);
-  border-color: rgba(0, 0, 0, 0.2);
-}
-
 .div-a {
   background-image: linear-gradient(rgba(247, 42, 0, 0.8), rgba(247, 42, 0, 1), rgba(247, 42, 0, 0.7));
 }
@@ -129,4 +120,26 @@ img.column-image {
 
 .div-c {
   background-image: linear-gradient(rgba(0, 247, 228, 0.8), rgba(0, 247, 228, 1), rgba(0, 247, 228, 0.7));
+}
+
+img.column-image:hover + .column-label {
+  color: rgba(0, 0, 0, 0.8);
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+
+img.column-image:hover + .column-label:before {
+  visibility: visible;
+  transform: scaleX(1);
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: 0.3s;
+}
+
+.underline-middle:before {
+  background-color: rgba(0, 0, 0, 0.8);
+  height: 2px;
+}
+
+.color-div.no-expand > .underline-middle:before {
+  height: 1px;
 }

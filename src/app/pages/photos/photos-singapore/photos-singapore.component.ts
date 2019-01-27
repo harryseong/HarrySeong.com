@@ -25,7 +25,7 @@ export class PhotosSingaporeComponent implements OnInit {
     'is home to 5.6 million residents; a reflection of Singapore\'s ethnic diversity, its four official languages are English, Malay, ' +
     'Mandarin, and Tamil.';
   images: any[] = [
-    {src: 'assets/images/photos/singapore/durian.jpg', w: 1067, h: 800, title: 'During fallen on a path.', author: 'HS'},
+    {src: 'assets/images/photos/singapore/durian.jpg', w: 1067, h: 800, title: 'A young durian fallen on a path.', author: 'HS'},
     {src: 'assets/images/photos/singapore/durian-building.jpg', w: 1422, h: 800, title: 'Building resembling durian.', author: 'HS'},
     {src: 'assets/images/photos/singapore/hawker.jpg', w: 1422, h: 800, title: 'Hawker center food.', author: 'HS'},
     {src: 'assets/images/photos/singapore/hawker-2.jpg', w: 1422, h: 800, title: 'Hawker center food.', author: 'HS'},

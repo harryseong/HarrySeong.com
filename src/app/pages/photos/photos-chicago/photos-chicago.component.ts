@@ -45,7 +45,7 @@ export class PhotosChicagoComponent implements OnInit {
     {src: 'assets/images/photos/chicago/fall-2.jpg', w: 1422, h: 800, title: '@Northwestern University: Autumn leaves outside office.', author: 'HS'},
     {src: 'assets/images/photos/chicago/fall-3.jpg', w: 1422, h: 800, title: '@Northwestern University: Autumn leaves outside office.', author: 'HS'},
     {src: 'assets/images/photos/chicago/flowers.jpg', w: 1422, h: 800, title: '@Northwestern University: Flowers blossoming outside office.', author: 'HS'},
-    {src: 'assets/images/photos/chicago/mushroom.jpg', w: 1422, h: 800, title: '@Northwestern University: Mushrooms growing outside office.', author: 'HS'},
+    {src: 'assets/images/photos/chicago/mushroom.jpg', w: 1422, h: 800, title: '@Northwestern University: Mushroom growing outside office.', author: 'HS'},
     {src: 'assets/images/photos/chicago/mushroom-2.jpg', w: 1422, h: 800, title: '@Northwestern University: Mushroom wilting outside office.', author: 'HS'},
     {src: 'assets/images/photos/chicago/home.jpg', w: 1067, h: 800, title: 'Home.', author: 'HS'},
     {src: 'assets/images/photos/chicago/home-2.jpg', w: 1067, h: 800, title: 'Home.', author: 'HS'},

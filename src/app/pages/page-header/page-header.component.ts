@@ -23,7 +23,6 @@ import {MatDialog} from '@angular/material';
   ]
 })
 export class PageHeaderComponent implements OnInit {
-
   @Input() pageHeader: string;
   @Input() pageSubheader: string;
   @Input() pageExplanation: string;

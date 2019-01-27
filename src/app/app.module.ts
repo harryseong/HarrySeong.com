@@ -33,6 +33,8 @@ import { PhotosNavComponent } from './pages/photos/photos-nav/photos-nav.compone
 import { PhotosChicagoComponent } from './pages/photos/photos-chicago/photos-chicago.component';
 import { PhotosSingaporeComponent } from './pages/photos/photos-singapore/photos-singapore.component';
 import { PhotosMinnesotaComponent } from './pages/photos/photos-minnesota/photos-minnesota.component';
+import { PhotosHeaderComponent } from './pages/photos/photos-header/photos-header.component';
+import { PhotosGalleryComponent } from './pages/photos/photos-gallery/photos-gallery.component';
 
 @NgModule({
   declarations: [
@@ -57,6 +59,8 @@ import { PhotosMinnesotaComponent } from './pages/photos/photos-minnesota/photos
     PhotosChicagoComponent,
     PhotosSingaporeComponent,
     PhotosMinnesotaComponent,
+    PhotosHeaderComponent,
+    PhotosGalleryComponent,
   ],
   imports: [
     AppRoutingModule,

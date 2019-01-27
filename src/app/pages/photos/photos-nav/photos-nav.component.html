@@ -3,24 +3,27 @@
   <div fxLayout="column" fxFlex="100/3" class="color-div div-a" [ngClass.xs]="['no-expand']" fxLayoutAlign="start center" [@colorDivAnimations]="divAState">
     <img src="/assets/images/durian_red.png" alt="cat" class="column-image" (click)="viewA()">
     <div class="column-label underline-middle">durian</div>
-    <div fxLayout="column" fxLayoutAlign="center center" class="column-description">
-      Durian is a spiky fruit that grows on trees and succumbs to gravity.
+    <div fxLayout="column" fxLayoutGap="1em" fxLayoutAlign="center center" class="column-description">
+      <div>Durian is a spiky fruit that grows on trees and succumbs to gravity.</div>
+      <div class="moniker">"The Lion City"</div>
     </div>
   </div>
 
   <div fxLayout="column" fxFlex="100/3" class="color-div div-b" [ngClass.xs]="['no-expand']" fxLayoutAlign="start center" [@colorDivAnimations]="divBState">
     <img src="/assets/images/momo_yellow.png" alt="cat" class="column-image" (click)="viewB()">
     <div class="column-label underline-middle">momo</div>
-    <div fxLayout="column" fxLayoutAlign="center center" class="column-description">
-      Momo is our family's beloved cat who lives on the mushroom farm.
+    <div fxLayout="column" fxLayoutGap="1em" fxLayoutAlign="center center" class="column-description">
+      <div>Momo is our family's beloved cat who lives on the mushroom farm.</div>
+      <div class="moniker">"Land of 10,000 Lakes"</div>
     </div>
   </div>
 
   <div fxLayout="column" fxFlex="100/3" class="color-div div-c" [ngClass.xs]="['no-expand']" fxLayoutAlign="start center" [@colorDivAnimations]="divCState">
     <img src="/assets/images/bird_cyan.png" alt="cat" class="column-image" (click)="viewC()">
     <div class="column-label underline-middle">seagull</div>
-    <div fxLayout="column" fxLayoutAlign="center center" class="column-description">
-      This hungry bird appeared near Lake Michigan and was ready to eat.
+    <div fxLayout="column" fxLayoutGap="1em" fxLayoutAlign="center center" class="column-description">
+      <div>This hungry bird appeared near Lake Michigan and was ready to eat.</div>
+      <div class="moniker">"The Windy City"</div>
     </div>
   </div>
 

@@ -1,0 +1,12 @@
+.header-title {
+  color: rgba(255, 255, 255, 1);
+  font-size: 1.4em;
+  font-weight: 400;
+}
+
+.moniker {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.8em;
+  font-weight: 300;
+  font-style: italic;
+}

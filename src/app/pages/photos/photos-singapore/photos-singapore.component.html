@@ -1,7 +1,5 @@
 <div fxLayout="column" fxFill fxLayoutGap="1em" fxLayoutAlign="center center" [@contentAnimations]>
-  <div>
-    This is the Durian page.
-  </div>
+  <app-photos-header [headerTitle]="headerTitle" [headerSubtitle]="headerSubtitle"></app-photos-header>
 
-  <button mat-stroked-button routerLink="/photos" routerLinkActive="active" class="back-btn">BACK</button>
+  <app-photos-gallery [images]="images"></app-photos-gallery>
 </div>

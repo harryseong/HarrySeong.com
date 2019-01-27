@@ -18,14 +18,14 @@ export class PhotosMinnesotaComponent implements OnInit {
   headerTitle = 'Minnesota';
   headerSubtitle = 'Land of 10,000 Lakes';
   images: any[] = [
-    {src: 'assets/images/photos/minnesota/momo.jpg', w: 1200, h: 800, title: '@Farm: Momo', author: 'HS'},
+    {src: 'assets/images/photos/minnesota/momo-2.jpg', w: 1200, h: 800, title: '@Farm: Momo', author: 'HS'},
     {src: 'assets/images/photos/minnesota/turkey-feather.jpg', w: 1200, h: 800, title: '@Farm: Wild turkey feather planted on the ground.', author: 'HS'},
     {src: 'assets/images/photos/minnesota/tiny-mushroom.jpg', w: 1200, h: 800, title: '@Farm: Tiny mushroom growing on a mossy log.', author: 'HS'},
     {src: 'assets/images/photos/minnesota/spider.jpg', w: 1200, h: 800, title: '@Farm: A spider made a home in the woods.', author: 'HS'},
     {src: 'assets/images/photos/minnesota/picnic.jpg', w: 1200, h: 800, title: '@Farm: Picnic table in the woods.', author: 'HS'},
     {src: 'assets/images/photos/minnesota/mom-flower.jpg', w: 1200, h: 800, title: '@Farm: Yellow flower planted by mom.', author: 'HS'},
     {src: 'assets/images/photos/minnesota/cats-hammock.jpg', w: 1200, h: 800, title: '@Farm: Momo and Coco on hammock with dad.', author: 'HS'},
-    {src: 'assets/images/photos/minnesota/momo-2.jpg', w: 1200, h: 800, title: '@Farm: Momo', author: 'HS'},
+    {src: 'assets/images/photos/minnesota/momo.jpg', w: 1200, h: 800, title: '@Farm: Momo', author: 'HS'},
     {src: 'assets/images/photos/minnesota/momo-3.jpg', w: 1200, h: 800, title: '@Farm: Momo', author: 'HS'},
     {src: 'assets/images/photos/minnesota/momo-4.jpg', w: 1200, h: 800, title: '@Farm: Momo', author: 'HS'},
     {src: 'assets/images/photos/minnesota/coco.jpg', w: 1067, h: 800, title: '@Farm: Coco', author: 'HS'},

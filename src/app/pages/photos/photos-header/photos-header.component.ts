@@ -8,6 +8,7 @@ import {Component, Input, OnInit, ViewChild} from '@angular/core';
 export class PhotosHeaderComponent implements OnInit {
   @Input() headerTitle: string;
   @Input() headerSubtitle: string;
+  @Input() headerBlurb: string;
 
   constructor() { }
 

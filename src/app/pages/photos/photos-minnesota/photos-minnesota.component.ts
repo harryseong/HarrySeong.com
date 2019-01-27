@@ -17,6 +17,9 @@ import {animate, style, transition, trigger} from '@angular/animations';
 export class PhotosMinnesotaComponent implements OnInit {
   headerTitle = 'Minnesota';
   headerSubtitle = 'Land of 10,000 Lakes';
+  headerBlurb = 'On May 11th, 1858, Minnesota was admitted as the 32nd state of the United States. Though it is referred to as the ' +
+    '"land of 10,000 lakes," the actual number of lakes--at least 10 acres in size--is closer to 12,000. Minnesota is home to 5.5 ' +
+    'million residents, 60% of whom live in the Minneapolis-Saint Paul "Twin Cities" metropolitan area.';
   images: any[] = [
     {src: 'assets/images/photos/minnesota/momo-2.jpg', w: 1200, h: 800, title: '@Farm: Momo', author: 'HS'},
     {src: 'assets/images/photos/minnesota/turkey-feather.jpg', w: 1200, h: 800, title: '@Farm: Wild turkey feather planted on the ground.', author: 'HS'},

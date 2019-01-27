@@ -1,6 +1,6 @@
 .header-title {
   color: rgba(255, 255, 255, 1);
-  font-size: 1.4em;
+  font-size: 1.6em;
   font-weight: 400;
 }
 
@@ -9,4 +9,13 @@
   font-size: 0.8em;
   font-weight: 300;
   font-style: italic;
+}
+
+.blurb {
+  text-align: center;
+  max-width: 25em;
+  margin-top: 1em;
+  color: rgba(255, 255, 255, 1);
+  font-size: 0.9em;
+  font-weight: 300;
 }

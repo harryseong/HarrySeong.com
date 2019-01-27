@@ -17,6 +17,8 @@ import {animate, style, transition, trigger} from '@angular/animations';
 export class PhotosChicagoComponent implements OnInit {
   headerTitle = 'Chicago';
   headerSubtitle = 'The Windy City';
+  headerBlurb = 'Incorporated as a city in 1837, the City of Chicago is the third most populous city in the United States with ' +
+    '2.5 million residing in Chicago proper and nearly 10 million in the greater Chicagoland metropolitan area.';
   images: any[] = [
     {src: 'assets/images/photos/chicago/seagull.jpg', w: 1422, h: 800, title: 'Hungry looking seagull from Northwestern lakefill.', author: 'HS'},
     {src: 'assets/images/photos/chicago/cubs.jpg', w: 1067, h: 800, title: 'Chicago Cubs game at Wrigley Field.', author: 'HS'},

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {animate, style, transition, trigger} from '@angular/animations';
+import {animate, query, stagger, style, transition, trigger} from '@angular/animations';
 
 @Component({
   selector: 'app-photos-chicago',
@@ -8,8 +8,12 @@ import {animate, style, transition, trigger} from '@angular/animations';
   animations: [
     trigger('contentAnimations', [
       transition(':enter', [
-        style({ opacity: 0, transform: 'translateY(0.5em)'}),
-        animate('1s ease', style({ opacity: 1, transform: 'translateY(0)' })),
+        query('.stagger-reveal', [
+          style({ opacity: 0, transform: 'translateY(0.5em)'}),
+          stagger(300, [
+            animate('1s ease', style({ opacity: 1, transform: 'translateY(0)' })),
+          ])
+        ])
       ]),
     ])
   ]

@@ -36,8 +36,9 @@ import {
   MatChipsModule,
   MatTabsModule,
   MatStepperModule,
-  MatIconModule
+  MatIconModule,
 } from '@angular/material';
+import {DragDropModule} from '@angular/cdk/drag-drop';
 
 const materialModules = [
   OverlayModule,
@@ -76,7 +77,8 @@ const materialModules = [
   MatChipsModule,
   MatTabsModule,
   MatStepperModule,
-  MatIconModule
+  MatIconModule,
+  DragDropModule,
 ];
 
 @NgModule({

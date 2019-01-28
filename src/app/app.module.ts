@@ -35,6 +35,8 @@ import { PhotosSingaporeComponent } from './pages/photos/photos-singapore/photos
 import { PhotosMinnesotaComponent } from './pages/photos/photos-minnesota/photos-minnesota.component';
 import { PhotosHeaderComponent } from './pages/photos/photos-header/photos-header.component';
 import { PhotosGalleryComponent } from './pages/photos/photos-gallery/photos-gallery.component';
+import { DragAndDropComponent } from './pages/experimental/drag-and-drop/drag-and-drop.component';
+import { ScratchSpaceComponent } from './pages/experimental/scratch-space/scratch-space.component';
 
 @NgModule({
   declarations: [
@@ -61,6 +63,8 @@ import { PhotosGalleryComponent } from './pages/photos/photos-gallery/photos-gal
     PhotosMinnesotaComponent,
     PhotosHeaderComponent,
     PhotosGalleryComponent,
+    DragAndDropComponent,
+    ScratchSpaceComponent,
   ],
   imports: [
     AppRoutingModule,

@@ -3,11 +3,21 @@
   <app-page-header [pageHeader]="pageHeader" [pageSubheader]="pageSubheader" [pageExplanation]="pageExplanation" [pageTech]="pageTech"></app-page-header>
 
   <div fxLayout="row" fxLayoutAlign="center center" [@contentAnimations]>
-    <div fxFlex="50" fxFlex.sm="60" fxFlex.xs="90">
+    <div fxFlex="80" fxFlex.sm="60" fxFlex.xs="90">
       <mat-tab-group>
+        <mat-tab label="scratch space">
+          <div class="mat-tab-content">
+            <app-scratch-space></app-scratch-space>
+          </div>
+        </mat-tab>
         <mat-tab label="dino">
           <div class="mat-tab-content">
             <app-dino></app-dino>
+          </div>
+        </mat-tab>
+        <mat-tab label="drag n drop">
+          <div class="mat-tab-content">
+            <app-drag-and-drop></app-drag-and-drop>
           </div>
         </mat-tab>
       </mat-tab-group>

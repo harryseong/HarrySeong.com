@@ -15,7 +15,7 @@ import {animate, style, transition, trigger} from '@angular/animations';
   ]
 })
 export class ExperimentalComponent implements OnInit {
-  pageHeader = 'experimental';
+  pageHeader = 'lab';
   pageSubheader = 'you called for a test subject?';
   pageExplanation = 'This page was created with the purpose of being a digital test site for all kinds of experimentation whether that ' +
     'be playing around with a new library or api.';

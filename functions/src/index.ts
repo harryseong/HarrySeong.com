@@ -5,7 +5,7 @@ const request = require('request'); // "Request" library
 const app = express();
 import * as cors from "cors";
 
-//options for cors midddleware
+//options for cors middleware
 const corsOptions: cors.CorsOptions = {
   allowedHeaders: ["Origin", "X-Requested-With", "Content-Type", "Accept", "X-Access-Token"],
   credentials: true,

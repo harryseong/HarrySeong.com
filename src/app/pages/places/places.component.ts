@@ -1,4 +1,4 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
+import {Component, HostListener, OnDestroy, OnInit} from '@angular/core';
 import {animate, style, transition, trigger} from '@angular/animations';
 import {FirestoreService} from '../../shared/services/firebase/firestore/firestore.service';
 import * as mapboxgl from 'mapbox-gl';
@@ -77,6 +77,17 @@ export class PlacesComponent implements OnInit, OnDestroy {
           }, 500);
         }
     });
+  }
+
+  @HostListener('window:keyup', ['$event'])
+  keyEvent(event: KeyboardEvent) {
+    if (event.key === 'ArrowRight' || event.key === 'ArrowUp') {
+      this.nextPlace();
+    }
+
+    if (event.key === 'ArrowLeft' || event.key === 'ArrowDown') {
+      this.previousPlace();
+    }
   }
 
   sliderChange() {

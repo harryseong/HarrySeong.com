@@ -7,12 +7,12 @@
     <div id="map" class="map" [ngClass.xs]="['map-xs']" [@mapAnimations]></div>
   </div>
 
-  <div fxLayout="column" fxLayoutGap="0" [@btnAnimations]>
-    <div fxLayout="row" fxFill fxLayoutGap="0.2em" fxLayoutAlign="center center">
+  <div fxLayout="column" [@btnAnimations]>
+    <div fxLayout="row" fxLayoutGap="0.2em" fxLayoutAlign="center center">
       <button mat-button (click)="previousPlace()" class="change-place-btn">
         <span><i class="fas fa-angle-left"></i> then</span>
       </button>
-      <mat-slider fxFill fxFlex="50" fx.Flex.xs="90" tickInterval="1" min="1" [max]="places.length"
+      <mat-slider fxFlex="50" fx.Flex.xs="90" tickInterval="1" min="1" [max]="places.length"
                   [(value)]="currentPlaceOrder" (change)="sliderChange()" class="year-slider"></mat-slider>
       <button mat-button (click)="nextPlace()" class="change-place-btn">
         <span>now <i class="fas fa-angle-right"></i></span>

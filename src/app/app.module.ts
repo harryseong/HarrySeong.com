@@ -37,6 +37,7 @@ import { PhotosHeaderComponent } from './pages/photos/photos-header/photos-heade
 import { PhotosGalleryComponent } from './pages/photos/photos-gallery/photos-gallery.component';
 import { DragAndDropComponent } from './pages/experimental/drag-and-drop/drag-and-drop.component';
 import { ScratchSpaceComponent } from './pages/experimental/scratch-space/scratch-space.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 @NgModule({
   declarations: [
@@ -79,6 +80,7 @@ import { ScratchSpaceComponent } from './pages/experimental/scratch-space/scratc
     ReactiveFormsModule,
     HttpClientModule,
     TypingAnimationModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
   ],
   exports: [
     MaterialModule

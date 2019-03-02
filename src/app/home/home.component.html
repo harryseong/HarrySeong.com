@@ -1,9 +1,8 @@
 <div class="content">
 
   <!-- Video -->
-  <video #video muted (ended)="videoEnded()" [class]="vidStatus=='playing' ? 'playing' : ''" [@videoLoadAnimation]
-         poster="assets/images/typewriter_3000x2000.jpg">
-    <source src="assets/videos/typewriter.mp4" type="video/mp4">
+  <video #video muted playsinline type="video/mp4" (ended)="videoEnded()" [class]="vidStatus=='playing' ? 'playing' : ''" [@videoLoadAnimation]
+         poster="/assets/images/app/typewriter_3000x2000.jpg" src="/assets/videos/typewriter.mp4">
   </video>
 
   <div fxLayout="column" fxLayoutGap="1em">

@@ -1,5 +1,5 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import {animate, state, style, transition, trigger} from '@angular/animations';
+import {animate, style, transition, trigger} from '@angular/animations';
 
 @Component({
   selector: 'app-home',
@@ -40,13 +40,19 @@ export class HomeComponent implements OnInit {
       this.vidStatus = 'paused';
     }
   }
+
   toggleVideo() {
     if (!this.video.paused) {
       this.video.pause();
+      console.log('Video paused.');
       this.setVidStatus();
     } else if (this.video.paused) {
-      this.video.play();
-      this.setVidStatus();
+      this.video.play().then(() => {
+        console.log('Video play triggered.');
+        this.setVidStatus();
+      }).catch(
+        (e) => console.log(e)
+      );
     }
   }
 

@@ -6,8 +6,8 @@
       "installMode": "prefetch",
       "resources": {
         "files": [
-          "/assets/images/typewriter_100x100.png",
-          "assets/images/typewriter_180x180.png",
+          "/assets/videos/**",
+          "/assets/images/app/**",
           "/index.html",
           "/*.css",
           "/*.js"
@@ -15,12 +15,12 @@
       }
     },
     {
-      "name": "assets",
+      "name": "photos",
       "installMode": "lazy",
       "updateMode": "prefetch",
       "resources": {
         "files": [
-          "/assets/**"
+          "/assets/images/photos/**"
         ]
       }
     }
@@ -30,10 +30,10 @@
       "name": "harryseong",
       "urls": ["https://www.harryseong.com/**"],
       "cacheConfig": {
-        "strategy": "freshness",
-        "maxSize": 20,
+        "strategy": "performance",
+        "maxSize": 300,
         "maxAge": "1h",
-        "timeout": "30s"
+        "timeout": "15s"
       }
     }
   ]

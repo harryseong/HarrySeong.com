@@ -1,15 +1,35 @@
 {
   "name": "harryseong",
   "short_name": "harryseong",
-  "theme_color": "#1976d2",
-  "background_color": "#fafafa",
+  "theme_color": "#000",
+  "background_color": "#000",
   "display": "standalone",
   "scope": "/",
   "start_url": "/",
   "icons": [
     {
-      "src": "assets/icons/icon-72x72.png",
-      "sizes": "72x72",
+      "src": "assets/images/app/typewriter_100x100.png",
+      "sizes": "100x100",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/app/typewriter_144x144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/app/typewriter_180x180.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/app/typewriter_200x200.png",
+      "sizes": "200x200",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/app/typewriter_300x300.png",
+      "sizes": "300x300",
       "type": "image/png"
     }
   ]

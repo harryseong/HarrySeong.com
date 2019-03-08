@@ -6,7 +6,6 @@
       "installMode": "prefetch",
       "resources": {
         "files": [
-          "/assets/videos/**",
           "/assets/images/app/**",
           "/index.html",
           "/*.css",
@@ -29,8 +28,7 @@
     {
       "name": "harryseong",
       "urls": [
-        "https://www.harryseong.com/**",
-        "http://localhost:4208/**"
+        "https://www.harryseong.com/**"
       ],
       "cacheConfig": {
         "strategy": "performance",

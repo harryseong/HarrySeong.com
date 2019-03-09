@@ -19,7 +19,7 @@ video.playing {
 }
 
 .btn {
-  height: 3em;
+  height: 2.8em;
   width: 8em;
   color: rgba(255, 255, 255, 0.75);
   border-color: rgba(255, 255, 255, 0.75);
@@ -76,9 +76,13 @@ video.playing {
 }
 
 .info-box-header {
-  font-size: 1.8em;
-  letter-spacing: 0.1em;
+  font-size: 2.2em;
+  letter-spacing: 0.13em;
   font-weight: 500;
   color: rgba(255, 255, 255, 1);
   text-transform: uppercase;
+}
+
+.info-box-content {
+  padding: 0.5em 0 1em 0;
 }

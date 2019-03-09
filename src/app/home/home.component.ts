@@ -33,7 +33,7 @@ export class HomeComponent implements OnInit {
   @ViewChild('video') videoElement: any;
   video: any;
   vidStatus: string;
-  isInfoBoxMinimized = false;
+  isInfoBoxMinimized = true;
 
   constructor() { }
 

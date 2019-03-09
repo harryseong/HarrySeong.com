@@ -8,16 +8,16 @@
   <div fxLayout="column" fxLayoutGap="1em">
     <div fxLayout="row" fxFill fxLayoutAlign="end end" fxLayoutAlign.xs="center center">
 
-      <div fxLayout="column" fxLayoutGap="1.5em" fxFlex="35" fxFlex.sm="60" fxFlex.xs="100" class="info-box" [@transitionAnimations]>
+      <div fxLayout="column" fxLayoutGap="1.5em" fxFlex="35" fxFlex.sm="60" fxFlex.xs="100" [ngClass]="isInfoBoxMinimized ? 'info-box minimized' : 'info-box'" [@transitionAnimations]>
 
-        <div fxLayout="row" fxLayoutAlign="start">
+        <div fxLayout="row" fxLayoutGap="0.1em" fxLayoutAlign="center center">
           <div class="info-box-header">welcome</div>
 
-          <span class="spacer"></span>
+          <span [ngClass]="isInfoBoxMinimized ? 'header spacer minimized' : 'header spacer'"></span>
 
-          <button class="min-max-btn" (click)="toggleInfoBox()">
-            <span *ngIf="!isInfoBoxMinimized"><i class="fas fa-minus fa-sm"></i></span>
-            <span *ngIf="isInfoBoxMinimized"><i class="fas fa-plus fa-sm"></i></span>
+          <button class="min-max-btn" (click)="toggleInfoBox()" fxFlexLayout="row" fxLayoutAlign="center baseline">
+            <i class="fas fa-minus fa-sm min-max-icon" *ngIf="!isInfoBoxMinimized"></i>
+            <i class="fas fa-info fa-sm min-max-icon" *ngIf="isInfoBoxMinimized"></i>
           </button>
         </div>
 

@@ -1,5 +1,5 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import {animate, style, transition, trigger} from '@angular/animations';
+import {animate, state, style, transition, trigger} from '@angular/animations';
 
 @Component({
   selector: 'app-home',
@@ -17,6 +17,15 @@ import {animate, style, transition, trigger} from '@angular/animations';
         style({ opacity: 0 }),
         animate('2s .3s ease', style({ opacity: 0.5})),
       ]),
+    ]),
+    trigger('minMaxAnimation', [
+      transition(':enter', [
+        style({opacity: 0, height: '0px'}),
+        animate('0.2s ease-in-out', style({ opacity: 1, height: '*'})),
+      ]),
+      transition(':leave', [
+        animate('0.2s ease-in-out', style({ opacity: 0, height: '0px'})),
+      ])
     ])
   ],
 })
@@ -24,6 +33,7 @@ export class HomeComponent implements OnInit {
   @ViewChild('video') videoElement: any;
   video: any;
   vidStatus: string;
+  isInfoBoxMinimized = false;
 
   constructor() { }
 
@@ -60,5 +70,7 @@ export class HomeComponent implements OnInit {
     this.vidStatus = 'stopped';
   }
 
-
+  toggleInfoBox() {
+    this.isInfoBoxMinimized = !this.isInfoBoxMinimized;
+  }
 }

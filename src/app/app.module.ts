@@ -15,7 +15,7 @@ import { PhotosComponent } from './pages/photos/photos.component';
 import { AboutComponent } from './pages/about/about.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import {AngularFireModule} from '@angular/fire';
-import {AngularFirestoreModule} from '@angular/fire/firestore';
+import {AngularFirestoreModule, FirestoreSettingsToken} from '@angular/fire/firestore';
 import {AngularFireAuthModule} from '@angular/fire/auth';
 import {environment} from '../environments/environment';
 import {TypingAnimationModule} from 'angular-typing-animation';
@@ -88,7 +88,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
   entryComponents: [
     PageHeaderDialogComponent,
   ],
-  providers: [],
+  providers: [{ provide: FirestoreSettingsToken, useValue: {} }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

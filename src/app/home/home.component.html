@@ -8,10 +8,20 @@
   <div fxLayout="column" fxLayoutGap="1em">
     <div fxLayout="row" fxFill fxLayoutAlign="end end" fxLayoutAlign.xs="center center">
 
-      <div fxLayout="column" fxFlex="35" fxFlex.sm="60" fxFlex.xs="100" class="info-box" [@transitionAnimations]>
-        <div class="info-box-header">welcome</div>
+      <div fxLayout="column" fxLayoutGap="1.5em" fxFlex="35" fxFlex.sm="60" fxFlex.xs="100" class="info-box" [@transitionAnimations]>
 
-        <div fxLayout="column" fxLayoutGap="1em">
+        <div fxLayout="row" fxLayoutAlign="start">
+          <div class="info-box-header">welcome</div>
+
+          <span class="spacer"></span>
+
+          <button class="min-max-btn" (click)="toggleInfoBox()">
+            <span *ngIf="!isInfoBoxMinimized"><i class="fas fa-minus fa-sm"></i></span>
+            <span *ngIf="isInfoBoxMinimized"><i class="fas fa-plus fa-sm"></i></span>
+          </button>
+        </div>
+
+        <div fxLayout="column" class="info-box-content" [@minMaxAnimation] *ngIf="!isInfoBoxMinimized" fxLayoutGap="1em">
           <div class="info-box-text">
             The typewriter that you see here is the Remington Rand Deluxe Model 5, a model manufactured in the 1940's.
             I was inspired to acquire this typewriter after reading about Tom Hanks' quirky fascination and passion

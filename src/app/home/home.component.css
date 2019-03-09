@@ -42,15 +42,30 @@ video.playing {
   transition: 0.3s;
 }
 
+.min-max-btn {
+  color: rgba(255, 255, 255, 0.75);
+  background-color: rgba(255, 255, 255, 0);
+  border: solid 1.1pt rgba(255, 255, 255, 0.75);
+  border-radius: 50%;
+  text-align: center;
+  align-items: center;
+  height: 2.3em;
+  width: 2.3em;
+  transition: 0.3s
+}
+
+.min-max-btn:hover {
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(255, 255, 255, 0.1);
+  border: solid 1.1pt rgba(255, 255, 255, 1);
+  cursor: pointer;
+  transition: 0.3s
+}
+
 .info-box-header {
   font-size: 1.8em;
   letter-spacing: 0.1em;
   font-weight: 500;
   color: rgba(255, 255, 255, 1);
-  margin-bottom: 0.5em;
   text-transform: uppercase;
-}
-
-.info-box-actions {
-  margin-top: 2em;
 }

@@ -28,7 +28,8 @@ import {
   MatTabsModule,
   MatStepperModule,
   MatDividerModule,
-  MatProgressBarModule
+  MatProgressBarModule,
+  MatExpansionModule,
 } from '@angular/material';
 import {DragDropModule} from '@angular/cdk/drag-drop';
 
@@ -63,6 +64,7 @@ const materialModules = [
   MatDividerModule,
   MatProgressBarModule,
   DragDropModule,
+  MatExpansionModule,
 ];
 
 @NgModule({

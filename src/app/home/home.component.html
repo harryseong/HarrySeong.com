@@ -15,9 +15,9 @@
 
           <span [ngClass]="isInfoBoxMinimized ? 'header spacer minimized' : 'header spacer'"></span>
 
-          <button class="min-max-btn" (click)="toggleInfoBox()" fxFlexLayout="row" fxLayoutAlign="center center">
-            <i class="fas fa-minus fa-sm min-max-icon" *ngIf="!isInfoBoxMinimized"></i>
-            <i class="fas fa-info fa-sm min-max-icon" *ngIf="isInfoBoxMinimized"></i>
+          <button class="min-max-btn" (click)="toggleInfoBox()" type="button" fxFlexLayout="row" fxLayoutAlign="center center">
+            <span *ngIf="!isInfoBoxMinimized"><i class="fas fa-minus fa-fw fa-sm"></i></span>
+            <span *ngIf="isInfoBoxMinimized"><i class="fas fa-info fa-fw fa-sm"></i></span>
           </button>
         </div>
 
@@ -44,7 +44,7 @@
             <span>ENTER</span>
           </button>
 
-          <button mat-stroked-button (click)="toggleVideo()" class="btn">
+          <button mat-stroked-button type="button" (click)="toggleVideo()" class="btn">
             <span *ngIf="vidStatus=='playing'"><i class="fas fa-pause fa-fw"></i>&nbsp;PAUSE</span>
             <span *ngIf="vidStatus=='paused'"><i class="fas fa-play fa-fw"></i>&nbsp;PLAY</span>
             <span *ngIf="vidStatus=='stopped'"><i class="fas fa-redo-alt fa-fw"></i>&nbsp;REPLAY</span>

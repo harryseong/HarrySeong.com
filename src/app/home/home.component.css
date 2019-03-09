@@ -19,6 +19,7 @@ video.playing {
 }
 
 .btn {
+  height: 3em;
   width: 8em;
   color: rgba(255, 255, 255, 0.75);
   border-color: rgba(255, 255, 255, 0.75);
@@ -72,10 +73,6 @@ video.playing {
   border: solid 1pt rgba(255, 255, 255, 1);
   cursor: pointer;
   transition: 0.3s
-}
-
-.min-max-icon {
-  padding-top: 0.15em;
 }
 
 .info-box-header {

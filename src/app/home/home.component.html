@@ -15,7 +15,7 @@
 
           <span [ngClass]="isInfoBoxMinimized ? 'header spacer minimized' : 'header spacer'"></span>
 
-          <button class="min-max-btn" (click)="toggleInfoBox()" fxFlexLayout="row" fxLayoutAlign="center baseline">
+          <button class="min-max-btn" (click)="toggleInfoBox()" fxFlexLayout="row" fxLayoutAlign="center center">
             <i class="fas fa-minus fa-sm min-max-icon" *ngIf="!isInfoBoxMinimized"></i>
             <i class="fas fa-info fa-sm min-max-icon" *ngIf="isInfoBoxMinimized"></i>
           </button>

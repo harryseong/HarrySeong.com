@@ -1,5 +1,5 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import {animate, state, style, transition, trigger} from '@angular/animations';
+import {animate, query, sequence, stagger, state, style, transition, trigger} from '@angular/animations';
 
 @Component({
   selector: 'app-home',
@@ -8,8 +8,14 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
   animations: [
     trigger('transitionAnimations', [
       transition(':enter', [
-        style({ opacity: 0, transform: 'translateY(-0.5em)' }),
-        animate('1s 1.25s ease', style({ opacity: 1, transform: 'translateY(0)'}))
+        query('.transition-element', [
+          style({ opacity: 0, transform: 'translateY(1em)'}),
+          stagger(150, [
+            sequence([
+              animate('1s 1.25s ease', style({ opacity: 1, transform: 'translateY(0)' })),
+            ])
+          ])
+        ])
       ]),
     ]),
     trigger('videoLoadAnimation', [

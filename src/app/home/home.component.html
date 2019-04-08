@@ -10,7 +10,7 @@
 
       <div fxLayout="column" fxLayoutGap="1.2em" fxFlex="35" fxFlex.sm="60" fxFlex.xs="100" [ngClass]="isInfoBoxMinimized ? 'info-box minimized' : 'info-box'" [@transitionAnimations]>
 
-        <div fxLayout="row" fxLayoutGap="0.1em" fxLayoutAlign="center center">
+        <div fxLayout="row" fxLayoutGap="0.1em" fxLayoutAlign="center center" class="transition-element">
           <div class="info-box-header">welcome</div>
 
           <span [ngClass]="isInfoBoxMinimized ? 'header spacer minimized' : 'header spacer'"></span>
@@ -39,7 +39,7 @@
           </div>
         </div>
 
-        <div fxLayout="row" fxLayoutGap="1em" fxFill fxLayoutAlign="center center" class="info-box-actions">
+        <div fxLayout="row" fxLayoutGap="1em" fxFill fxLayoutAlign="center center" class="info-box-actions transition-element">
           <button mat-stroked-button type="button" class="btn" routerLink="/nav" routerLinkActive="active">
             <span>ENTER</span>
           </button>

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {animate, state, style, transition, trigger} from '@angular/animations';
+import {animate, query, sequence, stagger, state, style, transition, trigger} from '@angular/animations';
 
 @Component({
   selector: 'app-navpage',
@@ -8,9 +8,15 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
   animations: [
     trigger('transitionAnimations', [
       transition(':enter', [
-        style({ opacity: 0, transform: 'translateY(-1em)' }),
-        animate('2s ease', style({ opacity: 1, transform: 'translateY(0)'}))
-      ])
+        query('.nav-btn-div', [
+          style({ opacity: 0, transform: 'translateY(2em)'}),
+          stagger(120, [
+            sequence([
+              animate('1s ease', style({ opacity: 1, transform: 'translateY(0)' })),
+            ])
+          ])
+        ], {optional: true})
+      ]),
     ])
   ]
 })

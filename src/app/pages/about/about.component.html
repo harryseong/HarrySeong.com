@@ -2,10 +2,10 @@
 
   <app-page-header [pageHeader]="pageHeader" [pageSubheader]="pageSubheader" [pageExplanation]="pageExplanation" [pageTech]="pageTech"></app-page-header>
 
-  <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap.lt-md="1em" fxLayoutAlign="center center">
+  <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap.lt-md="1em" fxLayoutAlign="center start" fxLayoutAlign.lt-md="center center">
 
     <div fxLayout="column" fxLayoutGap="0.25em" fxFlex="40" fxFlex.lt-md="100" fxLayoutAlign="center center" [@contentAnimations]>
-      <img src="assets/images/app/harry_200x200.jpg" alt="harry" class="harry-photo mat-elevation-z2">
+      <img src="assets/images/app/harry_200x200.jpg" alt="harry" class="harry-photo mat-elevation-z2" fxFlexOffset.gt-sm="3em">
       <div class="name">Hyunsoo Harry Seong (성현수)</div>
       <div class="bio-info" fxLayout="column" fxLayoutAlign="center center">
         <div><span class="white-text">hometown</span> Seoul, South Korea</div>

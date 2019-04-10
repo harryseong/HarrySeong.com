@@ -10,9 +10,9 @@ import {animate, query, sequence, stagger, state, style, transition, trigger} fr
       transition(':enter', [
         query('.nav-btn-div', [
           style({ opacity: 0, transform: 'translateY(2em)'}),
-          stagger(120, [
+          stagger(100, [
             sequence([
-              animate('1s ease', style({ opacity: 1, transform: 'translateY(0)' })),
+              animate('800ms ease', style({ opacity: 1, transform: 'translateY(0)' })),
             ])
           ])
         ], {optional: true})

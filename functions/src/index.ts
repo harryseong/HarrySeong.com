@@ -1,4 +1,4 @@
-import * as functions from 'firebase-functions';
+import {https} from 'firebase-functions';
 import {environment} from '../../src/environments/environment';
 const express = require('express'); // Express web server framework
 const request = require('request'); // "Request" library
@@ -50,7 +50,7 @@ app.get('/v1/currently_playing', (req, res) => {
     });
 });
 
-exports.api = functions.https.onRequest(app);
+exports.api = https.onRequest(app);
 
 
 

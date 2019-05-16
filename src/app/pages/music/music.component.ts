@@ -66,10 +66,17 @@ export class MusicComponent implements OnInit, OnDestroy {
   getCurrentlyPlaying(accessToken) {
     this.spotifyApiService.getCurrentlyPlaying(accessToken).subscribe(
       rsp => {
+        console.log(JSON.stringify(rsp));
         if (rsp !== null) {
           this.currentlyPlayingRsp = rsp;
-          this.songUri = this.sanitizer.bypassSecurityTrustResourceUrl(rsp.item.uri);
-          console.log('Refreshed currently playing track.');
+
+          if (rsp.item !== undefined && rsp.item !== null) {
+            this.songUri = this.sanitizer.bypassSecurityTrustResourceUrl(rsp.item.uri);
+            console.log('Refreshed currently playing track.');
+          } else {
+            this.currentlyPlayingRsp = null;
+            console.warn('Returned currentlyPlayingRspItem is null.');
+          }
         } else {
          this.currentlyPlayingRsp = null;
          console.warn('Returned currentlyPlayingRsp is null.');

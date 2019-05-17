@@ -1,11 +1,15 @@
 {
-  "name": "harryseong",
-  "short_name": "harryseong",
-  "theme_color": "#000",
-  "background_color": "#000",
+  "name": "HarrySeong",
+  "short_name": "HarrySeong",
+  "theme_color": "#000000",
+  "background_color": "#000000",
   "display": "standalone",
+  "orientation": "any",
   "scope": "/",
   "start_url": "/",
+  "description": "Harry Seong's personal website.",
+  "related_applications": [],
+  "prefer_related_applications": false,
   "icons": [
     {
       "src": "assets/images/app/typewriter_100x100.png",

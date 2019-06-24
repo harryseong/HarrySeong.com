@@ -5,7 +5,7 @@ import {environment} from '../../../environments/environment';
 import {animate, style, transition, trigger} from '@angular/animations';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import * as moment from 'moment-timezone';
-import {MatSnackBar} from '@angular/material';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-weather',
@@ -32,7 +32,7 @@ export class WeatherComponent implements OnInit, OnDestroy {
   weatherForm = new FormGroup({
       zip: new FormControl('', [Validators.pattern('^[0-9]{5}(?:-[0-9]{4})?$')])
   });
-  @ViewChild('zip') zipField: ElementRef;
+  @ViewChild('zip', {static: true}) zipField: ElementRef;
 
   currentZip = '60201';
   weatherRsp: any;

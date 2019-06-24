@@ -36,7 +36,7 @@ import {animate, query, sequence, stagger, state, style, transition, trigger} fr
   ],
 })
 export class HomeComponent implements OnInit {
-  @ViewChild('video') videoElement: any;
+  @ViewChild('video', {static: true}) videoElement: any;
   video: any;
   vidStatus: string;
   isInfoBoxMinimized = true;

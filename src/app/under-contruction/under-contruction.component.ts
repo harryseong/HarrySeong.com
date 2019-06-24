@@ -1,8 +1,7 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {ApiService} from '../shared/services/api/api.service';
 import {animate, style, transition, trigger} from '@angular/animations';
-import {isSuccess} from '@angular/http/src/http_utils';
 import {Subscription} from 'rxjs';
 
 @Component({

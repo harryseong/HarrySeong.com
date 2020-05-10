@@ -4,7 +4,8 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import {Router} from '@angular/router';
 import {map} from 'rxjs/operators';
 import {AngularFirestore} from '@angular/fire/firestore';
-import {auth} from 'firebase/app';
+import GoogleAuthProvider = firebase.auth.GoogleAuthProvider;
+import * as firebase from 'firebase';
 
 @Injectable({
   providedIn: 'root'
@@ -49,16 +50,16 @@ export class AuthService {
               private zone: NgZone) {}
 
   login() {
-    this.afAuth.auth.signInWithPopup(new auth.GoogleAuthProvider()).then(() => this.confirmLoginStatus());
+    this.afAuth.signInWithPopup(new GoogleAuthProvider()).then(() => this.confirmLoginStatus());
   }
 
   logout() {
-    this.afAuth.auth.signOut().then(() => this.confirmLoginStatus());
+    this.afAuth.signOut().then(() => this.confirmLoginStatus());
     this.router.navigateByUrl('');
   }
 
   confirmLoginStatus() {
-    this.afAuth.auth.onAuthStateChanged(user => {
+    this.afAuth.onAuthStateChanged(user => {
       if (user) {
         this.openSnackBar('You are logged in.', 'OK', 4000);
       } else {

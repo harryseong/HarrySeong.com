@@ -4,7 +4,7 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 @Component({
   selector: 'app-page-header-dialog',
   templateUrl: './page-header-dialog.component.html',
-  styleUrls: ['./page-header-dialog.component.css']
+  styleUrls: ['./page-header-dialog.component.scss']
 })
 export class PageHeaderDialogComponent implements OnInit {
 

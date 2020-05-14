@@ -4,7 +4,7 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
 @Component({
   selector: 'app-dino',
   templateUrl: './dino.component.html',
-  styleUrls: ['./dino.component.css'],
+  styleUrls: ['./dino.component.scss'],
   animations: [
     trigger('contentAnimations', [
       transition(':enter', [

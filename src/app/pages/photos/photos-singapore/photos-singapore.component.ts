@@ -4,7 +4,7 @@ import {animate, query, stagger, style, transition, trigger} from '@angular/anim
 @Component({
   selector: 'app-photos-singapore',
   templateUrl: './photos-singapore.component.html',
-  styleUrls: ['./photos-singapore.component.css'],
+  styleUrls: ['./photos-singapore.component.scss'],
   animations: [
     trigger('contentAnimations', [
       transition(':enter', [

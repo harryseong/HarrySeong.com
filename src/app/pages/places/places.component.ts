@@ -8,7 +8,7 @@ import {Subscription} from 'rxjs';
 @Component({
   selector: 'app-places',
   templateUrl: './places.component.html',
-  styleUrls: ['./places.component.css'],
+  styleUrls: ['./places.component.scss'],
   animations: [
     trigger('mapAnimations', [
       transition(':enter', [

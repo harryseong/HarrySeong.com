@@ -10,7 +10,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 @Component({
   selector: 'app-weather',
   templateUrl: './weather.component.html',
-  styleUrls: ['./weather.component.css'],
+  styleUrls: ['./weather.component.scss'],
   animations: [
     trigger('contentAnimations', [
       transition(':enter', [

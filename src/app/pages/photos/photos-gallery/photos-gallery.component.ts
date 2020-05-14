@@ -5,7 +5,7 @@ import PhotoSwipeUI_Default from 'photoswipe/dist/photoswipe-ui-default';
 @Component({
   selector: 'app-photos-gallery',
   templateUrl: './photos-gallery.component.html',
-  styleUrls: ['./photos-gallery.component.css']
+  styleUrls: ['./photos-gallery.component.scss']
 })
 export class PhotosGalleryComponent implements OnInit {
   pswpElement: any;

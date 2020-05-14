@@ -5,7 +5,7 @@ import {Router} from '@angular/router';
 @Component({
   selector: 'app-photos-nav',
   templateUrl: './photos-nav.component.html',
-  styleUrls: ['./photos-nav.component.css'],
+  styleUrls: ['./photos-nav.component.scss'],
   animations: [
     trigger('divAnimations', [
       transition(':enter', [

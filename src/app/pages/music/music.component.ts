@@ -7,7 +7,7 @@ import {DomSanitizer} from '@angular/platform-browser';
 @Component({
   selector: 'app-music',
   templateUrl: './music.component.html',
-  styleUrls: ['./music.component.css'],
+  styleUrls: ['./music.component.scss'],
   animations: [
     trigger('contentAnimations', [
       transition(':enter', [

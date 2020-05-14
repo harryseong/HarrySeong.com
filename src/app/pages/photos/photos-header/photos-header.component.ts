@@ -4,7 +4,7 @@ import {animate, style, transition, trigger} from '@angular/animations';
 @Component({
   selector: 'app-photos-header',
   templateUrl: './photos-header.component.html',
-  styleUrls: ['./photos-header.component.css'],
+  styleUrls: ['./photos-header.component.scss'],
   animations: [
     trigger('blurbAnimations', [
       transition(':enter', [

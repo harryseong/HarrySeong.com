@@ -4,7 +4,7 @@ import {animate, style, transition, trigger} from '@angular/animations';
 @Component({
   selector: 'app-experimental',
   templateUrl: './experimental.component.html',
-  styleUrls: ['./experimental.component.css'],
+  styleUrls: ['./experimental.component.scss'],
   animations: [
     trigger('contentAnimations', [
       transition(':enter', [

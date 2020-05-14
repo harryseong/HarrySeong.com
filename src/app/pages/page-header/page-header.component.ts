@@ -6,7 +6,7 @@ import { MatDialog } from '@angular/material/dialog';
 @Component({
   selector: 'app-page-header',
   templateUrl: './page-header.component.html',
-  styleUrls: ['./page-header.component.css'],
+  styleUrls: ['./page-header.component.scss'],
   animations: [
     trigger('headerAnimations', [
       transition(':enter', [

@@ -7,7 +7,7 @@ import {Subscription} from 'rxjs';
 @Component({
   selector: 'app-under-contruction',
   templateUrl: './under-contruction.component.html',
-  styleUrls: ['./under-contruction.component.css'],
+  styleUrls: ['./under-contruction.component.scss'],
   animations: [
     trigger('greetingFormAnimations', [
       transition(':enter', [

@@ -4,7 +4,7 @@ import {animate, query, sequence, stagger, state, style, transition, trigger} fr
 @Component({
   selector: 'app-navpage',
   templateUrl: './navpage.component.html',
-  styleUrls: ['./navpage.component.css'],
+  styleUrls: ['./navpage.component.scss'],
   animations: [
     trigger('transitionAnimations', [
       transition(':enter', [

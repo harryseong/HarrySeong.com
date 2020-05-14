@@ -4,7 +4,7 @@ import {animate, style, transition, trigger} from '@angular/animations';
 @Component({
   selector: 'app-navpage-secret',
   templateUrl: './navpage-secret.component.html',
-  styleUrls: ['./navpage-secret.component.css'],
+  styleUrls: ['./navpage-secret.component.scss'],
   animations: [
     trigger('transitionAnimations', [
       transition(':enter', [

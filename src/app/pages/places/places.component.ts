@@ -33,9 +33,9 @@ import {Subscription} from 'rxjs';
 export class PlacesComponent implements OnInit, OnDestroy {
   pageHeader = 'places';
   pageSubheader = 'where we\'ve been, where we are...';
-  pageExplanation = 'When getting to know somebody new for the first time, one question arises fairly frequently: ' +
-    '"where did you grow up?" In my opinion, geographical history doesn\'t outright define us but do play a decently sizable role ' +
-    'in shaping us throughout our lives, which is why I dedicated this page to the places I have lived.';
+  pageExplanation = 'When getting to know somebody for the first time, one question arises fairly frequently: ' +
+    '"where did you grow up?" In my opinion, geographical history does not outright define us but do play a sizable role ' +
+    'in shaping us, which is why I dedicated this page to the places I have lived.';
   pageTech = 'This page makes use of the Mapbox api. The list of cities, their attributes, descriptions, and GPS coordinates are stored ' +
     'and retrieved from the Firestore NoSQL database.';
   map: mapboxgl.Map;

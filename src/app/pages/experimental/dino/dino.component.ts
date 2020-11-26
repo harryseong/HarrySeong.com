@@ -74,7 +74,7 @@ export class DinoComponent implements OnInit {
       }
 
       if (this.dinoStamina === 40) {
-        this.dinoTalk = 'Why you do dis?!';
+        this.dinoTalk = 'Please stop! Why are we doing this?!';
         this.color = 'warn';
       }
 
@@ -83,7 +83,7 @@ export class DinoComponent implements OnInit {
       }
 
       if (this.dinoStamina === 20) {
-        this.dinoTalk = 'STAHP!! I THINK I\'LL FAINT!';
+        this.dinoTalk = 'I THINK I SHALL FAINT!';
       }
 
       if (this.dinoStamina === 5) {

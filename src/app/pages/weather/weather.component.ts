@@ -23,9 +23,9 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 export class WeatherComponent implements OnInit, OnDestroy {
   pageHeader = 'weather';
   pageSubheader = 'raindrops keep fallin\' on my head...';
-  pageExplanation = 'On January 18th, 2019, the Chicagoland area was forecasted to get 5-10 inches of snow from an impending blizzard. ' +
-    'We were even allowed to go home early from work early to avoid the storm. Then it did not snow until nightfall, and even so, we ' +
-    'didn\'t get so much snow. I was inspired to make this weather page because of the aforementioned faux-blizzard.';
+  pageExplanation = 'On January 18th, 2019, the Chicagoland area was forecasted to receive 5-10 inches of snow from an impending blizzard. ' +
+    'As a result, we were sent home early from work so that we could avoid the storm. However, it did not snow until nightfall, and even so, we ' +
+    'did not receive much snow at all. I was inspired to make this weather page because of the aforementioned faux-blizzard.';
   pageTech = 'This page makes use of the Open Weather Map api. The weather icons are displayed according to the weather id number ' +
     'received from the api and also according to the time of day; if the current time is between "sunrise" and "sunrise," the daytime ' +
     'weather icons are displayed. Otherwise, the nighttime weather icons are displayed';

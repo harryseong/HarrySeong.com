@@ -41,9 +41,9 @@ import {animate, style, transition, trigger} from '@angular/animations';
 export class AboutComponent implements OnInit {
   pageHeader = 'about';
   pageSubheader = 'who, what, when, where, how...';
-  pageExplanation = 'This is a summary view of my resume with some key experiences. It also serves as motivation for me to keep learning ' +
-    'and trying new things. Whenever I stop to think about how far I\'ve come in the past "x" months or years, I am filled with ' +
-    'gratitude for the individuals who believed in me, invested in me, and helped me along the way to get to where I am today. My hope ' +
+  pageExplanation = 'This is a summary page of my professional life. Seeing how far I have come motivates me to keep learning ' +
+    'and trying new things. Upon periodic reflection of the past many years, I am often filled with ' +
+    'gratitude for the individuals who believed in me, invested in me, and helped me to become who I am today. My hope ' +
     'is that I will have many opportunities throughout my life to pay it forward.';
   pageTech = 'Not much special on this page in terms of implementation.';
   currentYear = new Date().getFullYear();

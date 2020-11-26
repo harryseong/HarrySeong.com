@@ -44,7 +44,11 @@
   transition: 0.3s;
 }
 
-.about-text.job-title {
+.bold-header {
+  font-weight: 500;
+}
+
+.job-title {
   font-style: italic;
 }
 

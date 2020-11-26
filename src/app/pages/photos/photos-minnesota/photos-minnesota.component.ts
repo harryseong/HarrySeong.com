@@ -57,7 +57,7 @@ export class PhotosMinnesotaComponent implements OnInit {
     {src: 'assets/images/photos/minnesota/storm.jpg', w: 1422, h: 800, title: 'Impending storm.', author: 'HS'},
     {src: 'assets/images/photos/minnesota/stadium.jpg', w: 1422, h: 800, title: 'Home of my Minnesota Vikings.', author: 'HS'},
     {src: 'assets/images/photos/minnesota/cookies.jpg', w: 600, h: 800, title: '@MN State Fair: Sweet Martha\'s Cookies.', author: 'HS'},
-    {src: 'assets/images/photos/minnesota/butter-head.jpg', w: 1067, h: 800, title: '@MN State Fair: Sweet Martha\'s Cookies.', author: 'HS'},
+    {src: 'assets/images/photos/minnesota/butter-head.jpg', w: 1067, h: 800, title: '@MN State Fair: Butter sculptures.', author: 'HS'},
   ];
 
   constructor() { }

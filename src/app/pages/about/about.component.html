@@ -8,29 +8,44 @@
       <img src="assets/images/app/harry_200x200.jpg" alt="harry" class="harry-photo mat-elevation-z2" fxFlexOffset.gt-sm="3em">
       <div class="name">Hyunsoo Harry Seong (성현수)</div>
       <div class="bio-info" fxLayout="column" fxLayoutAlign="center center">
-        <div><span class="white-text">hometown</span> Seoul, South Korea</div>
-        <div><span class="white-text">nationality</span> United States</div>
-        <div><span class="white-text">languages</span> English, Korean</div>
-        <div><span class="white-text">birthday</span> August 1st, 1991</div>
-        <div><span class="white-text">current residence</span> Evanston, Illinois, USA</div>
+        <div class="bold-header"><span class="white-text">hometown</span> Seoul, South Korea</div>
+        <div class="bold-header"><span class="white-text">nationality</span> United States</div>
+        <div class="bold-header"><span class="white-text">languages</span> English, Korean</div>
+        <div class="bold-header"><span class="white-text">birthday</span> August 1st, 1991</div>
+        <div class="bold-header"><span class="white-text">current residence</span> Evanston, Illinois, USA</div>
       </div>
       <div class="bio-blurb white-text" fxLayoutAlign="center center">
-        Full stack developer passionate about producing high-quality web applications. Proactive, life-long learner,
-        independent yet values partnership and collaboration, seeks to exceed expectations. Interested in effective
-        business work-flows and reduction of pain-points through smart product design and development.
+        AWS cloud-native architect and full stack developer passionate about producing high-quality results.
+        Proactive, life-long learner, independent yet values partnership and collaboration, seeks to exceed expectations.
+        Interested in effective business work-flows and reduction of pain-points through smart product design and development.
       </div>
     </div>
 
     <div fxLayout="column" fxLayoutGap="1em" fxFlex="57" fxFlex.lt-md="100">
-      <div fxLayout="column" fxLayoutGap="0.25em" [@educationAnimations]>
+      <div fxLayout="column" fxLayoutGap="0.5em" [@educationAnimations]>
         <div fxHide.gt-sm>
           <mat-divider></mat-divider>
         </div>
 
-        <div class="about-header">education</div>
         <div>
-          <div class="about-text white-text">Northwestern University <span class="gray-text">|</span> Evanston, IL <span class="gray-text">|</span> Class of 2013</div>
-          <div class="about-text">B.A. Biological Sciences Major, Business Institutions Minor</div>
+          <div class="about-header">education</div>
+          <div>
+            <div class="about-text bold-header white-text">Northwestern University <span class="gray-text">|</span> Evanston, IL <span class="gray-text">|</span> Class of 2013</div>
+            <div class="about-text">B.A. Biological Sciences Major, Business Institutions Minor</div>
+          </div>
+        </div>
+
+        <div fxHide.gt-sm>
+          <mat-divider></mat-divider>
+        </div>
+
+        <div>
+          <div class="about-text bold-header white-text">AWS Certifications</div>
+          <div>
+            <div class="about-text">AWS Certified Solutions Architect - Professional</div>
+            <div class="about-text">AWS Certified Solutions Architect - Associate</div>
+            <div class="about-text">AWS Certified SysOps Administrator - Associate</div>
+          </div>
         </div>
       </div>
 
@@ -42,14 +57,14 @@
         <div class="about-header">key experiences</div>
         <div fxLayout="column" fxLayoutGap="0.5em">
           <div>
-            <div class="about-text white-text">Accenture <span class="gray-text">|</span> Chicago, IL <span class="gray-text">|</span> October 2020 - Present</div>
-            <div class="about-text white-text job-title">Full Stack Developer</div>
+            <div class="about-text bold-header white-text">Accenture <span class="gray-text">|</span> Chicago, IL <span class="gray-text">|</span> October 2019 - Present</div>
+            <div class="about-text white-text job-title">Technology Architect</div>
             <div class="about-text">
-              Specializing in Java/Spring Boot microservices applications and Angular front-end development.
+              Specializing in AWS cloud-native architecture and development of Java/Spring Boot microservices, Angular front-end.
             </div>
           </div>
           <div>
-            <div class="about-text white-text">Northwestern University <span class="gray-text">|</span> Evanston, IL <span class="gray-text">|</span> May 2016 - September 2019</div>
+            <div class="about-text bold-header white-text">Northwestern University <span class="gray-text">|</span> Evanston, IL <span class="gray-text">|</span> May 2016 - September 2019</div>
             <div class="about-text white-text job-title">Senior Technical Support Specialist</div>
             <div class="about-text">
               Onboarded app development project team in 2016. Created and maintained various Java/Spring Boot web apps for
@@ -58,24 +73,15 @@
             </div>
           </div>
           <div>
-            <div class="about-text white-text">bloXroute Labs <span class="gray-text">|</span> Evanston, IL <span class="gray-text">|</span> August 2018 - September 2019</div>
+            <div class="about-text bold-header white-text">bloXroute Labs <span class="gray-text">|</span> Evanston, IL <span class="gray-text">|</span> August 2018 - September 2019</div>
             <div class="about-text white-text job-title">Contracted Angular Front-End Engineer</div>
             <div class="about-text">
               Integrated bloXroute's API endpoints to develop interfaces for bloXroute's public facing webpage as well
               as internal systems that visualized test progresses and results for backend engineers.
             </div>
-            <div class="about-text">
-              <!--<a href="http://pocdash.bxrtest.com/#/" target="_blank">-->
-                <!--<i class="fas fa-external-link-alt"></i> Pocdash Comparison-->
-              <!--</a>-->
-              <!--&nbsp;-->
-              <!--<a href="http://pocdash.bxrtest.com/#/without-bloxroute" target="_blank">-->
-                <!--<i class="fas fa-external-link-alt"></i> Pocdash Individual-->
-              <!--</a>-->
-            </div>
           </div>
           <div>
-            <div class="about-text white-text">Michigan State Appellate Defender Office (SADO) <span class="gray-text">|</span> Remote <span class="gray-text">|</span> October 2018 – Present</div>
+            <div class="about-text bold-header white-text">Michigan State Appellate Defender Office (SADO) <span class="gray-text">|</span> Remote <span class="gray-text">|</span> October 2018 – Present</div>
             <div class="about-text white-text job-title">Pro Bono Technical Consultant and Developer</div>
             <div class="about-text">
               Developed social services finder app commissioned by SADO to assist Michigan citizens transitioning from
@@ -84,19 +90,6 @@
             <div class="about-text">
               <a href="https://reentry.sado.org/" target="_blank">
                 <i class="fas fa-external-link-alt"></i> Project Reentry
-              </a>
-            </div>
-          </div>
-          <div>
-            <div class="about-text white-text">MyBookRepo.com <span class="gray-text">|</span> Personal <span class="gray-text">|</span> February 2019 – Present</div>
-            <div class="about-text white-text job-title">Personal Project Developer</div>
-            <div class="about-text">
-              Developing a book database application hosted on Microsoft Azure with Dockerized Java/Spring Boot resources API service, OAuth2 API service,
-              and Angular front end. Application currently in alpha, but usable.
-            </div>
-            <div class="about-text">
-              <a href="https://www.mybookrepo.com/" target="_blank">
-                <i class="fas fa-external-link-alt"></i> MyBookRepo.com
               </a>
             </div>
           </div>
@@ -112,30 +105,26 @@
         <div fxLayout="row wrap" fxLayout.xs="column" fxLayoutGap="1em" fxLayoutGap.xs="0.5em">
           <div fxLayout="column" fxLayoutGap="0.5em" fxFlex="45">
             <div>
-              <div class="about-text white-text">languages</div>
+              <div class="about-text bold-header white-text">languages</div>
               <div class="about-text">Java, Typescript, JavaScript ES6, HTML/CSS/SASS, PHP, Python</div>
             </div>
             <div>
-              <div class="about-text white-text">databases</div>
+              <div class="about-text bold-header white-text">databases</div>
               <div class="about-text">MySQL, OracleDB, Google Firestore NoSQL</div>
             </div>
             <div>
-              <div class="about-text white-text">frameworks</div>
-              <div class="about-text">Spring Boot/Thymeleaf, Angular 2+, React, Firebase, Elasticsearch, Laravel</div>
+              <div class="about-text bold-header white-text">frameworks</div>
+              <div class="about-text">Spring Boot/Thymeleaf, Angular 2+, React, Firebase, Elasticsearch, Kubernetes</div>
             </div>
           </div>
           <div fxLayout="column" fxLayoutGap="0.5em" fxFlex="45">
             <div>
-              <div class="about-text white-text">libraries</div>
+              <div class="about-text bold-header white-text">libraries</div>
               <div class="about-text">Bootstrap, jQuery, Swagger2, RxJS, Angular Flex-Layout, Angular Material, Material-UI, Mapbox, Google Maps, ChartJS</div>
             </div>
             <div>
-              <div class="about-text white-text">tools / ide's</div>
+              <div class="about-text bold-header white-text">tools / ide's</div>
               <div class="about-text">Git, GitKraken, Docker, Maven, npm, Postman, DataGrip, Confluence, JIRA, IntelliJ, WebStorm, PHP Storm, PyCharm</div>
-            </div>
-            <div>
-              <div class="about-text white-text">currently learning</div>
-              <div class="about-text">AWS, Microsoft Azure, Kubernetes</div>
             </div>
           </div>
         </div>

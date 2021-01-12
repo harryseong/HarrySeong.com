@@ -35,7 +35,7 @@
     "@mapbox/mapbox-gl-geocoder": "^4.5.1",
     "angular-typing-animation": "^0.5.4",
     "core-js": "^3.6.5",
-    "firebase": "^7.14.3",
+    "firebase": "^8.2.2",
     "mapbox-gl": "^1.10.0",
     "moment": "^2.25.3",
     "moment-timezone": "^0.5.28",
@@ -63,12 +63,12 @@
     "karma-coverage-istanbul-reporter": "^3.0.2",
     "karma-jasmine": "^3.1.1",
     "karma-jasmine-html-reporter": "^1.5.3",
-    "protractor": "^5.4.4",
+    "protractor": "^7.0.0",
     "rxjs-tslint": "^0.1.8",
     "ts-node": "~8.10.1",
     "tslint": "^5.20.1",
     "typescript": "3.8.3",
-    "webpack": "^4.43.0",
+    "webpack": "^5.13.0",
     "webpack-dev-server": "^3.11.0"
   }
 }

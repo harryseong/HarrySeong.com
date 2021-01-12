@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { PhotosNavComponent } from './photos-nav.component';
 
@@ -6,7 +6,7 @@ describe('PhotosNavComponent', () => {
   let component: PhotosNavComponent;
   let fixture: ComponentFixture<PhotosNavComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ PhotosNavComponent ]
     })

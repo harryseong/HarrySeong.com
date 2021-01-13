@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {AuthService} from '../shared/services/firebase/auth/auth.service';
 import {animate, style, transition, trigger} from '@angular/animations';
 
 @Component({
@@ -17,7 +16,7 @@ import {animate, style, transition, trigger} from '@angular/animations';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor(public authService: AuthService) { }
+  constructor() { }
 
   ngOnInit() {}
 }

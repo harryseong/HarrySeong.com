@@ -30,43 +30,24 @@ export class MusicComponent implements OnInit, OnDestroy {
   currentlyPlayingRsp: any;
   currentlyPlaying$: Subscription;
   songUri: any;
-  accessToken: string;
 
   constructor(private spotifyApiService: SpotifyApiService, private sanitizer: DomSanitizer) { }
 
   ngOnInit() {
     this.currentlyPlaying$ = timer(0, 7500).subscribe(() => {
-      if (this.accessToken == null) {
-        this.spotifyApiService.refreshAccessToken().subscribe(rsp => {
-          this.accessToken = rsp.access_token;
-          this.getCurrentlyPlaying(this.accessToken);
-        });
-      } else {
-        this.getCurrentlyPlaying(this.accessToken);
-      }
+      this.getCurrentlyPlaying();
     });
   }
 
   ngOnDestroy(): void {
-    // this.currentlyPlaying$.unsubscribe();
-    // this.currentlyPlayingRsp = null;
-    // console.log('Unsubscribed from currentlyPlaying$.');
+    this.currentlyPlaying$.unsubscribe();
+    this.currentlyPlayingRsp = null;
+    console.log('Unsubscribed from currentlyPlaying$.');
   }
-
-  refreshAccessToken() {
-    this.spotifyApiService.refreshAccessToken().subscribe(
+  getCurrentlyPlaying() {
+    this.spotifyApiService.getCurrentlyPlaying().subscribe(
       rsp => {
-        this.accessToken = rsp.access_token;
-        console.log('Spotify access token was successfully refreshed.');
-      },
-      error1 => console.error('There was an error refreshing the Spotify access token.')
-    );
-  }
-
-  getCurrentlyPlaying(accessToken) {
-    this.spotifyApiService.getCurrentlyPlaying(accessToken).subscribe(
-      rsp => {
-        console.log(JSON.stringify(rsp));
+        // console.log(JSON.stringify(rsp));
         if (rsp !== null) {
           this.currentlyPlayingRsp = rsp;
 
@@ -84,9 +65,8 @@ export class MusicComponent implements OnInit, OnDestroy {
         this.updateTriedSpotifyApi();
       },
       error => {
-        console.warn('Spotify access token is expired.');
+        console.warn('Spotify API error.');
         this.currentlyPlayingRsp = null;
-        this.refreshAccessToken();
         this.updateTriedSpotifyApi();
       }
     );

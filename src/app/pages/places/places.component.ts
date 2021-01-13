@@ -1,9 +1,8 @@
-import {Component, HostListener, OnDestroy, OnInit} from '@angular/core';
+import {Component, HostListener, OnInit} from '@angular/core';
 import {animate, style, transition, trigger} from '@angular/animations';
-import {FirestoreService} from '../../shared/services/firebase/firestore/firestore.service';
 import * as mapboxgl from 'mapbox-gl';
 import {environment} from '../../../environments/environment';
-import {Subscription} from 'rxjs';
+import {AwsApiService} from '../../shared/services/api/aws/aws-api.service';
 
 @Component({
   selector: 'app-places',
@@ -30,35 +29,32 @@ import {Subscription} from 'rxjs';
     ])
   ]
 })
-export class PlacesComponent implements OnInit, OnDestroy {
+export class PlacesComponent implements OnInit {
   pageHeader = 'places';
   pageSubheader = 'where we\'ve been, where we are...';
   pageExplanation = 'When getting to know somebody for the first time, one question arises fairly frequently: ' +
     '"where did you grow up?" In my opinion, geographical history does not outright define us but do play a sizable role ' +
     'in shaping us, which is why I dedicated this page to the places I have lived.';
   pageTech = 'This page makes use of the Mapbox api. The list of cities, their attributes, descriptions, and GPS coordinates are stored ' +
-    'and retrieved from the Firestore NoSQL database.';
+    'and retrieved from the AWS DynamoDB NoSQL database.';
   map: mapboxgl.Map;
   style = 'mapbox://styles/mapbox/dark-v9';
   currentPlaceOrder = 1;
   currentPlace: any;
   places = [];
-  placesSubscription: Subscription;
 
-  constructor(private firestoreService: FirestoreService) {
+  constructor(private awsApiService: AwsApiService) {
     mapboxgl.accessToken = environment.mapbox.accessToken;
   }
 
   ngOnInit() {
-    this. placesSubscription = this.firestoreService.places.valueChanges().subscribe(places => {
-      this.places = places.sort((a, b) => a.order - b.order);
-      this.currentPlace = this.places[0];
-      this.initializeMap();
-    });
-  }
-
-  ngOnDestroy() {
-    this.placesSubscription.unsubscribe();
+    this.awsApiService.getAllPlaces().toPromise()
+      .then(places => {
+        this.places = places.sort((a, b) => a.order - b.order);
+        this.currentPlace = this.places[0];
+        this.initializeMap();
+      })
+      .catch(() => console.warn('There was an issue fetching places from AWS DynamoDB.'));
   }
 
   private initializeMap() {

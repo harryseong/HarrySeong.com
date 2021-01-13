@@ -9,8 +9,7 @@
   opacity: 0.75;
   user-select: none;
   transition: 0.3s;
-  border-right: 4pt rgb(0, 0, 0) solid;
-  border-left: 4pt rgb(0, 0, 0) solid;
+  border: 4pt rgb(0, 0, 0) solid;
 }
 
 .color-div:hover {
@@ -46,17 +45,43 @@ img.column-image {
   padding: 0.5em;
   border: solid 2pt rgba(0, 0, 0, 0.6);
   background-color: rgba(0, 0, 0, 0.07);
-  transition: 0.3s;
+  transform: scale(1);
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.92);
+  }
+
+  55% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0.92);
+  }
 }
 
 .color-div:hover > img.column-image:hover {
   cursor: pointer;
   transform: scale(1.05);
-  border-color: rgba(0, 0, 0, 0.8);
-  background-color: rgba(0, 0, 0, 0.15);
-  transition: 0.3s;
+  border: solid 2.2pt rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.25);
+  transition: 1s;
+  animation: expand 0.5s;
 }
 
+@keyframes expand {
+  0% {
+    transform: scale(0.92);
+  }
+
+  100% {
+    transform: scale(1.05);
+    border: solid 2.2pt rgba(0, 0, 0, 0.8);
+  }
+}
 
 .color-div.no-expand > img.column-image {
   margin-top: 5em;

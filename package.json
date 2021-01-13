@@ -8,9 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy-dev-firebase": "ng build && firebase deploy --except functions",
-    "deploy-prod-firebase-no-functions": "ng build --prod && firebase deploy --except functions",
-    "ng ": "ng build --prod && firebase deploy",
+    "deploy": "ng build && aws s3 cp . s3://test.harryseong.com --recursive",
+    "deploy-prod": "ng build --prod && aws s3 cp . s3://test.harryseong.com --recursive",
     "show-project-version": "echo $npm_package_version"
   },
   "private": true,

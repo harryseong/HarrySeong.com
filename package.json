@@ -8,8 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "ng build && aws s3 cp . s3://test.harryseong.com --recursive",
-    "deploy-prod": "ng build --prod && aws s3 cp . s3://test.harryseong.com --recursive",
+    "deploy-test": "ng build && aws s3 cp ./dist/harryseong s3://test.harryseong.com --recursive",
+    "deploy-prod": "ng build --prod && aws s3 cp ./dist/harryseong s3://www.harryseong.com --recursive",
     "show-project-version": "echo $npm_package_version"
   },
   "private": true,

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClient, HttpParams} from '@angular/common/http';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {environment} from '../../../../../environments/environment';
 
@@ -10,12 +10,8 @@ export class SpotifyApiService {
 
   constructor(private http: HttpClient) { }
 
-  refreshAccessToken(): Observable<any> {
-    return this.http.get<any>(environment.backend.apiUrl + 'refresh_access_token');
-  }
-
-  getCurrentlyPlaying(accessToken: string): Observable<any> {
-    const params = new HttpParams().set('access_token', accessToken);
-    return this.http.get<any>(environment.backend.apiUrl + 'currently_playing', {params: params});
+  getCurrentlyPlaying(): Observable<any> {
+    const headers = new HttpHeaders({'x-api-key': environment.spotify.apiKey});
+    return this.http.get<any>(environment.spotify.apiUrl, {headers: headers});
   }
 }

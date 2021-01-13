@@ -16,13 +16,11 @@ import { AboutComponent } from './pages/about/about.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import {AngularFireModule} from '@angular/fire';
 import {AngularFirestoreModule, SETTINGS} from '@angular/fire/firestore';
-import {AngularFireAuthModule} from '@angular/fire/auth';
 import {environment} from '../environments/environment';
 import {TypingAnimationModule} from 'angular-typing-animation';
 import { MusicComponent } from './pages/music/music.component';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import { UnderContructionComponent } from './under-contruction/under-contruction.component';
 import { ExperimentalComponent } from './pages/experimental/experimental.component';
 import { NavpageSecretComponent } from './pages/navpage-secret/navpage-secret.component';
 import { PageHeaderComponent } from './pages/page-header/page-header.component';
@@ -51,7 +49,6 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     AboutComponent,
     PageNotFoundComponent,
     MusicComponent,
-    UnderContructionComponent,
     ExperimentalComponent,
     NavpageSecretComponent,
     PageHeaderComponent,
@@ -71,7 +68,6 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase, environment.firebase.projectId),
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
-    AngularFireAuthModule, // imports firebase/auth, only needed for auth features,
     BrowserAnimationsModule,
     BrowserModule,
     FlexLayoutModule,

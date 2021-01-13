@@ -14,8 +14,6 @@ import { NavpageComponent } from './pages/navpage/navpage.component';
 import { PhotosComponent } from './pages/photos/photos.component';
 import { AboutComponent } from './pages/about/about.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
-import {AngularFireModule} from '@angular/fire';
-import {AngularFirestoreModule, SETTINGS} from '@angular/fire/firestore';
 import {environment} from '../environments/environment';
 import {TypingAnimationModule} from 'angular-typing-animation';
 import { MusicComponent } from './pages/music/music.component';
@@ -66,8 +64,6 @@ import { ServiceWorkerModule } from '@angular/service-worker';
   ],
   imports: [
     AppRoutingModule,
-    AngularFireModule.initializeApp(environment.firebase, environment.firebase.projectId),
-    AngularFirestoreModule, // imports firebase/firestore, only needed for database features
     BrowserAnimationsModule,
     BrowserModule,
     FlexLayoutModule,
@@ -84,7 +80,6 @@ import { ServiceWorkerModule } from '@angular/service-worker';
   entryComponents: [
     PageHeaderDialogComponent,
   ],
-  providers: [{ provide: SETTINGS, useValue: {} }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

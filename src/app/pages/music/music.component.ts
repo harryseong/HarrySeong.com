@@ -1,8 +1,8 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {animate, style, transition, trigger} from '@angular/animations';
-import {SpotifyApiService} from '../../shared/services/api/spotify/spotify-api.service';
 import {Subscription, timer} from 'rxjs';
 import {DomSanitizer} from '@angular/platform-browser';
+import {AwsApiService} from '../../shared/services/api/aws/aws-api.service';
 
 @Component({
   selector: 'app-music',
@@ -23,15 +23,13 @@ export class MusicComponent implements OnInit, OnDestroy {
   pageExplanation = 'Music is a daily part of my life, so I decided to pay an homage to it with this page. ' +
     'Music inspires and motivates me in so many ways that it is difficult to imagine life without music. There are, however, ' +
     'some moments when silence is a welcome companion; it depends on my mood which I prefer.';
-  pageTech = 'This page utilizes the Spotify API to retrieve information about the song being played on my Spotify account. ' +
-    'The access token for the API is refreshed with a refresh token through a simple NodeJS Express app uploaded to Firebase as a ' +
-    'function; this piece was implemented in order to conceal the refresh token from public view.';
+  pageTech = 'This page utilizes the Spotify API to retrieve information about the song being played on my Spotify account.';
   triedSpotifyApi = false;
   currentlyPlayingRsp: any;
   currentlyPlaying$: Subscription;
   songUri: any;
 
-  constructor(private spotifyApiService: SpotifyApiService, private sanitizer: DomSanitizer) { }
+  constructor(private awsApiService: AwsApiService, private sanitizer: DomSanitizer) { }
 
   ngOnInit() {
     this.currentlyPlaying$ = timer(0, 7500).subscribe(() => {
@@ -45,7 +43,7 @@ export class MusicComponent implements OnInit, OnDestroy {
     console.log('Unsubscribed from currentlyPlaying$.');
   }
   getCurrentlyPlaying() {
-    this.spotifyApiService.getCurrentlyPlaying().subscribe(
+    this.awsApiService.getCurrentlyPlayingSong().subscribe(
       rsp => {
         // console.log(JSON.stringify(rsp));
         if (rsp !== null) {

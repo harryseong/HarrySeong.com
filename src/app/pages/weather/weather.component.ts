@@ -1,11 +1,12 @@
 import {Component, ElementRef, NgZone, OnDestroy, OnInit, ViewChild} from '@angular/core';
-import {OpenWeatherMapApiService} from '../../shared/services/api/open-weather-map/open-weather-map-api.service';
+import {OpenWeatherMapService} from '../../shared/services/open-weather-map/open-weather-map.service';
 import {Subscription, timer} from 'rxjs';
 import {environment} from '../../../environments/environment';
 import {animate, style, transition, trigger} from '@angular/animations';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import * as moment from 'moment-timezone';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import {AwsApiService} from '../../shared/services/api/aws/aws-api.service';
 
 @Component({
   selector: 'app-weather',
@@ -41,7 +42,7 @@ export class WeatherComponent implements OnInit, OnDestroy {
   weatherUnit = 'F';
   weatherIcon: string;
 
-  constructor(private weatherService: OpenWeatherMapApiService, private snackBar: MatSnackBar, private zone: NgZone) { }
+  constructor(private awsApiService: AwsApiService, private weatherService: OpenWeatherMapService, private snackBar: MatSnackBar, private zone: NgZone) { }
 
   ngOnInit() {
     this.lookupHarrysWeather();
@@ -61,16 +62,16 @@ export class WeatherComponent implements OnInit, OnDestroy {
   }
 
   lookupHarrysWeather() {
-    this.getCurrentWeather(environment.openWeatherMap.harryZipcode);
+    this.getCurrentWeather(environment.aws.api.weather.harryZipcode);
   }
 
   getCurrentWeather(zip: string) {
     if (this.weather$ !== null && this.weather$ !== undefined) {
       this.weather$.unsubscribe();
     }
-    this.weather$ = timer(0, environment.openWeatherMap.apiCallFrequency).subscribe(
+    this.weather$ = timer(0, environment.aws.api.weather.apiCallFrequency).subscribe(
       () => {
-        this.weatherService.getCurrentWeather(zip, this.weatherUnitC ? 'metric' : 'imperial').subscribe(
+        this.awsApiService.getCurrentWeather(zip, this.weatherUnitC ? 'metric' : 'imperial').subscribe(
           rsp => {
             this.weatherRsp = rsp;
             this.weatherUnit = this.weatherUnitC ? 'C' : 'F';

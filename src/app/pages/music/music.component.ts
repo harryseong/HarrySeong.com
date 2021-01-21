@@ -43,7 +43,7 @@ export class MusicComponent implements OnInit, OnDestroy {
     console.log('Unsubscribed from currentlyPlaying$.');
   }
   getCurrentlyPlaying() {
-    this.awsApiService.getCurrentlyPlayingSong().subscribe(
+    this.awsApiService.getSpotifyCurrentlyPlaying().subscribe(
       rsp => {
         // console.log(JSON.stringify(rsp));
         if (rsp !== null) {

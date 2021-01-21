@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {HttpClient, HttpHeaders, HttpParams} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {environment} from '../../../../../environments/environment';
 
@@ -10,13 +10,19 @@ export class AwsApiService {
 
   constructor(private http: HttpClient) { }
 
-  getCurrentlyPlayingSong(): Observable<any> {
-    const headers = new HttpHeaders({'x-api-key': environment.aws.music.spotify.apiKey});
-    return this.http.get<any>(environment.aws.music.spotify.apiUrl, {headers: headers});
+  getSpotifyCurrentlyPlaying(): Observable<any> {
+    const headers = new HttpHeaders({'x-api-key': environment.aws.apiKey});
+    return this.http.get<any>(environment.aws.api.music.spotify.apiUrl, {headers});
   }
 
   getAllPlaces(): Observable<any> {
-    const headers = new HttpHeaders({'x-api-key': environment.aws.places.apiKey});
-    return this.http.get<any>(environment.aws.places.apiUrl, {headers: headers});
+    const headers = new HttpHeaders({'x-api-key': environment.aws.apiKey});
+    return this.http.get<any>(environment.aws.api.places.apiUrl, {headers});
+  }
+
+  getCurrentWeather(zipcode: string, unit: string): Observable<any> {
+    const headers = new HttpHeaders({'x-api-key': environment.aws.apiKey});
+    const params = new HttpParams().set('units', unit).set('zip', zipcode);
+    return this.http.get<any>(environment.aws.api.weather.apiUrl, {params, headers});
   }
 }

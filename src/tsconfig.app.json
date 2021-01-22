@@ -9,6 +9,6 @@
     "**/*.spec.ts"
   ],
   "angularCompilerOptions": {
-    "enableIvy": false // Setting to true did not work as of 6.24.2019.
+    "enableIvy": true
   }
 }

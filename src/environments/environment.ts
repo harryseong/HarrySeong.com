@@ -8,7 +8,7 @@ export const environment = {
     accessToken: 'pk.eyJ1IjoiaGFycnlzZW9uZyIsImEiOiJja2s1cXJ6b3owbm1mMm90aDdhamllYmkyIn0.OEEkiykq7mJpEammhbSGuQ'
   },
   aws: {
-    apiKey: 'AVTTb7jWelslsIoUQ2xb9A71RF17N5zavlrGN4ie',
+    apiKey: '7ZqGhGU2rw53F2yLaZlCs5W8oPytcY9F6WslQLJs',
     api: {
       music: {
         spotify: {
